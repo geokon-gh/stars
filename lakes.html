@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Limnology</title>
+<meta name="generator" content="Org mode">
+<meta name="author" content="George Kontsevich">
+<link rel="stylesheet" type="text/css" href="../web/geokon.css" />
+<link rel="shortcut icon" href="../web/panda.svg" type="image/x-icon">
+<style>
+html {
+margin: 0;
+overflow-x: hidden;
+}
+body {
+font: 14px/20px italic Times, sans-serif;
+margin-left: 0px;
+margin-right: 0px;
+margin-left: 5vw;
+margin-right: 5vw;}
+#table-of-contents {display: none} /* disable for now.. till I have a better plan */
+pre.src {
+margin-left:  -5vw;
+margin-right: -5vw;
+font-family: monospace;
+font-size: 100%;
+background: #FFFFEE;
+overflow: auto;
+position: static;
+border-top: 1px solid  #e5e5d6;
+border-bottom: 1px solid  #e5e5d6;
+}
+pre.src-org {
+color: red;
+background: #FFFFFF;
+}
+blockquote {
+width: 100%;
+padding-left: 0.5em;
+border-left: solid;
+border-left-width: 4px;
+border-left-color: grey;
+font: 14px/20px italic Times, serif;
+background-color: #eefaf6; /*#f1ffee;*/
+margin: 0;
+.org-center {
+text-align: center;}
+}
+svg { /* newer inline SVGs */
+width: 100vw;
+overflow: hidden;
+height: auto;
+margin-left: -5vw;
+margin-right: 0;
+}
+.org-svg { /* non-inlined SVGs */
+width: 100%;
+max-height: 350px;
+display: block;
+margin-left: auto;
+margin-right: auto;
+}
+img { /* static images */
+width:     100%;
+max-width: max-content;}
+ul {padding-left: 1.5em;
+border-left: solid;
+border-left-width: 4px;
+border-left-color: grey;}
+h1 {color: #596060;}
+h2 {color: black;
+padding-top: 0.5em;
+border-bottom: 4px solid  #aaaaaa;}
+h3 {color: black;
+border-bottom: 2px dotted  #aaaaaa;}
+b, i{
+font-family: serif ;}
+sup { /* fixes line spacing issues due to superscripts */
+font-size: 0.8em;
+line-height: 0;
+position: relative;
+vertical-align: baseline;
+top: -0.5em;
+}
+sub { /* if these are missing then lines with subscripts take up more space */
+font-size: 0.8em;
+line-height: 0;
+}
+</style>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Limnology</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org6348c27">Types of lakes</a></li>
+<li><a href="#orgbbbae7e">Lake Zones</a></li>
+<li><a href="#orgd47da47">Mixing and Stratification</a>
+<ul>
+<li><a href="#org7b03686">Regional differences</a></li>
+<li><a href="#orge875082">Lake mixing types</a></li>
+</ul>
+</li>
+<li><a href="#org1bb4ab2">Waves</a></li>
+<li><a href="#org6f7e6c4">Currents</a></li>
+<li><a href="#org79ff102">Sediment</a>
+<ul>
+<li><a href="#orgf64a49f">Controls</a></li>
+<li><a href="#org0bf4eaf">Loss on Ignition</a></li>
+<li><a href="#orgf38f2ca">Trophic Level</a></li>
+<li><a href="#org9db4524">Humic Level</a></li>
+<li><a href="#orged6fafb">BPI/BPN</a></li>
+<li><a href="#org2d2d0dc">Geochemical Classification</a></li>
+<li><a href="#orgbe615e2">Genetic Classification</a></li>
+<li><a href="#org7faf205">Mechanical Classification</a></li>
+</ul>
+</li>
+<li><a href="#org4d52653">Lake Evolution</a></li>
+<li><a href="#org85cf391">Chemistry</a>
+<ul>
+<li><a href="#orgd48dc03">Oxygen</a></li>
+<li><a href="#orga5d67aa">Iron</a></li>
+<li><a href="#org7ceafc8">Carbon</a></li>
+<li><a href="#org89878d1">Nitrogen</a></li>
+<li><a href="#org7c31091">Phosphorus</a></li>
+<li><a href="#orgbe643b3">Silica</a></li>
+</ul>
+</li>
+<li><a href="#orge1a95c8">Determining Sediment Age</a></li>
+<li><a href="#org177e454">Biomarkers</a>
+<ul>
+<li><a href="#orgbd0537b">Phytoplankton</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-org6348c27" class="outline-2">
+<h2 id="org6348c27">Types of lakes</h2>
+<div class="outline-text-2" id="text-org6348c27">
+<dl class="org-dl">
+<dt>Genetic Lake Types</dt><dd>Classifying lakes by how they were created
+<dl class="org-dl">
+<dt>Tectonic Lakes</dt><dd>divergence/convergence/transform/continental-collision/craton-basin.
+<dl class="org-dl">
+<dt>Lake Baikal</dt><dd>1.6km deep. 7km sediment. 25-30Myrs old</dd>
+<dt>Lake Tanganyika</dt><dd>Rift Valley lake. 14.km deep. Below 200m it's anoxic. Alkaline (sodium carbonate)</dd>
+<dt>(no term)</dt><dd>Lakes behind/front of volcanic ridges at subduction zones. Usually very large and shallow
+<dl class="org-dl">
+<dt>Front</dt><dd><b>Peripheral</b> if the subduction zone is on dry land then the subduction point will make a basin</dd>
+<dt>Back</dt><dd><b>Retroarc</b> The load of the acreted mountains at the subduction zone will weight the plate down and create a depression behind the mountain</dd>
+</dl></dd>
+<dt>(no term)</dt><dd>Cratonic lakes are in middle of continents where the continent has sagged</dd>
+<dt>(no term)</dt><dd>Tibetan Lakes are behind the collisional mountain building</dd>
+</dl></dd>
+<dt>Volcanic Lakes</dt><dd>(same as Maar lakes?) Crater lakes. Explosively created lakes. Steep sides, no/low inflow. 
+<dl class="org-dl">
+<dt>Titan</dt><dd>where during cool periods methane builds up in the ground and then explodes)</dd>
+<dt>Limnic eruptions</dt><dd>Build up of dissolved CO<sub>2</sub> under water (where it is under a lot of water pressure and dissolvable). Once it comes out of solution, the water starts to mix and the CO<sub>2</sub> comes up to a level where it can come out of solution all at once (with a positive feedback driving the mixing) - ex: Lake Nyos</dd>
+</dl></dd>
+<dt>Landslide Lakes</dt><dd>like what we have in Taiwan (TODO: Find which one it is)</dd>
+<dt>Glacial Lakes </dt><dd>Can both be host to very slow deposition (varves) and catastrophic deposition (ice dam burst, glacial till etc.)
+<dl class="org-dl">
+<dt>Ice lakes</dt><dd>Lakes in contact with a glacier or on a glacier.</dd>
+<dt>Glacial rock basins</dt><dd>ie. carved glaciers.. cirque lakes, piedmon,fjord etc..</dd>
+<dt>Morainic/outwash lakes</dt><dd>formed at the terminal point of ice advance</dd>
+<dt>Drift basins</dt><dd>kettle lakes (blocks of ice/permafrost left behind - periglacial lakes), thermokarst (TODO: What is this..?)</dd>
+</dl></dd>
+<dt>Karst lakes</dt><dd>ex: sinkholes - washed out karst holes</dd>
+<dt>Fluvial Lakes</dt><dd>like a "plunge pool" under a waterfall.. Or oxbow lakes caused by rivers meandering and cutting of their own flow along bends.</dd>
+<dt>Aeolian Lakes</dt><dd>caused by wind, either an eroded basin or dammed outlet (ex: Qattara Depression in Egypt)</dd>
+<dt>Shoreline Lakes</dt><dd>tombolo lakes, spits lakes, created by ocean currents bringing material (TODO: Look into). These are typically not very old.</dd>
+<dt>Organic lakes</dt><dd>beavers, corals etc created lakes</dd>
+<dt>Anthropogenic Lakes</dt><dd></dd>
+
+<dt>Meteorite Lakes</dt><dd></dd>
+
+<dt>Solution Lakes</dt><dd>Something is dissolving..  ex: karst in Dalmatian coast</dd>
+<dt>Saline Lake</dt><dd>brine pools.. groundwater inflow and outflow. Mud flats fed from below. Lake margins that move a lot between seasons</dd>
+</dl></dd>
+</dl>
+
+
+
+<dl class="org-dl">
+<dt>Trophic Lakes Types</dt><dd>"Trophic, from Ancient Greek τροφικός (trophikos) "pertaining to food or nourishment", may refer to" - Wiki. We divide lakes based on 2 paramters - the <b>allochthonous</b> source of nutrients (coming from outside into the lake) and <b>autochthous</b> (coming from within)
+<ul class="org-ul">
+<li>Oligotrophic</li>
+<li>Eutrophic</li>
+<li>Dystrophic</li>
+</ul></dd>
+</dl>
+
+<p>
+The fast majority of lakes are glacial and at higher latitudes    
+</p>
+</div>
+</div>
+<div id="outline-container-orgbbbae7e" class="outline-2">
+<h2 id="orgbbbae7e">Lake Zones</h2>
+<div class="outline-text-2" id="text-orgbbbae7e">
+<dl class="org-dl">
+<dt>Shoreline</dt><dd>The shoreline is a great paleoclimate record, however it can change severly due to tectonic motion. Primarily by isostatic rebound after glacial withdrawl. This can great complicate your analysis b/c shore lines may be irregularly lifted relative to their original positions</dd>
+<dt>Photic Zone</dt><dd>area of photosynthesis</dd>
+<dt>Aphotic Zone</dt><dd></dd>
+
+<dt>Benthic</dt><dd>lake floor
+<dl class="org-dl">
+<dt>Littoral</dt><dd>photic zone of the floor</dd>
+<dt>Sublittoral</dt><dd>photic but only by algae/cyanobacteria (not <b>macrophytes</b> - large submerged plants)</dd>
+</dl></dd>
+</dl>
+
+<p>
+All zones are species dependent (due to different light absorption spectra and light's interaction with turbidity)
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd47da47" class="outline-2">
+<h2 id="orgd47da47">Mixing and Stratification</h2>
+<div class="outline-text-2" id="text-orgd47da47">
+<p>
+Fluid with either flow <b>laminarly</b> or <b>turbulently</b> according to the following relationship:
+</p>
+<blockquote>
+<p>
+<b>Reynolds Number</b>
+</p>
+
+<p>
+R<sub>e</sub> = U L &rho; / mu{}
+</p>
+
+<dl class="org-dl">
+<dt>U</dt><dd>velocity of flow</dd>
+<dt>L</dt><dd>reference length</dd>
+<dt>&rho;</dt><dd>fluid density</dd>
+<dt>&mu;</dt><dd>viscous forces</dd>
+</dl>
+</blockquote>
+<p>
+<i>R<sub>e</sub> &lt; 500</i> = laminar
+<i>R<sub>e</sub> &gt; 2000</i> = turbulent
+</p>
+
+<p>
+Bear in mind that cold water will generally be more viscous - and water mixed with sediment will also be viscous and will sometimes flow laminarly.
+</p>
+
+<p>
+<b>Turbulent mixing</b> occurs when adjacent bodies of water are moving at different speeds and they have similar densities
+</p>
+
+<blockquote>
+<p>
+<b>Richardson's number</b>
+</p>
+
+<p>
+R<sub>i</sub> = g (p&rho;/dz)/&rho;(du/dz)<sup>2</sup>
+</p>
+
+<dl class="org-dl">
+<dt>g</dt><dd>gravitation constant</dd>
+<dt>&rho;</dt><dd>density</dd>
+<dt>z</dt><dd>depth</dd>
+<dt>u</dt><dd>velocity</dd>
+</dl>
+</blockquote>
+<p>
+If <b>R<sub>i</sub></b> &lt; 0.25 then mixing occurs, otherwise <b>stratification</b> - with the lower layer called the <b>hypolimnion</b> and the higher/upper layer called the <b>epilimnion</b>. The in-between zone will be called the <b>metalimnion</b> and it will contain the <b>thermocline</b> - the depth at which you have the highest temperature gradient.
+</p>
+
+<p>
+This paramterization may be sufficient on a micro level - but is not directly applicable when characterizing a lake. For that we develop a new metric that is in terms of known/measurable lake paramters
+</p>
+
+
+<blockquote>
+<p>
+<b>Stratification index</b>
+</p>
+
+<p>
+S = &mu;<sup>3</sup>&rho;C<sub>&rho;</sub> / z g &alpha; (Q<sub>0</sub> - 2 Q<sub>1</sub> / c z)
+</p>
+
+<dl class="org-dl">
+<dt>&mu;</dt><dd>fristional velocity of air</dd>
+<dt>&rho;</dt><dd>density of water</dd>
+<dt>C<sub>&rho;</sub></dt><dd>specific heat of water at constant pressure</dd>
+<dt>z</dt><dd>water depth</dd>
+<dt>g</dt><dd>gravational constant</dd>
+<dt>&alpha;</dt><dd>coefficient of thermal expansion</dd>
+<dt>Q<sub>0</sub></dt><dd>net surface heat input</dd>
+<dt>Q<sub>1</sub></dt><dd>solar radiation penetrating water column</dd>
+<dt>c</dt><dd>extinction coefficient</dd>
+</dl>
+</blockquote>
+<p>
+A well mixed water mass will stratify when <b>S</b> drop below ~6700.
+</p>
+
+<p>
+Stratification is quasi-stable. While a mixing body of water will stratify when conditions are met, transitioning from a stratified state to a mixing state requires an additional input of energy. If the lake system is vasillating around <i>S = 6700</i> it will not rapidly switch between mixing and stratification. It will stratify and then "stick"The energy to change to a mixing state is characterized by the lake's <b>stability</b>
+</p>
+
+<blockquote>
+<p>
+<b>Wedderburn number</b>
+</p>
+
+<p>
+W = [(&rho;<sub>2</sub> - &rho;<sub>1</sub>)/&rho;) / &rho;] g h<sup>2</sup> / &mu;<sup>2</sup>L
+</p>
+
+<dl class="org-dl">
+<dt>&rho;<sub>2</sub></dt><dd>density of hypolimnion</dd>
+<dt>&rho;<sub>1</sub></dt><dd>density of epilimnion</dd>
+<dt>&rho;</dt><dd>density of water</dd>
+<dt>h</dt><dd>depth of epilimnion (TODO: look into parameter)</dd>
+<dt>&mu;</dt><dd>shear velocity in the water at the water surface (TODO: What..? probably wind speed related)</dd>
+<dt>L</dt><dd>length of lake in the wind direction - ie. the <b>fetch</b></dd>
+</dl>
+</blockquote>
+
+<p>
+If <i>W &gt; L/4h</i> then stratification is strong and mixing is inhibited. Generally a large thermal contrast will lead to large density difference and make the stratification more stable
+</p>
+
+<p>
+Notice that temperature/energy is also characteristic of the <i>Stratification Index</i>. Both values co-vary, but the stability is also a function of the wind and lake length. The wind/fetch (and therefore geometry of the lake vs. prevailing wind direction) will also affect the depth of the thermocline
+</p>
+
+<blockquote>
+<p>
+D<sub>th</sub> = 4F<sup>0.5</sup>
+</p>
+
+<dl class="org-dl">
+<dt>D<sub>th</sub></dt><dd>depth of thermocline (m)</dd>
+<dt>F</dt><dd>maximum fetch (km)</dd>
+</dl>
+</blockquote>
+
+<p>
+This equation must be a very rough approximation since it doesn't factor in variables like turbidity. But the point is that the depth of the thermocline is also an indicator of stability
+</p>
+</div>
+
+<div id="outline-container-org7b03686" class="outline-3">
+<h3 id="org7b03686">Regional differences</h3>
+<div class="outline-text-3" id="text-org7b03686">
+<p>
+High latitude lakes experience large seasonal temperature variations. However the density of water does not change a lot at low temperatures - so large fluctations of cold waters don't create necessarily create a large density contrast.
+</p>
+
+<p>
+At tropical latitudes you have more favorable temperatures but the temperature fluctuations are small
+</p>
+
+<p>
+So there is a sweet spot (local maximum of sorts) at around 20&deg;-30&deg;
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge875082" class="outline-3">
+<h3 id="orge875082">Lake mixing types</h3>
+<div class="outline-text-3" id="text-orge875082">
+<p>
+Obviously the seasons are the strongest driver for lake mixing. As a result there are several classes of lakes:
+</p>
+
+<dl class="org-dl">
+<dt>Dimictic Lake</dt><dd>is one that completely mixes twice annually. One during the winter when ice forms (and there is no wind) and once in the summer when you have a strong temperature contrast. The <i>complete</i> part is essential b/c it allows the bottom to be ventilated, critters can live on the lake floor, you get bioturbation and a very different sedimentary record.</dd>
+<dt>Monomictic Lake</dt><dd>One mix..
+<dl class="org-dl">
+<dt>Warm version</dt><dd>typically it's like a dimictic, but since the winter doesn't get cold enough to create an ice cap, mixing next stops in the winter. So you have one long mixing season</dd>
+<dt>Cold version</dt><dd>like the dimictic, but the summer never gets warm enough to stratify..</dd>
+</dl></dd>
+<dt>Meromictic Lake</dt><dd>is one with only partial mixing. The bottom will have no bioturbation and you will get fine laminations in your sediment. So you can easily observe seasonality is runoff/nutrients/biological activity in higher mixing layers
+<dl class="org-dl">
+<dt>mixolimnion</dt><dd>the mixing upper water mass</dd>
+<dt>monimolimnion</dt><dd>the poorly mixing bottom mass</dd>
+<dt>endogenic meromixis</dt><dd>salts released from organic decay at the bottom</dd>
+<dt>ecotgenic meromixis</dt><dd>externally input salts (both are salty dense bottom water with light fresh water on top)</dd>
+</dl></dd>
+<dt>Polymictic Lake</dt><dd>mixes repeatedly. Usually small lakes that are easily disturbed by strong winds. Or arid lakes where evaporative cooling plays a major role</dd>
+<dt>Oligomictic Lake</dt><dd>rarely/irregularly mixes. Usually also wind driven..</dd>
+<dt>Amictic lake</dt><dd>never mix (ex: always covered by ice)</dd>
+</dl>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org1bb4ab2" class="outline-2">
+<h2 id="org1bb4ab2">Waves</h2>
+<div class="outline-text-2" id="text-org1bb4ab2">
+<p>
+Will either be <b>progressive</b> (moving forward) or <b>standing</b>. They have the following parameters
+</p>
+
+<dl class="org-dl">
+<dt>Wavelength</dt><dd>&lambda;</dd>
+<dt>Height</dt><dd>h</dd>
+<dt>Period</dt><dd>T</dd>
+<dt>"Orbitals"</dt><dd>the motion vertically of the water particles</dd>
+<dt>Deep-water wave velocity</dt><dd>For waves below the surface, the speed will be <i>&lambda;/T</i></dd>
+<dt>Shallow water waves</dt><dd>if <i>&lambda;/2 &gt; z</i> then the wave is squeezed in by the lake floor. The wave will start to move sediment. And the velocity will be dictated by <i>u = &pi;HT sin (z 2&pi;z</i>&lambda;)/ (</dd>
+</dl>
+<blockquote>
+<ul class="org-ul">
+<li>TODO: Check this equation.. it doesn't make sense)</li>
+</ul>
+</blockquote>
+<p>
+The variable flow in these shallow waves can result in heavy particles moving landward and finer particles moving lakeward. Maybe more details in .. Komar and Miller, 1975 (???)
+</p>
+
+<p>
+Since the wave is not typically orthogonal to the shore, as it approaches it gets squeezed, the wave refracts towards the coast, and a coastal <b>longshore current</b> is formed (as fast as 30cm/s) - se Freeman et al. 1972, Sly 1978. These leave <b>ripples</b> and <b>sand bars</b>. In even a large lake, this zone is only a few meters wide
+</p>
+
+<p>
+Waves break when wave steepness is &gt;1/7
+</p>
+
+<dl class="org-dl">
+<dt>Seiches</dt><dd>standing waves along the length of the whole lake. Typically due to constant wind action. This will also distort the thermocline (sharper downwind). The pilling up on water downwind can cause backflow below - and in effect an overturn of the whole water body</dd>
+
+<dt>Poincare waves</dt><dd>oscillatory cells in the middle of large lakes due to the Coriolis effect</dd>
+
+<dt>Kelvin waves</dt><dd>shoreline-parallel waves due to Coriolis. (Saggio and Imberger 1998)</dd>
+</dl>
+</div>
+</div>
+
+<div id="outline-container-org6f7e6c4" class="outline-2">
+<h2 id="org6f7e6c4">Currents</h2>
+<div class="outline-text-2" id="text-org6f7e6c4">
+<p>
+Generally not a huge factor in lakes.. for obvious reasons. In small lakes this is dominated by inflow/outflow, which in turn is dominated by seasonality. River water will flow into the lake and flow down till it reaches a level of similar density - and then it'll flow "into" the lake
+</p>
+
+<dl class="org-dl">
+<dt>overflow</dt><dd>the river water floats above the lake - creating a lid. Usually with low sediment; often fresh water flowing over salty</dd>
+<dt>interflow</dt><dd>mixes somewhere in the middle. Usually this is in statified lakes. The downward flow will naturally cause turbulence and mixing. This can be greatly affected by Coriolis - which will dictate where nutrients get distributed in the lake [2-15 cm/s]</dd>
+<dt>underflow</dt><dd>along the bottom.. usually inflow with lots of sediment. Can reach high speeds and move sands [100 cm/s] Grover and Howard 1938, Pickrill and Irwin 1982, Lambert 1982 Wierich 1984</dd>
+<dt>gravity flow</dt><dd>very sediment heavy underflow. Like due to earthquakes/landslides. If it's an "event" it can also be called a <b>turbidity flow</b> which has a <b>head</b> <b>body</b> and <b>end</b>. These can even be erosive and create channels. On the bottom they will form a <b>sublacustrine fan</b>.</dd>
+</dl>
+
+<p>
+Of course this can all change seasonally - and leave a paleorecord!
+</p>
+</div>
+</div>
+
+<div id="outline-container-org79ff102" class="outline-2">
+<h2 id="org79ff102">Sediment</h2>
+<div class="outline-text-2" id="text-org79ff102">
+<p>
+Classification is complicated a bit b/c it's quite multidimensional and you can't pigeon hole sediments easily:
+</p>
+</div>
+
+<div id="outline-container-orgf64a49f" class="outline-3">
+<h3 id="orgf64a49f">Controls</h3>
+<div class="outline-text-3" id="text-orgf64a49f">
+<p>
+The controls on sidment are as follows:
+</p>
+<dl class="org-dl">
+<dt>Eustasy</dt><dd>lake/sea level</dd>
+<dt>Subsidence</dt><dd></dd>
+
+<dt>Sediment supply</dt><dd></dd>
+
+<dt>Basin morphology</dt><dd></dd>
+
+<dt>Sediment compaction</dt><dd></dd>
+
+<dt>Flexural isostasy</dt><dd>Seems like it's similar to isostatic rebound??</dd>
+</dl>
+</div>
+</div>
+
+<div id="outline-container-org0bf4eaf" class="outline-3">
+<h3 id="org0bf4eaf">Loss on Ignition</h3>
+<div class="outline-text-3" id="text-org0bf4eaf">
+<p>
+A metric of "organic content" - <b>IG</b>
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf38f2ca" class="outline-3">
+<h3 id="orgf38f2ca">Trophic Level</h3>
+<div class="outline-text-3" id="text-orgf38f2ca">
+<p>
+A gauge of the biological activity of a lake based on the ratio of <b>minerogenic</b> matter <i>Si</i>- <b>inorganic biogenic material</b>  (diatome fustules and biogenic precipitated calcium carbonate <i>D-group</i>
+</p>
+
+<p>
+From <i>Si</i> to <i>D</i> there are classified as (nutrient poor) <b>oligotrophic</b>, <b>mesotrophic</b> and <b>eutrophic</b> (nutrient rich)
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9db4524" class="outline-3">
+<h3 id="org9db4524">Humic Level</h3>
+<div class="outline-text-3" id="text-org9db4524">
+<p>
+This is another gauage of biologcal activity but on the <b>C/N</b> ratio.
+</p>
+
+<p>
+This ranges from <b>dystropic/polyhumic</b> (<code>C/N = 10-15</code>) to <b>oligohumic</b> (<code>C/N &lt; 10</code>)
+</p>
+</div>
+</div>
+
+<div id="outline-container-orged6fafb" class="outline-3">
+<h3 id="orged6fafb">BPI/BPN</h3>
+<div class="outline-text-3" id="text-orged6fafb">
+<p>
+Nitrogen content <i>N</i> generally correlates with organic content <i>IG</i>. How much the two co-vary is summarized using two different measures.
+</p>
+<dl class="org-dl">
+<dt>BPN</dt><dd><i>bioproduction number</i> which is is the "slope" of the N = f(IG) line.</dd>
+<dt>BPI</dt><dd><i>bioproduction index</i> - which is the <i>N</i> content at 10% <i>IG</i>.</dd>
+</dl>
+<p>
+Both say the same thing though..
+</p>
+
+<p>
+Using this these values (ie. the N/IG ratio) we can say something about a lake's Trophic/Humic levels. At low <i>IG</i> and <i>N</i> values we can primarily infer the humicity (the <i>C/N</i> ratio will be high) - while at high IG and N values we can infer about the lake's trophic level (high <i>IG</i> would imply a lot of biogenic-precipitates//D-group/
+</p>
+
+<p>
+ge0k0n
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-org2d2d0dc" class="outline-3">
+<h3 id="org2d2d0dc">Geochemical Classification</h3>
+<div class="outline-text-3" id="text-org2d2d0dc">
+<dl class="org-dl">
+<dt>oxic/anoxic</dt><dd><dl class="org-dl">
+<dt>sulfidic</dt><dd>measurable dissolved sulfide : <i>S<sup>2-</sup></i></dd>
+<dt>non-sulfidic</dt><dd>can be divided further into.. :
+<dl class="org-dl">
+<dt>post-oxic</dt><dd>"oxygen removal without sulfate reduction" (TODO: doesn't that make it sulfidic??)</dd>
+<dt>methanic</dt><dd>complete sulfate reduction and methane gas formation</dd>
+</dl></dd>
+</dl></dd>
+</dl>
+<blockquote>
+<p>
+These seem incorrect. Post-oxic should be a "sulfidic"
+</p>
+</blockquote>
+<p>
+Diagenesis often proceeds along the sequence of : <code>oxic -&gt; post-oxic -&gt; sulfidic -&gt; methanic</code>
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbe615e2" class="outline-3">
+<h3 id="orgbe615e2">Genetic Classification</h3>
+<div class="outline-text-3" id="text-orgbe615e2">
+<p>
+Main 3: Lithogenous / Biogenous (carbonate) / Hydrogenous
+</p>
+
+<p>
+Others; Evaporite / Organic sediments (carbon based) / Iron-rich sediments / Sulfuric sediments
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7faf205" class="outline-3">
+<h3 id="org7faf205">Mechanical Classification</h3>
+<div class="outline-text-3" id="text-org7faf205">
+<p>
+Using a "cone apparatus" <b>Wentworth Scale</b> or <b>Phi Scale</b>
+ex: Rock/boulder - pebbles/mussles - gravel/sand - sand - sandy silt - hard clay - fine sediments - very fine sediments
+</p>
+
+
+<ol class="org-ol">
+<li>Sphericity/Elongated :: brought by river -&gt; round</li>
+</ol>
+
+<p>
+Roundness/Texture
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org4d52653" class="outline-2">
+<h2 id="org4d52653">Lake Evolution</h2>
+<div class="outline-text-2" id="text-org4d52653">
+<p>
+Lake -&gt; Marsh -&gt; Floating Fen -&gt; Basin Fen -&gt; Valley Bog -&gt; Raised Bog
+</p>
+
+<p>
+Caused by the water slowly filling in with Peat/Turf. This is partially decayed vegetation or organic matter (ex: Sphagnum Mosses)
+</p>
+</div>
+</div>
+<div id="outline-container-org85cf391" class="outline-2">
+<h2 id="org85cf391">Chemistry</h2>
+<div class="outline-text-2" id="text-org85cf391">
+</div>
+<div id="outline-container-orgd48dc03" class="outline-3">
+<h3 id="orgd48dc03">Oxygen</h3>
+<div class="outline-text-3" id="text-orgd48dc03">
+<p>
+Redox reactions .. ex: organic stuff -&gt; <i>CO<sub>2</sub></i>. A lot of this is happening on the lake floor and it's Very tied to stratification and turn over in the Lake. 
+</p>
+
+<p>
+It also dissolves worse in water when the water is warmer. Summer statification and high temperatures can lead to very low oxygen levels and kill a lot of animals (<b>summerkill</b>). As you go deeper the water will be colder - but then since you have minimal mixing it will have less oxygen reaching it. Somewhere in the middle is the <b>metalimnetic oxygen maximum</b>.
+</p>
+
+<p>
+It will also change a lot througout the day due to photosynthesis. Especially is the lake is eutrophics (nutrient rich)
+</p>
+
+<p>
+Production is primarily dictated by lake surface area - however consumption is dictated by lake bed surface area. So the lake basin's shape and subsequent changes in lake level can greatly alter oxygen consumption and production.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga5d67aa" class="outline-3">
+<h3 id="orga5d67aa">Iron</h3>
+<div class="outline-text-3" id="text-orga5d67aa">
+<p>
+In very anoxic conditions, <i>Fe<sup>3+</sup></i> will turn to <i>Fe<sup>2+</sup></i> and this can dissolve into the water. The anoxic zone needs to be relatively thick b/c once <i>Fe<sup>2+</sup></i> hits any oxic layer it'll turn back into Fe<sup>3+</sup>. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7ceafc8" class="outline-3">
+<h3 id="org7ceafc8">Carbon</h3>
+<div class="outline-text-3" id="text-org7ceafc8">
+<p>
+CO<sub>2</sub> is an important form of carbon that makes water acidic
+</p>
+
+<p>
+Redfield ration <i>C</i>:/N/:/P/ = <i>106:16:1</i> - "ideal" nutrient ration for phytoplankton. Usually an insufficient amount of one stalls the development of more organic life.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org89878d1" class="outline-3">
+<h3 id="org89878d1">Nitrogen</h3>
+<div class="outline-text-3" id="text-org89878d1">
+<p>
+Necessary for life (ex: nucleotide - Guanine)
+</p>
+
+<p>
+Inert as <i>N<sub>2</sub></i>. To be bioavailale it needs to be "fixed" by something like cyanobacteria. So when it's bioavailable form is insufficient then the fixers have a distinct advantage vs. other organisms.
+</p>
+
+<p>
+<i>&shy;<sup>15</sup>N</i> is an isotope that's enriched at each trophic level by about <i>3-4%</i>
+</p>
+
+<p>
+The <b>C/N ratio</b> can tell you about past plant types. Terrestrial plants have lots of cellulose and therefore lots of <i>C</i> and low <i>N</i>. Phytoplankton by contrast have lower C/N ratios. Combined with <i>&shy;<sup>13</sup></i> you can ID the organic matter types.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7c31091" class="outline-3">
+<h3 id="org7c31091">Phosphorus</h3>
+<div class="outline-text-3" id="text-org7c31091">
+<p>
+DAN/RNA/ATP/Phospholipids
+</p>
+
+<p>
+all isotopes are radioactive ..
+</p>
+
+<p>
+Recycles easily, so not a great paleorecord
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbe643b3" class="outline-3">
+<h3 id="orgbe643b3">Silica</h3>
+<div class="outline-text-3" id="text-orgbe643b3">
+<p>
+has isotopes..
+</p>
+
+<p>
+is what diatoms use
+</p>
+
+<p>
+Lots of lil skeletons.. everywhere.. all the time (can look at species compositions I guess?)
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orge1a95c8" class="outline-2">
+<h2 id="orge1a95c8">Determining Sediment Age</h2>
+<div class="outline-text-2" id="text-orge1a95c8">
+<dl class="org-dl">
+<dt>Relative ages</dt><dd>by looking at what layers deposited above other.  Sometimes layers can be disturbed to the point where this gives wrong or deceptive results.</dd>
+<dt>Absolute ages</dt><dd>You use some radioisotope or whatever to get an actual age directly</dd>
+</dl>
+
+<p>
+Obviously it's best if you can use the two in combination..
+</p>
+
+<dl class="org-dl">
+<dt>Chronology</dt><dd>arranging events/dates in order of occurrence</dd>
+
+<dt>Chronometry</dt><dd>Measuring the dates.. like with radioisotopes</dd>
+
+<dt>Radioisotopes</dt><dd>Radiocarbon / <i>&shy;<sup>230</sup>Th</i> / <i>&shy;<sup>210</sup>Pb</i></dd>
+
+<dt>Radiation damage</dt><dd>Radioactive decay damages crystal structures. This builds up some strain in crystals which can be released as luminescence</dd>
+
+<dt>Amino acid racemization</dt><dd>amino acids (&gt;500 in total, but 20 are used in genetic code) will spontaneously change chirality over time (temperature dependent). So it can function as a clock of sorts.</dd>
+
+<dt>&shy;<sup>14</sup>C</dt><dd>Cosmic Rays -&gt; spallation -&gt; &shy;<sup>14</sup>N =&gt; &shy;<sup>14</sup> + thermal neutron =&gt; &shy;<sup>14</sup>CO<sub>2</sub></dd>
+
+<dt>&shy;^[13}C</dt><dd>~1%</dd>
+
+<dt><i>&shy;<sup>210</sup>Pb</i></dt><dd>from <i>&shy;<sup>222</sup>Rn</i> that's in the air .. so lead raining everywhere all the time.. can determine sedimentation rates and all that jazz. Super cool. Does it end up in stalagmites..? Prolly.. should check</dd>
+</dl>
+</div>
+</div>
+
+
+<div id="outline-container-org177e454" class="outline-2">
+<h2 id="org177e454">Biomarkers</h2>
+<div class="outline-text-2" id="text-org177e454">
+<dl class="org-dl">
+<dt>Pollen</dt><dd>plankton size</dd>
+<dt>Rotifers</dt><dd>small animals</dd>
+<dt>Crustaceans</dt><dd></dd>
+
+<dt>Ostracodes</dt><dd>bivalve bean shaped things.. with calcareous shells</dd>
+<dt>Insects</dt><dd>ex: Chironomids leave behind hard mouth parts</dd>
+<dt>Fish</dt><dd>Nektons (active swimming animals in water - vs. planktons). Leave behind scales and ear pieces: <b>Otolith</b></dd>
+<dt>Ancient DNA</dt><dd>spooky stuff&#x2026;</dd>
+</dl>
+</div>
+<div id="outline-container-orgbd0537b" class="outline-3">
+<h3 id="orgbd0537b">Phytoplankton</h3>
+<div class="outline-text-3" id="text-orgbd0537b">
+<p>
+Som are photoplankton some are heterotrophic
+</p>
+<dl class="org-dl">
+<dt>Blue/green algae</dt><dd>ie. Cyanobacteria. Nitrogen fixers (using their <i>heterocysts</i>). Thrive in places with nitrogen runoff (Baltic Sea)</dd>
+<dt>Dinoflagellates</dt><dd>Eukaryotes with two flagella. Their resting cyst is what gets typically preserved. They cause red tides</dd>
+<dt>Diatoms</dt><dd>Made up of two siliceous frustules (like a box). However frustules easily dissolve in high pH</dd>
+<dt>Gold brown algae (Chrysophytes)</dt><dd>often with falgella .. some have siliceous scales. Also have cysts that get preserved</dd>
+<dt>Green Algae (Chlorophytes)</dt><dd>unicellular and collonial. Many don't get preserved at all.. Some have carbonate parts - like the "stoneworts" Charophytes</dd>
+<dt>Charophytes</dt><dd>freshwater green algae that create spirals. Different species prefer different conditions.</dd>
+</dl>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

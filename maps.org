@@ -1,0 +1,25 @@
+#+TITLE: Maps
+#+DESCRIPTION:
+
+#+INCLUDE: "../web/config.org"
+#+HTML_HEAD_EXTRA: <meta name="robots" content="noindex">
+
+
+* Shoreslines
+
+The shorelines I got from here: https://www.ngdc.noaa.gov/mgg/shorelines/
+
+* Elevation Data
+
+Then for the elevation data I went here: https://earthexplorer.usgs.gov/
+These instructions for how to get data: https://gisgeography.com/usgs-earth-explorer-download-free-landsat-imagery/
+acct: gkontsevich
+password: NTU104passNTU104pass
+
+
+* Wind data
+
+https://www.ncdc.noaa.gov/cdo-web/
+https://www.ssd.noaa.gov/PS/WIND/index.html
+https://weatherhistory.co.uk/about
+https://customweather.com/
