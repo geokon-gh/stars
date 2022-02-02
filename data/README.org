@@ -1,0 +1,10 @@
+* Data files
+
+- 41586_2016_BFnature18591_MOESM388_ESM.xlsx :: Stalagmite data from Haicheng's group
+https://www.nature.com/articles/nature18591
+
+- antarctica2015co2composite.txt :: CO_{2} data used by Haicheng's group - goes back 800 000 years
+
+- vostok_methane_age.txt :: Vostok data used by Ruddiman to make an Antartic Ice Age model. Even though the file says methane, it also have CO_{2} and d18O data
+
+- proxy.php :: The output of the orbital parameter calculator http://vo.imcce.fr/insola/earth/online/earth/online/index.php when selecting /eccentricity/, /climatic precession/, /obliquity/
