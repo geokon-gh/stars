@@ -545,3 +545,53 @@ L /.. latent heat of condensation/
 When /q/ is zero you get back /\theta{}/
 
 This terms is used in the same exact way as /\theta{}/ - as is the primary term we should be looking at for air convection. Around the tropics, where we have a lot of air rising, \theta{}_{e}\ is pretty constant with altitude (indicating instability)
+
+* Meridonal structure of the atmosphere
+
+*** Tilt
+If the Earth has no tilt then the poles would recieve no radiation. The tilt ensures that during their respective summer each pole recieves some radiation. This has the cummulative effect of evening out the amount of radiation absorbed by the Earth
+
+*** Sphericity
+Due to the Earth's sphericity and the albedo of polar ice/snow, the tropics absorb about \times{}6 more radiation than the poles.
+
+And yet the outgoing radiation doesn't differ by as much. This is due to heat being transported poleward. This happens both through the atmosphere as well as the oceans
+
+*** Potential temperature
+
+B/c convection is generally driven by moist air, the dry-air convection's /potential temperature/ is generally secondary. Therefore the atmosphere is generally "warmer" in terms of potential temperature as you go up. However, the actual (nonpressure-corrected) temperature decreases (and hence the /saturated specific humidity/). The potential temperature starts to rapidly change in thin layers once you've reaches the stratosphere
+
+*** Equivalent potential temperature
+
+The moisture corrected temperature however doesn't change as you look up in altitude when you are in the tropics. This however changes a bit towards the poles. This is due to intense equatorial convection. We can look at the resulting isolines to determine where air can move along adiabatically
+
+*** Stratosphere
+
+Is deliniated from the troposphere by the tropopause. Due to the equatorial convection, the tropopause is pushed upwards in the tropics - so it does not form a smooth spherical layer. Furthermore there are /tropopause gaps/ where the temperature is warm enough to allow stratosphere air to mix with the upper troposphere air directly (caused by jet streams.. to be revisited..)
+
+** Pressure vs Height
+
+Pressure is simpler to measure. It is in effect a measure of "the overlying mass burden" (how much air is above a point) and is known as a /mass coordinate/.
+
+Of course pressure and height as mutually dependent. As we saw before there is a net zero balance of forces on a static pair parcel. When looking at in terms of densities /\rho{}/
+
+#+begin_quote
+Pressure_{below} + Pressure_{above} + gravity = 0 \\
+p\delta{}A - (p+\delta{}p)\delta{}A + \delta{}p/\delta{}z + g\rho{}\delta{}A\delta{}z = 0 \\
+\partial{}p/\partial{}z + g\rho{} = 0 \\
+#+end_quote
+Here we can rewrite the density term /\rho{}/ in terms of temperature /T/ and pressure /p/ using the perfect gas law /p=\rho{}RT/
+#+begin_quote
+\partial{}p/\partial{}z + gp/[RT] = 0 \\
+#+end_quote
+Rearranging things a bit 
+#+begin_quote
+\partial{}z p / \partial{}p = -g/[RT] \\
+\partial{}z / \partial{}\ln{}p = -g/[RT] /.. using the calculus idenity/ p \partial{}/\partial{}p = \partial{}/\partial{}\ln{}p\\
+z(p) = R \int{}_{p}^{p_{s}} [T/g] dp/p
+#+end_quote
+And we can now calculate the height /z/ of a given pressure "surface"  /p/. It depends on the average temperature below it (/T/ is a function of /p/ here and needs to be integrated) as well as the surface pressure /p_{s}/. The equation assumes a static /g/ - so this kind of calculation will drift from the true height when you are at very high altitudes (ie. mesosphere ~100km)
+
+In general /z/ and /p/ covary. A low pressure surface corresponds to a lower /z/ height. And generally pressure surfaces are high in the tropics and low at the poles b/c the integral/average of the temperature below a pressure surface is higher in the tropics. Cold air columns contract and warm columns expand.
+
+** Winds
+The resulting difference in pressure surface height drives air mass poleward from the tropics and creates winds.
