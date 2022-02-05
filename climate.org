@@ -27,7 +27,6 @@ Here I load a bunch of libraries. I use the ~geo~ library to work with GIS files
 (add-libs {'factual/geo {:mvn/version "3.0.1"}})
 (add-libs {'com.github.jai-imageio/jai-imageio-core {:mvn/version "1.4.0"}})
 (add-libs {'clj-curl/clj-curl {:mvn/version "1.1.2"}})
-(add-libs {'uncomplicate/neanderthal {:mvn/version "0.43.3"}})
 (add-libs {'guru.nidi.com.kitfox/svgSalamander {:mvn/version "1.1.3"}})
 (add-libs {'batik-rasterize/batik-rasterize {:mvn/version "0.1.2"}
            'xerces/xerces {:mvn/version  "2.4.0"}
@@ -53,7 +52,6 @@ Here I load a bunch of libraries. I use the ~geo~ library to work with GIS files
          '[thi.ng.math.noise :as noise]
          '[clj-curl.easy :as curl-easy]
          '[clj-curl.opts :as curl-opts]
-         '[uncomplicate.neanderthal.linalg :as linalg]
          '[batik.rasterize :as batik])
 (use 'geo.io)
 (use 'geo.jts)
@@ -142,9 +140,9 @@ svg-xml-string]
 #+END_SRC
 
 #+RESULTS:
-: #'user/svg2org#'user/render-with-batikclass clojure.lang.Compiler$CompilerExceptionclass clojure.lang.Compiler$CompilerExceptionclass clojure.lang.Compiler$CompilerExceptionclass clojure.lang.Compiler$CompilerExceptionSyntax error compiling at (isotope:localhost:38305(clj)*:19:21).
+: #'user/svg2org#'user/render-with-batikclass clojure.lang.Compiler$CompilerExceptionclass clojure.lang.Compiler$CompilerExceptionclass clojure.lang.Compiler$CompilerExceptionclass clojure.lang.Compiler$CompilerExceptionSyntax error compiling at (*cider-repl Projects/rocks:localhost:41185(clj)*:19:21).
 : Unable to resolve symbol: region-ranges in this context
-: Syntax error compiling at (isotope:localhost:38305(clj)*:54:21).
+: Syntax error compiling at (*cider-repl Projects/rocks:localhost:41185(clj)*:54:21).
 : Unable to resolve symbol: region-ranges in this context
 
 
@@ -595,3 +593,8 @@ In general /z/ and /p/ covary. A low pressure surface corresponds to a lower /z/
 
 ** Winds
 The resulting difference in pressure surface height drives air mass poleward from the tropics and creates winds.
+(However the pressure difference seems to be offset by Coriolis forces)
+
+One would expect a large "cell" to form where air rises at the equator, moves to the poles, and then falls back to the surface. However this isn't the case. Instead you get two cells (no explanation!) on each hemisphere, with only the tropical cell behaving the way we expect - with the surface winds being towards the equator.
+
+There is also a /zonal-wind/ (east/west) component. In the tropics winds are westward *Easterlies*, while away from the tropics they are eastward *Westerlies*. The East/West divide only roughly corresponds to the overturn cell. So at the surface winds that are towards the equator are generally also westward - but on the graphs there is a bit of a mismatch at altitude.
