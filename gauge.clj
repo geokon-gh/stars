@@ -156,3 +156,9 @@
 ;;     #time/offset-date-time "2022-01-17T18:03:58+08:00"
 ;;     #time/offset-date-time "2022-01-17T18:47:44+08:00"
 ;;     #time/offset-date-time "2022-01-17T19:40:15+08:00")
+
+(def time-between-ticks (->> event-tick-times
+                             (partition 2 1 )
+                             (map #(tick/seconds (tick/between (first %)
+                                                               (second %))))))
+
