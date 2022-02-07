@@ -111,14 +111,15 @@
          time
          am-or-pm](clojure.string/split logger-str
                                         #"\s")
-        pm-offset (if (= am-or-pm "PM")
-                    12
-                    0)
         [hours
          minutes
-         seconds] (map read-string
+         seconds] (map #(int(Double/parseDouble %))
                        (clojure.string/split time
-                                             #":"))]
+                                             #":"))
+         pm-offset (if (and (= am-or-pm "PM")
+                            (not= hours 12)) ;; 12PM is noon
+                    12
+                    0)]
     (str (tick/date date)
          "T"
          (->> hours
@@ -129,7 +130,6 @@
               (format "%02d"))
          ":"
          (->> seconds
-              Math/round ;; no decimal seconds
               (format "%02d"))
          offset-str))))
 
