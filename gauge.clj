@@ -145,9 +145,9 @@
 
 
 (def event-tick-times (->> event-str-times
-                           (map (partial loggertime-to-iso8601
+                           (mapv (partial loggertime-to-iso8601
                                          "+08:00"))
-                           (map tick/offset-date-time)))
+                           (mapv tick/offset-date-time)))
 
 #_(->> event-tick-times
        (take 5))
