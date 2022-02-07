@@ -157,8 +157,31 @@
 ;;     #time/offset-date-time "2022-01-17T18:47:44+08:00"
 ;;     #time/offset-date-time "2022-01-17T19:40:15+08:00")
 
-(def time-between-ticks (->> event-tick-times
-                             (partition 2 1 )
-                             (map #(tick/seconds (tick/between (first %)
-                                                               (second %))))))
+(def time-between-ticks
+  "The inverse will be the average rain rate"
+  (->> event-tick-times
+       (partition 2 1 )
+       (map #(tick/seconds (tick/between (first %)
+                                         (second %))))))
 
+(def rain-rate-between-ticks
+  "The Y axis of sorts
+  The rain amount is fixed to 0.3mm of rain.
+  The longer the duration between ticks the lower the rate"
+  (->> time-between-ticks
+       (mapv #(/ 0.3
+                 %))))
+
+(def time-from-first-tick
+  "The X axis of sorts"
+  (mapv #(tick/seconds (tick/between (first event-tick-times)
+                                     %))
+        event-tick-times))
+
+(def time-rate-pairs
+  "The inverse will be the average rain rate"
+  (->> time-from-first-tick
+       (partition 2 1 )
+       (mapcat #(vector [(first %2) %1]
+                      [(second %2) %1])
+             rain-rate-between-ticks)))
