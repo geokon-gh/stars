@@ -185,31 +185,6 @@
                       [(second %2) %1])
              rain-rate-between-ticks)))
 
-(defn- render-with-svgsalamander
-  [region
-   svg-xml-string]
-  (let [[lat-range
-         lon-range] (region-ranges region)
-        universe (com.kitfox.svg.SVGCache/getSVGUniverse)
-        uri (.loadSVG universe
-                      (java.io.StringReader. svg-xml-string)
-                      "unused-placeholder")
-        diagram (.getDiagram universe uri)
-        buffered-image (java.awt.image.BufferedImage.
-                        (* lon-range
-                           100) ;; width
-                        (* lat-range
-                           100) ;; height
-                        java.awt.image.BufferedImage/TYPE_4BYTE_ABGR)
-        graphics-2d (.createGraphics buffered-image)]
-    (.setRenderingHint graphics-2d
-                       java.awt.RenderingHints/KEY_ANTIALIASING
-                       java.awt.RenderingHints/VALUE_ANTIALIAS_ON)
-    (.render diagram graphics-2d)
-    (.removeDocument universe
-                     uri)
-    buffered-image))
-
 (defn mm-plot
   [width
    height
