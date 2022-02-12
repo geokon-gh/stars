@@ -126,11 +126,6 @@
 
 #_(->> event-tick-times
        (take 5))
-;; => (#time/offset-date-time "2022-01-17T17:51:42+08:00"
-;;     #time/offset-date-time "2022-01-17T17:56:01+08:00"
-;;     #time/offset-date-time "2022-01-17T18:03:58+08:00"
-;;     #time/offset-date-time "2022-01-17T18:47:44+08:00"
-;;     #time/offset-date-time "2022-01-17T19:40:15+08:00")
 
 (def time-between-ticks
   "The inverse will be the average rain rate"
@@ -173,25 +168,31 @@
                               last
                               first)]
 		 :range  [left-margin width]
-		 :minor  30
+		 :major  (* 60
+                            60
+                            24
+                            30) ;; seconds in a month
+		 :minor  (* 60
+                            60
+                            24) ;; seconds in a day
 		 :label-style {:fill "none"}
 		 :pos    height})
-       :y-axis (-> (viz/linear-axis {:domain  [-0.0001
-                                               0.01]
-		                 :range   [height 0]
-		                 :major  100
-		                 :minor  10
-		                 :pos    left-margin})
-                   (assoc :major [100]))
-       :grid {:minor-x true
-	      :minor-y false}
+       :y-axis (viz/linear-axis
+                {:domain  [-0.0001
+                           0.01]
+		 :range   [height 0]
+		 :pos    left-margin})
+       :grid {:minor-x true}
        :data [{:values data
 	       :attribs {:fill "none" :stroke "red"}
 	       :layout  viz/svg-line-plot}]}
       (viz/svg-plot2d-cartesian)))
 
 (->> time-rate-pairs
-     (mm-plot 200
-              100
+     ;;     (take 470)
+     (mm-plot 360
+              120
               10)
+     (svg/svg {:viewBox "0 0 360 120"})
+     svg/serialize
      (spit "gauge.svg"))
