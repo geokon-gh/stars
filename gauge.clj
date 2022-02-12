@@ -199,8 +199,8 @@
 		 :minor  30
 		 :label-style {:fill "none"}
 		 :pos    height})
-       :y-axis (-> (viz/linear-axis {:domain  [0
-                                           1]
+       :y-axis (-> (viz/linear-axis {:domain  [-0.0001
+                                               0.01]
 		                 :range   [height 0]
 		                 :major  100
 		                 :minor  10
