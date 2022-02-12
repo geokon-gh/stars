@@ -38,14 +38,12 @@
 (use 'geo.jts)
 
 
-;; Read in our data file - which is in a CSV format.
-;; This gives us a vector-of-vectors format
-(def event-csv-table (-> "/home/geokon/Data/EventX.csv"
-                         io/reader
-                         csv/read-csv))
-
-#_(->> event-csv-table
+;; Our data comes in he following format
+#_(->> "/home/geokon/Data/EventX.csv"
+       io/reader
+       csv/read-csv
        (take 10))
+;;
 ;; => (["USB-500/600 Log File" ""]
 ;;     ["Name: EventX" ""]
 ;;     ["Model: USB-505" ""]
@@ -60,34 +58,6 @@
 ;;     ["3" "2022-01-17 6:03:58.4 PM" "Contact Closing" ""]
 ;;     ["4" "2022-01-17 6:47:43.9 PM" "Contact Closing" ""]
 ;;     ["5" "2022-01-17 7:40:14.9 PM" "Contact Closing" ""])
-
-
-
-(def event-str-times
-  "We only care about the data vector's event time stamps.
-  So those are extracted into a vector"
-  (->> event-csv-table
-       (drop 5)
-       (map second)))
-
-#_(->> event-times-str
-       (take 5))
-;; => ("2022-01-17 5:51:41.7 PM"
-;;     "2022-01-17 5:56:01.4 PM"
-;;     "2022-01-17 6:03:58.4 PM"
-;;     "2022-01-17 6:47:43.9 PM"
-;;     "2022-01-17 7:40:14.9 PM")
-
-#_(-> event-str-times
-      first
-      (clojure.string/split #"\s"))
-;; => ["2022-01-17" "5:51:41.7" "PM"]
-
-#_(-> event-str-times
-      first
-      (clojure.string/split #"\s"))
-;; => ["2022-01-17" "5:51:41.7" "PM"]
-
 
 (defn loggertime-to-iso8601
   "Convert the logger's time format to iso8601.
@@ -142,11 +112,14 @@
        tick/offset-date-time)
 ;; => #time/offset-date-time "2022-01-17T17:51:42+08:00"
 
-
-(def event-tick-times (->> event-str-times
-                           (mapv (partial loggertime-to-iso8601
-                                         "+08:00"))
-                           (mapv tick/offset-date-time)))
+(def event-tick-times  (->> "/home/geokon/Data/EventX.csv"
+                            io/reader
+                            csv/read-csv
+                            (drop 5) ;; remove header
+                            (map second) ;; get second column
+                            (mapv (partial loggertime-to-iso8601
+                                           "+08:00")) ;; convert time strings
+                            (mapv tick/offset-date-time))) ;; load into tick objects
 
 #_(->> event-tick-times
        (take 5))
