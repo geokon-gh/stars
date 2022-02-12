@@ -36,7 +36,6 @@
          '[batik.rasterize :as batik])
 (use 'geo.io)
 (use 'geo.jts)
-(use '[uncomplicate.neanderthal core native])
 
 
 ;; Read in our data file - which is in a CSV format.
