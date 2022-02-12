@@ -142,7 +142,8 @@
   The longer the duration between ticks the lower the rate"
   (->> time-between-ticks
        (mapv #(/ 0.3
-                 %))))
+                 (+ % ;; add delta to not divide by zero
+                    0.1)))))
 
 (def time-from-first-tick
   "The X axis of sorts"
