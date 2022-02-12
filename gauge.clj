@@ -88,7 +88,10 @@
          pm-offset (if (and (= am-or-pm "PM")
                             (not= hours 12)) ;; 12PM is noon
                     12
-                    0)]
+                    (if (and (= am-or-pm "AM")
+                             (= hours 12))
+                      -12 ;;12AM is 0
+                      0))]
     (str (tick/date date)
          "T"
          (->> hours
