@@ -195,4 +195,7 @@
               10)
      (svg/svg {:viewBox "0 0 360 120"})
      svg/serialize
+     (#(clojure.string/replace %
+                               #"><"
+                               ">\n<"))
      (spit "gauge.svg"))
