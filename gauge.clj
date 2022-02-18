@@ -1,3 +1,5 @@
+(def gauge-data-path "./data/example/EventX.csv")
+
 ;; allows for loading libraries dynamically
 (use 'clojure.tools.deps.alpha.repl)
 
@@ -115,7 +117,7 @@
        tick/offset-date-time)
 ;; => #time/offset-date-time "2022-01-17T17:51:42+08:00"
 
-(def event-tick-times  (->> "/home/geokon/Data/EventX.csv"
+(def event-tick-times  (->> gauge-data-path
                             io/reader
                             csv/read-csv
                             (drop 5) ;; remove header
