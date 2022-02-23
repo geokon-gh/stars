@@ -54,7 +54,7 @@ CSV tables as read in by ~clojure.data.csv/read-csv~ are in a format vector-of-v
 #+BEGIN_SRC clojure :exports code
   (def rain-data
     "The rain data"
-    (->> "/home/geokon/Projects/isotope/fixed-measurements.csv"
+    (->> "./data/krabi/fixed-measurements.csv"
 	 slurp
 	 read-csv
 	 csv-2-map))
@@ -72,445 +72,530 @@ Add rain data to plot
   If the SVG is one long line, then Emacs is not happy"
   [svg]
   (-> svg
-       serialize
-       (clojure.string/replace #"><" ">\n<")))
+      serialize
+      (clojure.string/replace #"><" ">\n<")))
 
-  (defn mm-plot
-    [data
-     start-date
-     width
-     height
-     left-margin]
-      (-> {:x-axis (linear-axis
-		    {:domain [0 366]
-		     :range  [left-margin width]
-		     :minor  30
-		     :label-style {:fill "none"}
-		     :pos    height})
-	   :y-axis (-> (linear-axis {:domain  [0 300]
-		                     :range   [height 0]
-		                     :major  100
-		                     :minor  10
-		                     :pos    left-margin})
-                       (assoc :major [100]))
-                       
-	   :grid {:minor-x true
-		  :minor-y false}
-	   :data [{:values  (->> data
-				 (mapv #(vector (->> %
-						     :Date
-						     tick/date
-						     (tick/new-interval start-date)
-						     tick/duration
-						     tick/days)
-						(-> %
-						    :Rain--mm-
-						    read-string))))
-		   :attribs {:fill "none" :stroke "red"}
-		   :layout  svg-bar-plot}]}
-	  (svg-plot2d-cartesian)))
+(defn mm-plot
+  "Top red plot with mm of rain"
+  [data
+   start-date
+   width
+   height
+   left-margin]
+  (-> {:x-axis (linear-axis
+		 {:domain [0
+                           366]
+		  :range  [left-margin
+                           width]
+		  :minor  30
+		  :label-style {:fill "none"}
+		  :pos    height})
+       :y-axis (-> (linear-axis {:domain  [0
+                                           300]
+		                 :range   [height
+                                           0]
+		                 :major  100
+		                 :minor  10
+		                 :pos    left-margin})
+                   (assoc :major [100]))
+       :grid {:minor-x true
+	      :minor-y false}
+       :data [{:values  (->> data
+			     (mapv
+                               #(vector (->> %
+					     :Date
+					     tick/date
+					     (tick/new-interval
+                                               start-date)
+					     tick/duration
+					     tick/days)
+					(-> %
+					    :Rain--mm-
+					    read-string))))
+	       :attribs {:fill "none"
+                         :stroke "red"}
+	       :layout  svg-bar-plot}]}
+      (svg-plot2d-cartesian)))
 
-  (defn d18O-plot
-    [data
-     start-date
-     width
-     height
-     left-margin]
-      (-> {:x-axis (linear-axis
-		    {:domain [0 366]
-		     :range  [left-margin width]
-		     :minor  30
-		     :label-style {:fill "none"}
-		     :pos    100})
-	   :y-axis (assoc (linear-axis
-			   {:domain  [0 -25] ;; the first values in effect sets the bar's `zero`
-			    :range   [  
-				      (/  height
-					  2.0)
-				      height]
-			    :pos    left-margin})
-			  :major
-			  [0 -10 -20])
-	   :grid {:minor-x true
-		  :minor-y false}
-	   :data [{:values  (->> data
-				 (mapv #(vector (->> %
-						     :Date
-						     tick/date
-						     (tick/new-interval start-date)
-						     tick/duration
-						     tick/days)
-						(-> %
-						    :d18O
-						    read-string))))
-		   :attribs {:fill "none" :stroke "#0af"}
-		   :layout  svg-bar-plot}]}
-	  (svg-plot2d-cartesian)))
+(defn d18O-plot
+  "Bottom blue plot with d18O"
+  [data
+   start-date
+   width
+   height
+   left-margin]
+  (-> {:x-axis (linear-axis
+		 {:domain [0
+                           366]
+		  :range  [left-margin
+                           width]
+		  :minor  30
+		  :label-style {:fill "none"}
+		  :pos    100})
+       :y-axis (assoc (linear-axis
+                        ;; first values in effect is the bar's `zero`
+			{:domain [0
+                                  -25]
+			 :range [(/
+                                   height
+				   2.0)
+				 height]
+			 :pos left-margin})
+		      :major
+		      [0 -10 -20])
+       :grid {:minor-x true
+	      :minor-y false}
+       :data [{:values  (->> data
+			     (mapv
+                               #(vector (->> %
+					     :Date
+					     tick/date
+					     (tick/new-interval
+                                               start-date)
+					     tick/duration
+					     tick/days)
+					(-> %
+					    :d18O
+					    read-string))))
+	       :attribs {:fill "none"
+                         :stroke "#0af"}
+	       :layout svg-bar-plot}]}
+      (svg-plot2d-cartesian)))
 
-  (defn group-by-consecutive-days
-    [data]
-    (->> (reduce (fn [{:keys [previous-date grouped-data]}
-		      new-data]
-		   {:previous-date (:Date new-data)
-		    :grouped-data (if (= 2 ;; start of one day to end of following day is 48H
-					 (->> new-data
-					      :Date
-					      tick/date
-					      (tick/new-interval previous-date)
-					      tick/duration
-					      tick/days))
-				    (update grouped-data
-					    0
-					    #(clojure.core/into % [new-data]))
-				    (clojure.core/into [[new-data]] grouped-data))})
-		 {:previous-date (-> data
-				     first
-				     :Date
-				     tick/date
-				     tick/dec)
-		  :grouped-data [[]]}
-		 data)
-	 :grouped-data
-	 (filterv #(not= 1
-			(count %)))))
+(defn group-by-consecutive-days
+  "Put days into vector"
+  [data]
+  (->> (reduce (fn [{:keys [previous-date
+                            grouped-data]}
+		    new-data]
+		 {:previous-date (:Date new-data)
+                  ;; start of one day to end of following day is 48H
+		  :grouped-data (if (=
+                                      2
+				      (->> new-data
+					   :Date
+					   tick/date
+					   (tick/new-interval
+                                             previous-date)
+					   tick/duration
+					   tick/days))
+				  (update
+                                    grouped-data
+				    0
+				    #(clojure.core/into
+                                       %
+                                       [new-data]))
+				  (clojure.core/into
+                                    [[new-data]]
+                                    grouped-data))})
+	       {:previous-date (-> data
+				   first
+				   :Date
+				   tick/date
+				   tick/dec)
+		:grouped-data [[]]}
+	       data)
+       :grouped-data
+       (filterv
+         #(not=
+            1
+	    (count %)))))
 
-  (defn grouped-data-to-intervals
-    [grouped-data
-     start-date]
-    (mapv #(vector (->> %
-		       first
-		       :Date
-		       tick/date
-		       (tick/new-interval start-date)
-		       tick/duration
-		       tick/days)
-		  (->> %
-		       last
-		       :Date
-		       tick/date
-		       (tick/new-interval start-date)
-		       tick/duration
-		       tick/days))
-	 grouped-data))
+(defn grouped-data-to-intervals
+  "Something something"
+  [grouped-data
+   start-date]
+  (mapv #(vector (->> %
+		      first
+		      :Date
+		      tick/date
+		      (tick/new-interval start-date)
+		      tick/duration
+		      tick/days)
+		 (->> %
+		      last
+		      :Date
+		      tick/date
+		      (tick/new-interval start-date)
+		      tick/duration
+		      tick/days))
+	grouped-data))
 
-  (defn event-interval-plot
-    [data
-     start-date
-     width
-     height
-     left-margin]
-    (let [grouped-data (group-by-consecutive-days data)
-	  intervals-in-days (grouped-data-to-intervals grouped-data
-						       start-date)]
-      (->> {:x-axis (linear-axis
-		    {:domain [0 366]
-		     :range  [left-margin width]
+(defn event-interval-plot
+  "Something more"
+  [data
+   start-date
+   width
+   height
+   left-margin]
+  (let [grouped-data (group-by-consecutive-days data)
+	intervals-in-days (grouped-data-to-intervals grouped-data
+						     start-date)]
+    (->> {:x-axis (linear-axis
+		    {:domain [0
+                              366]
+		     :range  [left-margin
+                              width]
 		     :minor  30
 		     :label-style {:fill "none"}
 		     :pos    height
 		     :visible false})
-	   :y-axis (linear-axis
-		    {:domain  [0 300]
-		     :range   [(* height 0.95) 0]
+	  :y-axis (linear-axis
+		    {:domain  [0
+                               300]
+		     :range   [(*
+                                 height
+                                 0.95)
+                               0]
 		     :major  100
 		     :minor  10
 		     :pos    left-margin
 		     :visible false})
-	    :data   [{:values  intervals-in-days
-		      :attribs {:stroke-width "10px" :stroke-linecap "none" :stroke "grey"}
-		      :layout  svg-stacked-interval-plot}]}
-	   (svg-plot2d-cartesian))))
+	  :data   [{:values  intervals-in-days
+		    :attribs {:stroke-width "10px"
+                              :stroke-linecap "none" :stroke "grey"}
+		    :layout  svg-stacked-interval-plot}]}
+	 (svg-plot2d-cartesian))))
 
-  (defn event-weighted-averages
-    [grouped-data]
-    (mapv (fn [event-data]
-	   (let [[sum total-mm] (reduce (fn [[sum total-mm] rainy-day]
-					  (let [day-mm (-> rainy-day
-							   :Rain--mm-
-							   read-string)
-						day-d18O (-> rainy-day
-							     :d18O
-							     read-string)]
+(defn event-weighted-averages
+  "Something something"
+  [grouped-data]
+  (mapv (fn [event-data]
+	  (let [[sum
+                 total-mm] (reduce
+                             (fn [[sum
+                                   total-mm]
+                                  rainy-day]
+			       (let [day-mm (-> rainy-day
+						:Rain--mm-
+						read-string)
+				     day-d18O (-> rainy-day
+						  :d18O
+						  read-string)]
+				 [(+ sum
+				     (* day-mm
+					day-d18O))
+				  (+ total-mm
+				     day-mm)]))
+			     [0
+                              0]
+			     event-data)
+		weighted-average (/
+                                   sum
+                                   total-mm)]
+	    weighted-average))
+	grouped-data))
 
-					    [(+ sum
-						(* day-mm
-						   day-d18O))
-					     (+ total-mm
-						day-mm)]))
-					[0 0]
-					event-data)
-		 weighted-average (/ sum total-mm)]
-	     weighted-average))
-	 grouped-data))
+(defn event-average-plot
+  "Something Something"
+  [data
+   start-date
+   width
+   height
+   left-margin]
+  (let [grouped-data (group-by-consecutive-days
+                       data)
+	intervals-in-days (grouped-data-to-intervals
+                            grouped-data
+			    start-date)
+	weighted-averages (event-weighted-averages
+                            grouped-data)
+	line-segments (mapv
+                        (fn [[segment-start-date
+			      segment-end-date]
+			     weighted-average]
+			  (println "event!: "
+                                   segment-start-date
+                                   " "
+                                   segment-end-date
+                                   " "
+                                   weighted-average)
+			  {:layout svg-area-plot
+			   :attribs {:fill "#cadbd6"}
+			   :values [[segment-start-date
+				     (if (neg?
+                                           weighted-average)
+				       weighted-average
+				       0.0)]
+				    [segment-end-date
+				     (if (neg?
+                                           weighted-average)
+				       weighted-average
+				       0.0)]]})
+			intervals-in-days
+			weighted-averages)]
+    (-> {:x-axis (linear-axis
+		   {:domain [0
+                             366]
+		    :range  [left-margin
+                             width]
+		    :minor 30
+		    :label-style {:fill "none"}
+		    :pos 100})
+	 :y-axis (assoc
+                   (linear-axis
+		     {:domain  [0 ;; first values sets the bar's `zero`
+                                -25]
+		      :range   [(/
+                                  height
+				  2.0)
+				height]
+		      :pos    left-margin})
+		   :major [0
+                           -10
+                           -20])
+	 :grid {:minor-x true
+		:minor-y false}
+	 :data line-segments}
+	(svg-plot2d-cartesian))
+    ))
 
-  (defn event-average-plot
-    [data
-     start-date
+(defn combined-plot
+  [start-date
+   width
+   height
+   data]
+  (let [margin-size 100]
+    (group
+      {}
+      (group
+        {}
+        (text
+          [0
+           120]
+          "d18O")
+	(d18O-plot
+          data
+	  start-date
+	  width
+	  height
+	  margin-size))
+      (group
+        {:transform (geom/translate
+                      M32
+		      [0
+                       -100])}
+	(mm-plot
+          data
+	  start-date
+	  width
+	  height
+	  margin-size)
+	(text
+          [0
+           185]
+          "Rain (mm)")
+	(text
+          [(+
+             margin-size
+             5)
+           110]
+          (str
+            (->> data
+		 first
+		 :Date
+		 tick/date
+                 tick/year
+                 tick/int))
+          #_(str "One Year Period. Starting on: "
+			  (->> data
+			       first
+			       :Date
+			       tick/date
+			       (tick/format (tick.format/formatter "yyyy-MM-dd")))
+			  " Ending on: "
+			  (->> data
+			       last
+			       :Date
+			       tick/date
+			       (tick/format (tick.format/formatter "yyyy-MM-dd"))))))
+
+      (group
+        {:transform (geom/translate
+                      M32
+		      [0
+                       0])}
+	     #_(event-interval-plot (filterv #(clojure.core/< 1.0 (-> %
+								      :Rain--mm-
+								      read-string))
+					     data)
+				    start-date
+				    width
+				    height
+				    margin-size)
+
+	     #_(text [0 (* height 0.975)] "Rain Events ->")))))
+
+(defn make-charts
+  ([data
+    width
+    height]
+   (make-charts
+     data
      width
      height
-     left-margin]
-    (let [grouped-data (group-by-consecutive-days data)
-	  intervals-in-days (grouped-data-to-intervals grouped-data
-						       start-date)
-	  weighted-averages (event-weighted-averages grouped-data)
-	  line-segments (mapv (fn [[segment-start-date
-				    segment-end-date]
-				   weighted-average]
-				(println "event!: " segment-start-date " " segment-end-date " " weighted-average)
-				{:layout svg-area-plot
-				 :attribs {:fill "#cadbd6"}
-				 :values [[segment-start-date
-					   (if (neg? weighted-average)
-					     weighted-average
-					     0.0)]
-					  [segment-end-date
-					   (if (neg? weighted-average)
-					     weighted-average
-					     0.0)]]})
-			      intervals-in-days
-			      weighted-averages)]
-      #_(println line-segments)
-      (-> {:x-axis (linear-axis
-		    {:domain [0 366]
-		     :range  [left-margin width]
-		     :minor  30
-		     :label-style {:fill "none"}
-		     :pos    100})
-	   :y-axis (assoc (linear-axis
-			   {:domain  [0 -25] ;; the first values in effect sets the bar's `zero`
-			    :range   [  
-				      (/  height
-					  2.0)
-				      height]
-			    :pos    left-margin})
-			  :major
-			  [0 -10 -20])
-	   :grid {:minor-x true
-		  :minor-y false}
-	   :data #_[{:values [[0 -10][10 -10]]
-		     :attribs {:fill "none" :stroke "#0af"}
-		     :layout svg-area-plot}]
-	   line-segments #_[{:values  (->> data
-					   (mapv #(vector (->> %
-							       :Date
-							       tick/date
-							       (tick/new-interval start-date)
-							       tick/duration
-							       tick/days)
-							  (-> %
-							      :d18O
-							      read-string))))
-			     :attribs {:fill "none" :stroke "#0af"}
-			     :layout  svg-bar-plot}]}
-	  (svg-plot2d-cartesian))
-      ))
-
-
-
-  (defn combined-plot
-    [start-date
-     width
-     height
-     data]
-    (let [margin-size 100
-	  ;; data  (filterv #(clojure.core/< 1.0 (-> %
-	  ;; 								:Rain--mm-
-	  ;; 								read-string))
-	  ;;                data)
-	  ]
-      (group {}
-	     (group {}
-		    (text [0 120] "d18O")
-		    #_(event-average-plot (filterv #(clojure.core/< 1.0 (-> %
-									  :Rain--mm-
-									  read-string))
-						 data)
-					start-date
-					width
-					height
-					margin-size)
-		    (d18O-plot data
-			       start-date
-			       width
-			       height
-			       margin-size))
-	     (group {:transform (geom/translate M32
-						[0 -100])} 
-		    (mm-plot data
-			     start-date
-			     width
-			     height
-			     margin-size)
-		    (text [0 185] "Rain (mm)")
-		    (text [(+ margin-size 5) 110] (str (->> data
-							    first
-							    :Date
-							    tick/date
-                                                            tick/year
-                                                            tick/int))
-                          #_(str "One Year Period. Starting on: "
-						       (->> data
-							    first
-							    :Date
-							    tick/date
-							    (tick/format (tick.format/formatter "yyyy-MM-dd")))
-						       " Ending on: "
-						       (->> data
-							    last
-							    :Date
-							    tick/date
-							    (tick/format (tick.format/formatter "yyyy-MM-dd"))))))
-
-	     (group {:transform (geom/translate M32
-						[0 0])}
-		    #_(event-interval-plot (filterv #(clojure.core/< 1.0 (-> %
-									  :Rain--mm-
-									  read-string))
-						 data)
-					 start-date
-					 width
-					 height
-					 margin-size)
-
-		    #_(text [0 (* height 0.975)] "Rain Events ->")))))
-
-
-  (defn make-charts
-    ([data
-      width
-      height]
-     (make-charts data
-		  width
-		  height
-		  0
-		  nil))
-    ([data
-      width
-      height
-      offset
-      combined-svg]
-     (println offset)
-     (let [start-date (-> data
-			   first
-			   :Date
-			   tick/date
-                           tick/year ;; Fix start-date to Jan 1st
-                           tick/int
-                           (tick/new-date 1
-                                          1))
-	   end-date (-> start-date
-                        #_#_#_#_
-                        data
+     0
+     nil))
+  ([data
+    width
+    height
+    offset
+    combined-svg]
+   (println
+     offset)
+   (let [start-date (-> data
 			first
 			:Date
 			tick/date
-			(tick/>> (tick/new-period 1 :years)))
-	   sorted-data (clojure.core/group-by #(-> %
-						   :Date
-						   tick/date
-						   (tick/relation end-date))
-					      data)
-	   rain-in-year (:precedes sorted-data)
-	   svg-of-chart (->> rain-in-year
-			     (combined-plot start-date
-					    width
-					    height)
-			     #_(svg {:width width :height height}))
-	   other-rains (:preceded-by sorted-data)]
-       (if (nil? other-rains)
-	 (svg {:width width
-	       :height offset
-	       :viewBox (str "0 0 "
-			     (+ width
-				25)
-			     " "
-			     offset)}
-	      combined-svg)
-	 (make-charts other-rains
-		      width
-		      height
-		      (+ offset height)
-		      (if (nil? combined-svg)
-		       svg-of-chart
-			(group {}
-			       combined-svg
-			       (group {:transform (geom/translate M32
-								  [0 offset])}
-				      svg-of-chart))))))))
+                        tick/year ;; Fix start-date to Jan 1st
+                        tick/int
+                        (tick/new-date
+                          1
+                          1))
+	 end-date (-> start-date ;; a year later
+		      (tick/>>
+                        (tick/new-period
+                          1
+                          :years)))
+	 sorted-data (clojure.core/group-by
+                       #(-> %
+			    :Date
+			    tick/date
+			    (tick/relation end-date))
+		       data)
+	 rain-in-year (:precedes
+                       sorted-data)
+	 svg-of-chart (->> rain-in-year
+			   (combined-plot
+                             start-date
+			     width
+			     height)
+			   #_(svg {:width width :height height}))
+	 other-rains (:preceded-by
+                      sorted-data)]
+     (if (nil?
+           other-rains)
+       ;; BASE CASE: output the combined svg
+       (svg {:width width
+	     :height offset
+	     :viewBox (str
+                        "0 0 "
+			(+ width
+			   25)
+			" "
+			offset)}
+	    combined-svg)
+       ;; RECURE: add another row to the chart
+       (make-charts
+         other-rains
+	 width
+	 height
+	 (+
+           offset
+           height)
+	 (if (nil?
+               combined-svg)
+	   svg-of-chart
+	   (group
+             {}
+	     combined-svg
+	     (group
+               {:transform (geom/translate
+                             M32
+			     [0
+                              offset])}
+	       svg-of-chart))))))))
 #+END_SRC
 
 #+RESULTS:
-: #'user/svg-to-org#'user/mm-plot#'user/d18O-plot#'user/group-by-consecutive-days#'user/grouped-data-to-intervals#'user/event-interval-plot#'user/event-weighted-averages#'user/event-average-plot#'user/combined-plot#'user/make-charts
+: #'user/svg-to-org#'user/mm-plot#'user/d18O-plot#'user/monsoon-index-plot#'user/group-by-consecutive-days#'user/grouped-data-to-intervals#'user/event-interval-plot#'user/event-weighted-averages#'user/event-average-plot#'user/combined-plot#'user/make-charts
 
 Write out rain event data to a CSV:
 #+BEGIN_SRC clojure
-    (defn rain-event-stats
-      [rain-event]
-      (let [[total-rain-during-event-mm
-	     weighted-sum-d18O]  (reduce (fn [[total-rain-mm
-					       weighted-sum-d18O]
-					      rainy-day]
-					   #_(println rainy-day)
-					   (let [rain-mm (-> rainy-day
-							     :Rain--mm-
-							     read-string)
-						 d18O (-> rainy-day
-							  :d18O
-							  read-string)]
-					     [(+ total-rain-mm
-						 rain-mm)
-					      (+ weighted-sum-d18O
-						 (* d18O
-						    rain-mm))]))
-					 [0 0]
-					 rain-event)
-	    weighted-average-d18O (/ weighted-sum-d18O
-				     total-rain-during-event-mm)]
-	{:start-date (-> rain-event
-			 first
-			 :Date)
-	 :end-data (-> rain-event
-		       last
-		       :Date)
-	 :total-rain-mm total-rain-during-event-mm
-	 :weighted-average-d18O weighted-average-d18O}))
+(defn rain-event-stats
+  [rain-event]
+  (let [[total-rain-during-event-mm
+	 weighted-sum-d18O]  (reduce
+                               (fn [[total-rain-mm
+				     weighted-sum-d18O]
+				    rainy-day]
+				 #_(println rainy-day)
+				 (let [rain-mm (-> rainy-day
+						   :Rain--mm-
+						   read-string)
+				       d18O (-> rainy-day
+						:d18O
+						read-string)]
+				   [(+
+                                      total-rain-mm
+				      rain-mm)
+				    (+
+                                      weighted-sum-d18O
+				      (*
+                                        d18O
+					rain-mm))]))
+			       [0 0]
+			       rain-event)
+	weighted-average-d18O (/
+                                weighted-sum-d18O
+				total-rain-during-event-mm)]
+    {:start-date (-> rain-event
+		     first
+		     :Date)
+     :end-data (-> rain-event
+		   last
+		   :Date)
+     :total-rain-mm total-rain-during-event-mm
+     :weighted-average-d18O weighted-average-d18O}))
 
-
-    (let [filtered-data (filterv #(clojure.core/< 1.0 (-> %
-							  :Rain--mm-
-							  read-string))
-				 rain-data)
-	  grouped-data (group-by-consecutive-days filtered-data)
-	  ;; intervals-in-days (grouped-data-to-intervals grouped-data
-	  ;;   					   (->> rain-data
-	  ;;   						first
-	  ;;   						:Date
-	  ;;   						tick/date))
-	  event-info (map rain-event-stats
-			  grouped-data)
-	  event-info-csv-vec (mapv (fn [event]
-				     (vector (:start-date event)
-					     (:end-data event)
-					     (:total-rain-mm event)
-					     (:weighted-average-d18O event)))
-				   event-info)]
-      (with-open [writer (writer "event-stats.csv")]
-	(write-csv writer
-		   (into [["state-date" "end-date" "total-precipitation-mm" "average-d18O"]]
-			 event-info-csv-vec))))
+;; Write out to file!!
+(let [filtered-data (filterv
+                      #(clojure.core/<
+                         1.0
+                         (-> %
+			     :Rain--mm-
+			     read-string))
+		      rain-data)
+      grouped-data (group-by-consecutive-days
+                     filtered-data)
+      ;; intervals-in-days (grouped-data-to-intervals grouped-data
+      ;;   					   (->> rain-data
+      ;;   						first
+      ;;   						:Date
+      ;;   						tick/date))
+      event-info (map rain-event-stats
+		      grouped-data)
+      event-info-csv-vec (mapv
+                           (fn [event]
+			     (vector
+                               (:start-date event)
+			       (:end-data event)
+			       (:total-rain-mm event)
+			       (:weighted-average-d18O event)))
+			   event-info)]
+  (with-open [writer (writer
+                       "event-stats.csv")]
+    (write-csv
+      writer
+      (into
+        [["state-date"
+          "end-date"
+          "total-precipitation-mm"
+          "average-d18O"]]
+	event-info-csv-vec))))
 #+END_SRC
 
 #+RESULTS:
 : #'user/rain-event-statsnil
 
 #+BEGIN_SRC clojure :results html
-  (->> (make-charts rain-data
-		    1500
-		    200)
-       svg-to-org
-       symbol)
+(->> (make-charts
+       rain-data
+       1500
+       200)
+     svg-to-org
+     symbol)
   ;;	   (spit "intervals.svg"))
-
 #+END_SRC
 
 #+RESULTS:
