@@ -69,16 +69,26 @@ CSV tables as read in by ~clojure.data.csv/read-csv~ are in a format vector-of-v
 #+BEGIN_SRC clojure :exports code
 (def monsoon-indeces
   "The rain data"
-  (let [csv-data (->> "./data/krabi/fixed-measurements.csv"
+  (let [csv-data (->> "./data/krabi/monsoon-indeces.csv"
 	              slurp
 	              read-csv)
-        summer (map
-                 first
-                 csv-data)
-        winter (map
-                 second
-                 csv-data)]
-        [summer winter]))
+        summers (map
+                  #(-> %
+                       first
+                       (Double/parseDouble))
+                  csv-data)
+        winters (map
+                  #(-> %
+                       second
+                       (Double/parseDouble))
+                  csv-data)]
+    (map
+      (fn [summer
+           winter]
+        [summer
+         winter])
+      summers
+      winters)))
 #+END_SRC
 
 #+RESULTS:
@@ -370,8 +380,7 @@ Add rain data to plot
 	 :grid {:minor-x true
 		:minor-y false}
 	 :data line-segments}
-	(svg-plot2d-cartesian))
-    ))
+	(svg-plot2d-cartesian))))
 
 (defn combined-plot
   [start-date
@@ -421,45 +430,96 @@ Add rain data to plot
                  tick/year
                  tick/int))
           #_(str "One Year Period. Starting on: "
-			  (->> data
-			       first
-			       :Date
-			       tick/date
-			       (tick/format (tick.format/formatter "yyyy-MM-dd")))
-			  " Ending on: "
-			  (->> data
-			       last
-			       :Date
-			       tick/date
-			       (tick/format (tick.format/formatter "yyyy-MM-dd"))))))
+		 (->> data
+		      first
+		      :Date
+		      tick/date
+		      (tick/format (tick.format/formatter "yyyy-MM-dd")))
+		 " Ending on: "
+		 (->> data
+		      last
+		      :Date
+		      tick/date
+		      (tick/format (tick.format/formatter "yyyy-MM-dd"))))))
 
       (group
         {:transform (geom/translate
                       M32
 		      [0
                        0])}
-	     #_(event-interval-plot (filterv #(clojure.core/< 1.0 (-> %
-								      :Rain--mm-
-								      read-string))
-					     data)
-				    start-date
-				    width
-				    height
-				    margin-size)
+	#_(event-interval-plot (filterv #(clojure.core/< 1.0 (-> %
+								 :Rain--mm-
+								 read-string))
+					data)
+			       start-date
+			       width
+			       height
+			       margin-size)
 
-	     #_(text [0 (* height 0.975)] "Rain Events ->")))))
+	#_(text [0 (* height 0.975)] "Rain Events ->")))))
+
+(defn monthly-monsoon-index-plot
+  "Overlay of the monsoon index"
+  [data
+   width
+   height
+   left-margin]
+  (-> {:x-axis (linear-axis
+		 {:domain [-0.5
+                           11.5]
+		  :range  [left-margin
+                           width]
+		  :pos    height
+                  :visible false})
+       :y-axis (linear-axis
+                 {:domain  [0
+                            1]
+		  :range   [height
+                            0]
+		  :pos    left-margin
+                  :visible false})
+       :grid {:minor-x true
+	      :minor-y false}
+       :data [{:values  (mapv
+                          (fn [month
+                               value]
+                            [month
+                             (first
+                               value)])
+                          (range
+                            12)
+                          data)
+	       :attribs {:fill "none"
+                         :stroke "green"}
+	       :layout  svg-line-plot}
+              {:values  (mapv
+                          (fn [month
+                               value]
+                            [month
+                             (second
+                               value)])
+                          (range
+                            12)
+                          data)
+	       :attribs {:fill "none"
+                         :stroke "magenta"}
+	       :layout  svg-line-plot}]}
+      (svg-plot2d-cartesian)))
 
 (defn make-charts
   ([data
+    monthly-monsoon-index
     width
     height]
    (make-charts
      data
+     monthly-monsoon-index
      width
      height
      0
      nil))
   ([data
+    monthly-monsoon-index
     width
     height
     offset
@@ -493,6 +553,14 @@ Add rain data to plot
                              start-date
 			     width
 			     height)
+                           (group {}
+                                  (monthly-monsoon-index-plot
+                                    (take
+                                      12
+                                      monthly-monsoon-index)
+			            width
+			            height
+                                    100))
 			   #_(svg {:width width :height height}))
 	 other-rains (:preceded-by
                       sorted-data)]
@@ -511,27 +579,30 @@ Add rain data to plot
        ;; RECURE: add another row to the chart
        (make-charts
          other-rains
-	 width
-	 height
-	 (+
-           offset
-           height)
-	 (if (nil?
-               combined-svg)
-	   svg-of-chart
-	   (group
-             {}
-	     combined-svg
-	     (group
-               {:transform (geom/translate
-                             M32
-			     [0
-                              offset])}
-	       svg-of-chart))))))))
+         (drop
+           12
+           monthly-monsoon-index)
+	       width
+	       height
+	       (+
+                 offset
+                 height)
+	       (if (nil?
+                     combined-svg)
+	         svg-of-chart
+	         (group
+                   {}
+	           combined-svg
+	           (group
+                     {:transform (geom/translate
+                                   M32
+			           [0
+                                    offset])}
+	             svg-of-chart))))))))
 #+END_SRC
 
 #+RESULTS:
-: #'user/svg-to-org#'user/mm-plot#'user/d18O-plot#'user/monsoon-index-plot#'user/group-by-consecutive-days#'user/grouped-data-to-intervals#'user/event-interval-plot#'user/event-weighted-averages#'user/event-average-plot#'user/combined-plot#'user/make-charts
+: #'user/svg-to-org#'user/mm-plot#'user/d18O-plot#'user/group-by-consecutive-days#'user/grouped-data-to-intervals#'user/event-interval-plot#'user/event-weighted-averages#'user/event-average-plot#'user/combined-plot#'user/monthly-monsoon-index-plot#'user/make-charts
 
 Write out rain event data to a CSV:
 #+BEGIN_SRC clojure
@@ -614,6 +685,7 @@ Write out rain event data to a CSV:
 #+BEGIN_SRC clojure :results html
 (->> (make-charts
        rain-data
+monsoon-indeces
        1500
        200)
      svg-to-org
@@ -632,6 +704,13 @@ Write out rain event data to a CSV:
 <g>
 <g>
 <g>
+<g>
+<g>
+<g stroke-dasharray="1 1" stroke="#ccc">
+</g>
+<polyline fill="none" points="158.33,170.40 275.00,188.36 391.67,51.32 508.33,158.11 625.00,106.32 741.67,110.09 858.33,59.51 975.00,74.25 1091.67,76.35 1208.33,122.37 1325.00,140.61 1441.67,166.39" stroke="green" />
+<polyline fill="none" points="158.33,153.21 275.00,187.78 391.67,49.38 508.33,181.24 625.00,157.26 741.67,156.69 858.33,152.90 975.00,131.72 1091.67,143.60 1208.33,124.55 1325.00,124.18 1441.67,136.56" stroke="magenta" />
+</g>
 <g>
 <g>
 <text x="0.00" y="120.00">d18O</text>
@@ -1059,7 +1138,15 @@ Write out rain event data to a CSV:
 </g>
 <g transform="matrix(1.00,0.00,0.00,1.00,0.00,0.00)" />
 </g>
+</g>
 <g transform="matrix(1.00,0.00,0.00,1.00,0.00,200.00)">
+<g>
+<g>
+<g stroke-dasharray="1 1" stroke="#ccc">
+</g>
+<polyline fill="none" points="158.33,124.88 275.00,164.71 391.67,149.76 508.33,105.50 625.00,77.68 741.67,83.71 858.33,57.24 975.00,88.61 1091.67,31.95 1208.33,132.59 1325.00,112.23 1441.67,153.58" stroke="green" />
+<polyline fill="none" points="158.33,125.03 275.00,174.09 391.67,161.32 508.33,145.71 625.00,157.17 741.67,163.74 858.33,133.12 975.00,159.91 1091.67,143.57 1208.33,144.55 1325.00,103.90 1441.67,121.79" stroke="magenta" />
+</g>
 <g>
 <g>
 <text x="0.00" y="120.00">d18O</text>
@@ -1561,7 +1648,15 @@ Write out rain event data to a CSV:
 </g>
 </g>
 </g>
+</g>
 <g transform="matrix(1.00,0.00,0.00,1.00,0.00,400.00)">
+<g>
+<g>
+<g stroke-dasharray="1 1" stroke="#ccc">
+</g>
+<polyline fill="none" points="158.33,179.43 275.00,171.99 391.67,193.98 508.33,102.07 625.00,80.03 741.67,50.63 858.33,17.70 975.00,102.81 1091.67,77.15 1208.33,75.32 1325.00,108.74 1441.67,184.85" stroke="green" />
+<polyline fill="none" points="158.33,178.72 275.00,163.53 391.67,191.85 508.33,127.66 625.00,152.48 741.67,153.86 858.33,146.38 975.00,157.13 1091.67,143.35 1208.33,126.09 1325.00,79.19 1441.67,161.45" stroke="magenta" />
+</g>
 <g>
 <g>
 <text x="0.00" y="120.00">d18O</text>
@@ -2021,7 +2116,15 @@ Write out rain event data to a CSV:
 </g>
 </g>
 </g>
+</g>
 <g transform="matrix(1.00,0.00,0.00,1.00,0.00,600.00)">
+<g>
+<g>
+<g stroke-dasharray="1 1" stroke="#ccc">
+</g>
+<polyline fill="none" points="158.33,192.11 275.00,198.05 391.67,189.13 508.33,151.46 625.00,112.00 741.67,60.76 858.33,36.29 975.00,86.73 1091.67,63.56 1208.33,58.58 1325.00,114.08 1441.67,143.20" stroke="green" />
+<polyline fill="none" points="158.33,185.00 275.00,197.82 391.67,191.51 508.33,166.35 625.00,154.67 741.67,154.38 858.33,160.19 975.00,136.14 1091.67,150.86 1208.33,107.42 1325.00,103.89 1441.67,103.37" stroke="magenta" />
+</g>
 <g>
 <g>
 <text x="0.00" y="120.00">d18O</text>
@@ -2523,7 +2626,15 @@ Write out rain event data to a CSV:
 </g>
 </g>
 </g>
+</g>
 <g transform="matrix(1.00,0.00,0.00,1.00,0.00,800.00)">
+<g>
+<g>
+<g stroke-dasharray="1 1" stroke="#ccc">
+</g>
+<polyline fill="none" points="158.33,188.83 275.00,189.07 391.67,193.60 508.33,153.80 625.00,118.57 741.67,74.01 858.33,97.98 975.00,51.15 1091.67,12.21 1208.33,137.76 1325.00,120.42 1441.67,168.25" stroke="green" />
+<polyline fill="none" points="158.33,182.29 275.00,192.98 391.67,196.20 508.33,157.29 625.00,159.69 741.67,145.52 858.33,154.05 975.00,142.79 1091.67,125.14 1208.33,133.83 1325.00,81.42 1441.67,148.96" stroke="magenta" />
+</g>
 <g>
 <g>
 <text x="0.00" y="120.00">d18O</text>
@@ -2941,7 +3052,15 @@ Write out rain event data to a CSV:
 </g>
 </g>
 </g>
+</g>
 <g transform="matrix(1.00,0.00,0.00,1.00,0.00,1000.00)">
+<g>
+<g>
+<g stroke-dasharray="1 1" stroke="#ccc">
+</g>
+<polyline fill="none" points="158.33,177.77 275.00,191.34 391.67,196.20 508.33,193.68 625.00,0.00 741.67,48.54 858.33,56.86 975.00,90.78 1091.67,30.79 1208.33,50.81 1325.00,149.61 1441.67,122.45" stroke="green" />
+<polyline fill="none" points="158.33,175.82 275.00,187.45 391.67,197.64 508.33,194.19 625.00,149.55 741.67,144.25 858.33,132.80 975.00,156.53 1091.67,156.30 1208.33,128.15 1325.00,149.21 1441.67,3.25" stroke="magenta" />
+</g>
 <g>
 <g>
 <text x="0.00" y="120.00">d18O</text>
@@ -3401,7 +3520,15 @@ Write out rain event data to a CSV:
 </g>
 </g>
 </g>
+</g>
 <g transform="matrix(1.00,0.00,0.00,1.00,0.00,1200.00)">
+<g>
+<g>
+<g stroke-dasharray="1 1" stroke="#ccc">
+</g>
+<polyline fill="none" points="158.33,90.25 275.00,183.00 391.67,163.04 508.33,135.99 625.00,44.21 741.67,94.58 858.33,104.94 975.00,64.59 1091.67,44.37 1208.33,119.63 1325.00,106.01 1441.67,154.67" stroke="green" />
+<polyline fill="none" points="158.33,23.29 275.00,181.97 391.67,161.05 508.33,135.23 625.00,136.70 741.67,157.17 858.33,158.83 975.00,142.89 1091.67,123.50 1208.33,153.49 1325.00,0.00 1441.67,132.41" stroke="magenta" />
+</g>
 <g>
 <g>
 <text x="0.00" y="120.00">d18O</text>
@@ -3903,7 +4030,15 @@ Write out rain event data to a CSV:
 </g>
 </g>
 </g>
+</g>
 <g transform="matrix(1.00,0.00,0.00,1.00,0.00,1400.00)">
+<g>
+<g>
+<g stroke-dasharray="1 1" stroke="#ccc">
+</g>
+<polyline fill="none" points="158.33,147.84 275.00,188.17 391.67,177.36 508.33,108.91 625.00,98.37 741.67,63.58 858.33,77.98 975.00,68.54 1091.67,87.42 1208.33,94.73 1325.00,127.73 1441.67,144.89" stroke="green" />
+<polyline fill="none" points="158.33,151.57 275.00,189.68 391.67,185.09 508.33,150.92 625.00,144.81 741.67,153.14 858.33,156.44 975.00,159.08 1091.67,148.31 1208.33,110.74 1325.00,112.42 1441.67,89.69" stroke="magenta" />
+</g>
 <g>
 <g>
 <text x="0.00" y="120.00">d18O</text>
@@ -4410,6 +4545,7 @@ Write out rain event data to a CSV:
 <text x="105.00" y="110.00">2018</text>
 </g>
 <g transform="matrix(1.00,0.00,0.00,1.00,0.00,0.00)" />
+</g>
 </g>
 </g>
 </g>
