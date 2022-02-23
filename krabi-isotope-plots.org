@@ -51,6 +51,8 @@ CSV tables as read in by ~clojure.data.csv/read-csv~ are in a format vector-of-v
 : #'user/csv-2-map
 
 ** Load Data from file
+
+*** Isotope Data
 #+BEGIN_SRC clojure :exports code
   (def rain-data
     "The rain data"
@@ -62,6 +64,27 @@ CSV tables as read in by ~clojure.data.csv/read-csv~ are in a format vector-of-v
 
 #+RESULTS:
 : #'user/rain-data
+
+*** Monsoon Index Data
+#+BEGIN_SRC clojure :exports code
+(def monsoon-indeces
+  "The rain data"
+  (let [csv-data (->> "./data/krabi/fixed-measurements.csv"
+	              slurp
+	              read-csv)
+        summer (map
+                 first
+                 csv-data)
+        winter (map
+                 second
+                 csv-data)]
+        [summer winter]))
+#+END_SRC
+
+#+RESULTS:
+: #'user/monsoon-indeces
+
+
 
 * Basic Plots
 Add rain data to plot
