@@ -1,0 +1,141 @@
+:imagesdir: fig/photo/eastern-caves/
+
+= Eastern Cave Survey 2022-07-11 to 2022-07-15
+
+== 2022-07-11
+=== Tham Khao Wang Thong
+
+Location:: 9.204618418631329, 99.7741429933002
+
+Quality:: Good. A lot of stalagmites
+
+Depth:: 500 meters
+
+Access:: Seems you can drive up
+
+Concerns:: 300 baht guide fee. Tourist cave. Looks like it even has some shrine inside..
+
+Other:: https://www.tripadvisor.com/Attraction_Review-g469413-d9718774-Reviews-Tham_Khao_Wang_Thong-Khanom_Nakhon_Si_Thammarat_Province.html
+
+*Entrance* (from internet)
+
+image:2022-07-11/entrance.jpg[]
+
+*Interior*
+
+image:2022-07-11/interior01.jpg[]
+image:2022-07-11/interior02.jpg[]
+image:2022-07-11/interior03.jpg[]
+
+== 2022-07-12
+=== Tham Khao Krod 1/2/3
+
+Location:: 9.2165261,99.7616255 or 9.239590, 99.801338
+
+Quality:: Bad Ceremonial Cave
+
+Depth:: N/A
+
+Access:: Public
+
+Concerns:: Monks
+
+Other::
+
+*Krod 1*
+image:2022-07-12/krod1-a.avif[]
+
+=== Tham Taled
+
+Location:: 9.31203961279708, 99.78394269229388
+
+Quality:: Bad
+
+Depth:: 100-200 meters
+
+Access:: Steep Stairs
+
+Concerns:: Only a flowstone
+
+Other:: Big Chamber
+
+*Interior*
+
+From online it looks like a temple/cave
+https://www.google.com/maps/@9.3120389,99.7839414,17z
+
+== 2022-07-13
+=== Tham Thalot (or Thalod?)
+
+Location:: 9.228682, 99.837597
+
+Quality:: Bad
+
+Temple cave..
+
+
+image:2022-07-13/talot0.jpg[]
+
+image:2022-07-13/talot1.jpg[]
+
+=== Tham Lot
+
+Location:: 9.232862, 99.866472
+
+Quality:: Bad, Dry Cave
+
+*Interior*
+
+image:2022-07-13/lot0.jpg[]
+
+image:2022-07-13/lot1.jpg[]
+
+== 2022-07-14
+=== Tham lek
+
+Location:: 9.201878, 99.774613
+
+Quality:: Bad .. dry .. flowstones and stalagtites
+
+Depth:: ??
+
+Access:: Looks developped with stairs
+
+
+Other::
+
+*Entrance*
+
+image:2022-07-14/entrance.jpg[]
+
+*Interior*
+image:2022-07-14/interior0.jpg[]
+image:2022-07-14/interior1.jpg[]
+image:2022-07-14/interior2.jpg[]
+image:2022-07-14/interior3.jpg[]
+image:2022-07-14/interior4.jpg[]
+image:2022-07-14/interior5.jpg[]
+
+
+
+== 2022-07-16
+
+Tried to find a promising cave. Guide was unavailable that day. But Nong was unable to locate it on his own. So he returned to the cave from the first day and took clearer pictures
+
+=== Tham Khao Wang Thong
+
+*SEE ABOVE FOR DETAILS*
+
+*Entrance*
+
+image:2022-07-15/entrance.jpg[]
+
+*Interior*
+image:2022-07-15/interior00.jpg[]
+image:2022-07-15/interior01.jpg[]
+image:2022-07-15/interior02.jpg[]
+image:2022-07-15/interior03.jpg[]
+image:2022-07-15/interior04.jpg[]
+image:2022-07-15/interior05.jpg[]
+
+
