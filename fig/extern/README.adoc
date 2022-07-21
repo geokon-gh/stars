@@ -1,0 +1,10 @@
+hulu-rain-oxygen.png :: Wang, Q., Wang, Y., Shao, Q., Liang, Y., Zhang, Z., & Kong, X. (2018). Millennial-scale Asian monsoon variability during the late Marine Isotope Stage 6 from Hulu Cave, China. Quaternary Research, 90(2), 394-405. doi:10.1017/qua.2018.75
+
+yongxing-rain-oxygen.png :: Wang 2018 - _The transfer of oxygen isotopic signals from precipitation to drip water and modern calcite on the seasonal time scale in Yongxing Cave, central China_
+
+speleothems.jpg :: https://commons.wikimedia.org/wiki/File:Labeled_speleothems.jpg
+
+hawaii-annual.png :: Bin Wang & LinHo 2001
+
+hawaii-asia.png:: Bin Wang & LinHo 2001
+
