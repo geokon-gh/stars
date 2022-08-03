@@ -1,5 +1,6 @@
 :imagesdir: none
 :!webfonts:
+:stylesheet: ../web/adoc.css
 
 = Notes on _Mountain Weather and Climate_
 
