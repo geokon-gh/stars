@@ -1,6 +1,7 @@
 :imagesdir: fig/photo/eastern-caves/
 :!webfonts:
 :stylesheet: ../web/adoc.css
+:!last-update-label:
 
 
 = Eastern Cave Survey 2022-07-11 to 2022-07-15
