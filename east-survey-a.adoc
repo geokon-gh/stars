@@ -1,4 +1,7 @@
 :imagesdir: fig/photo/eastern-caves/
+:!webfonts:
+:stylesheet: ../web/adoc.css
+
 
 = Eastern Cave Survey 2022-07-11 to 2022-07-15
 
@@ -17,15 +20,29 @@ Concerns:: 300 baht guide fee. Tourist cave. Looks like it even has some shrine 
 
 Other:: https://www.tripadvisor.com/Attraction_Review-g469413-d9718774-Reviews-Tham_Khao_Wang_Thong-Khanom_Nakhon_Si_Thammarat_Province.html
 
-*Entrance* (from internet)
 
-image:2022-07-11/entrance.jpg[]
 
-*Interior*
+[cols="1,1,1"]
+|===
+|*Entrance* (from internet)
+|
+|
 
-image:2022-07-11/interior01.jpg[]
-image:2022-07-11/interior02.jpg[]
-image:2022-07-11/interior03.jpg[]
+|image:2022-07-11/entrance.jpg[]
+|
+|
+|===
+
+[cols="1,1,1"]
+|===
+|*Interior*
+|
+|
+
+|image:2022-07-11/interior01.jpg[]
+|image:2022-07-11/interior02.jpg[]
+|image:2022-07-11/interior03.jpg[]
+|===
 
 == 2022-07-12
 === Tham Khao Krod 1/2/3
@@ -40,9 +57,7 @@ Access:: Public
 
 Concerns:: Monks
 
-Other::
-
-*Krod 1*
+.Krod 1
 image:2022-07-12/krod1-a.avif[]
 
 === Tham Taled
@@ -74,9 +89,11 @@ Quality:: Bad
 Temple cave..
 
 
-image:2022-07-13/talot0.jpg[]
-
-image:2022-07-13/talot1.jpg[]
+[cols="1,1,1"]
+|===
+|image:2022-07-13/talot0.jpg[]
+|image:2022-07-13/talot1.jpg[]
+|===
 
 === Tham Lot
 
@@ -86,9 +103,11 @@ Quality:: Bad, Dry Cave
 
 *Interior*
 
-image:2022-07-13/lot0.jpg[]
-
-image:2022-07-13/lot1.jpg[]
+[cols="1,1,1"]
+|===
+|image:2022-07-13/lot0.jpg[]
+|image:2022-07-13/lot1.jpg[]
+|===
 
 == 2022-07-14
 === Tham lek
@@ -106,16 +125,23 @@ Other::
 
 *Entrance*
 
-image:2022-07-14/entrance.jpg[]
+[cols="1,1,1"]
+|===
+|image:2022-07-14/entrance.jpg[]
+|===
 
 *Interior*
-image:2022-07-14/interior0.jpg[]
-image:2022-07-14/interior1.jpg[]
-image:2022-07-14/interior2.jpg[]
-image:2022-07-14/interior3.jpg[]
-image:2022-07-14/interior4.jpg[]
-image:2022-07-14/interior5.jpg[]
 
+[cols="1,1,1"]
+|===
+|image:2022-07-14/interior0.jpg[]
+|image:2022-07-14/interior1.jpg[]
+|image:2022-07-14/interior2.jpg[]
+
+|image:2022-07-14/interior3.jpg[]
+|image:2022-07-14/interior4.jpg[]
+|image:2022-07-14/interior5.jpg[]
+|===
 
 
 == 2022-07-16
@@ -127,15 +153,21 @@ Tried to find a promising cave. Guide was unavailable that day. But Nong was una
 *SEE ABOVE FOR DETAILS*
 
 *Entrance*
-
-image:2022-07-15/entrance.jpg[]
+[cols="1,1,1"]
+|===
+|image:2022-07-15/entrance.jpg[]
+|===
 
 *Interior*
-image:2022-07-15/interior00.jpg[]
-image:2022-07-15/interior01.jpg[]
-image:2022-07-15/interior02.jpg[]
-image:2022-07-15/interior03.jpg[]
-image:2022-07-15/interior04.jpg[]
-image:2022-07-15/interior05.jpg[]
 
+[cols="1,1,1"]
+|===
+|image:2022-07-15/interior00.jpg[]
+|image:2022-07-15/interior01.jpg[]
+|image:2022-07-15/interior02.jpg[]
+
+|image:2022-07-15/interior03.jpg[]
+|image:2022-07-15/interior04.jpg[]
+|image:2022-07-15/interior05.jpg[]
+|===
 
