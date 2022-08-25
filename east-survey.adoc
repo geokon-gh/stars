@@ -8,6 +8,7 @@
 = Eastern Cave Survey (Summer 2022)
 
 == Caves - Khanon
+:sectnums:
 
 === Tham Khao Wang Thong
 Location:: 9.204618418631329, 99.7741429933002
