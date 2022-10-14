@@ -1,0 +1,53 @@
+:imagesdir: fig/
+:!webfonts:
+:stylesheet: ../web/adoc.css
+:table-caption!:
+:reproducible:
+:nofooter:
+
+= Tham Khao Din Stalagmite(s)
+
+This is a very large spacious dry cave that is being converted into a temple of sorts. The bottom level are all eroded away and there are only some very ugly stalagmites. The area is generally very dusty
+
+[.scrollbox]
+--
+image:photo/thamkhaodin/p4.jpg[]
+image:photo/thamkhaodin/p1.jpg[]
+image:photo/thamkhaodin/p2.jpg[]
+image:photo/thamkhaodin/p3.jpg[]
+--
+
+I suspected that moving up in the cave we could get above this washed out layers. Through some stairs and ladders at the top you can access an enclosed chamber that contains a small group of accessible active stalagmites.
+
+== S1
+
+First you seet his huge beautiful barrel of a stalagmite. It looks like it's still active, however there is no practical way to sample it. However. it could be used to track the drip rate
+
+[.scrollbox]
+--
+image:photo/thamkhaodin/s1a.jpg[]
+image:photo/thamkhaodin/s1b.jpg[]
+image:photo/thamkhaodin/s1c.jpg[]
+--
+
+== S2
+
+Immediately behind this is a small cluster of stalagmites. One looks very active, a few others look a bit less active (maybe only during certain parts of the year). The ceiling is very high, but there seem to be wellfomed active stalagmites.
+
+
+[.scrollbox]
+--
+image:photo/thamkhaodin/s2a.jpg[]
+image:photo/thamkhaodin/s2b.jpg[]
+image:photo/thamkhaodin/s2c.jpg[]
+image:photo/thamkhaodin/s2d.jpg[]
+image:photo/thamkhaodin/s2e.jpg[]
+image:photo/thamkhaodin/s2f.jpg[]
+--
+
+video::photo/thamkhaodin/s2g.mp4[]
+
+
+== Could be more...
+
+There are higher levels but they are hard to access
