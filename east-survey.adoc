@@ -1,8 +1,9 @@
 :imagesdir: fig/photo/eastern-caves/
 :!webfonts:
 :stylesheet: ../web/adoc.css
-:!last-update-label:
 :table-caption!:
+:reproducible:
+:nofooter:
 
 
 = Eastern Cave Survey (Summer 2022)
