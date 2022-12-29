@@ -1,0 +1,91 @@
+:revealjs_customtheme: ../web/reveal-white.css
+:revealjs_slideNumber: true
+:revealjs_transition: none
+:revealjs_center: true
+:revealjs_disablelayout: true
+:!webfonts:
+
+:imagesdir: fig/
+:svg-type: inline
+
+= Title
+- Automatic pseudoindex generation for bistable climate phenomena by the bifurcation of the SVD subspace of mesoscale preciptiation
+- Automatic pseudoindex generation for bistable climate phenomena by SVD subspace bifurcation
+
+== Abstract
+As communities observe recurring regional weather patterns they will often ascribe colloquial
+names to them such as the Meiyu in East Asia or the Santa Ana winds of California. However,
+attaching quantitative characterizations to these same names often proves challenging. Heuristics
+have been developed for particular locations and particular weather phenomena, but their inherent
+subjectivity undermine the robustness of any subsequent quantitative analysis. To develop a neutral
+universal metric we start by observing that the spatial distribution of rain in a given region is in large
+part controlled by the complex interplay between the climate and the Earth’s topography.
+Consequently each individual recurring weather pattern exhibits a unique regional
+signature/distribution. Leveraging these signatures and pattern extraction algorithms we’ve
+developed a generic method for constructing regional climatic indices which allow us to objectively
+gauge the presence of the weather phenomena. As a case study we use gridded precipitation data
+from NASA’s Global Precipitation Measurement (GPM) mission (compiled in to the IMERG
+dataset) to look at annual and diurnal cycles in several regions of particular interest
+
+== Introduction
+
+The extraction of recurring climate phenomena from long term climate observations has presented a long standing challenge for meteorological data analysis with results that are often muddled and unsatisfactory. We revisit the common method of the Singular Value Decomposition (SVD), explore its inherent issues and present a comprehensive solution for climate systems that are bistable.
+
+== Data
+
+To demonstrate the utility of the method, we work with NASA’s Global Precipitation Measurement (GPM) mission data as compiled in the IMERG dataset. When we think of different climate phenomena, we often think it terms of their effects on precipitation. The spatial distribution of precipitation over a given area is the complex interplay of the local orography with different atmospheric parameters (such as pressure, moisture, wind etc.). The final distribution of rain over a given area provides us an indirect proxy to the climate processes at play. Recurring and persistent patterns generally acquire names from local communities affected. The IMERG data set provides us insights into these patterns at the interannual, seasonal and diurnal scale.
+
+== Single pattern systems
+
+The easiest precipitation patterns to extract are ones that occur in isolation. The most direct approach to pattern extraction is the Singular Value Decomposition (SVD). This treats out precipitation system as some patterns + noise. This turns out to generally be a good approximation of regional climate at the mesoscale. The noise is caused by things such as local convection and other chaotic elements of the local weather. The SVD acts as an iterative method which at every step combines input data vectors to maximize the signal strength of the resulting sum. We represent this as the induces matrix norm
+
+INDUCED MATRIX NORM EQUATION
+
+Here our input data is arranged as columns in the matrix M. x is our combination vector - designating the combination of columns we will sum. This acts akin to a weighted sum. The final condition is that ||x|| = 1 - which acts as a limiting factor on the weights. So in effect if you add a bit more of one column, you must add a bit less of the others.
+
+The SVD algorithm selects a vector x which maximizes the length of the resulting sum. When there is only one pattern present, then it will select those data points where the pattern is more prominent. The signals will add up constructively, while the noise will not. The final result will be optimal and better than a straight average of all the data since it has de-prioritize data columns which are noise dominated and given weight to those where the signal is strongest
+
+== Case Study: Hector the Convector
+
+To see the effect we start by looking at one such system - the diurnal system off of the Tiwi Islands in Australia colloquially know as Hector the Convector.
+
+== Case Study: Catatumbo lightning
+
+== Case Study: South East China
+
+When we repeat the process at a larger scale, such as South East China, we start to see suboptimal results. The dominant precipitation pattern that we expect is that of the Asian Summer Monsoon (ASM). However the result has a lot of smearing at the edges. This is due the non-stationary pattern of the ASM at the synoptic scale. The monsoon system generally starts near the equator and moves poleward - hence more equatorial regions have an earlier onset of the pattern than those that are further north. As a result the SVD can't construct an optimal sum where a substantial fraction of the data is in a half formed semi-pattern and the signals can't be summed constructively. This illustrated the danger in using the SVD at large scales as the result has a bias that is hard to interpret. This is often seen in results where selecting different regions of interest returns different inconsistent patterns.
+
+The avoid this issue, one simply has to analysis a smaller region. For instance in the case of the monsoon, at the mesoscale the onset of the monsoon happens so quickly that over the course of a year one would expect only about one week of a semi-pattern. The pattern extracted at the mesoscale can still give you insight as to the synoptic climate phenomena in effect.
+
+== Case Study: Zoomed in SEC
+
+== Bistable systems
+
+Of more interest to climatologists are bistable system. These occur at all time scales: diurnal rains in Hawaii, annual monsoons in Asia and Africa, interannual El Nino/La Nina and the North Atlantic Oscillation. These all have their own associated precipitation patterns which can be viewed at both the synoptic of mesoscale. A key property of these systems, inherent in the name, is that the two patterns in question can not co-occur.
+
+Prior research using the SVD has had mixed results when dealing with these systems. The appeal of the method is that is gives a sense of objectivity and hence it has been central to some more modern climate indices that try to avoid heuristics.
+
+This issues stem directly from properties of the SVD's singular vectors. When constructing an optimal combination of the data columns in the presence of two different signals the SVD in-effect returns a combination that actually includes both. This comes out of the property of ||x|| = 1 (which maintains that the Pythagorean length of the combination vector remains constant) but the relationship is hard to grasp on an intuitive level. The resulting sum is such that it is weighted towards the signal that is strongest.
+
+As the SVD is iterative, after constructing a singular vector (ie. the first mode) it then construct the subsequent one. This is done by removing all components of the constructed singular vector from the data, and then recalculating a new singular vector as before. Since the singular vector simultaneously contains both signals, when you remove it from the data you are not left with noise, but a different combination of signal + noise. Because the first singular vector component had been removed from the data, the next constructed singular vector must be orthogonal to the one that came before (ie. it has no component in the direction of the first). If the original data has two signals present, once the second vector is removed you will only be left with noise. This comes as a consequence of the original degrees of freedom of the system.
+
+This is best illustrated by a synthetic example
+
+== Synthetic Example: Bistable
+
+
+
+Here the first singular vector
+
+
+== Synethetic Example: Weighted
+
+== Case Study Southern Thailand
+
+When this method is applied directly to a bistable system that is biased towards one state the resulting modes can be so biased towards one state that is gives the illusion that the original signal has been extracted. Here we apply the SVD directly to monthly precipitation over ten years (2010-2020) in Southern Thailand.
+
+IMAGES OF SVD
+
+As we can see, the resulting modes look very similar to what we expect the summer and winter monsoons to look like. The first mode being the dominant summer monsoon, it exhibits a dominant west coast precipitation. And the second mode looks generally like a east coast winter monsoon pattern. However the synthetic example has shown us that this is not true. Both modes exhibit a mixture of the two signals. Furthermore, we know from the iterative construction of the singular vectors that the vectors are orthogonal - but no such constraint exists in nature. The original two signals have no reason to be orthogonal
+
+== The singular vector subspace
