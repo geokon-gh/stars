@@ -154,3 +154,77 @@ Furthermore, we know from the iterative construction of the singular vectors tha
 The original two monsoon generated signals have no reason to be orthogonal
 
 == The singular vector subspace
+
+.GUI inputs
+* coastline file
+* data files folder
+* data file resolutions
+* data file start coordinate
+* region of interest - 4 coordinates
+* selected file
+
+ ------------------------------
+               | /path to data/
+    GLOBE      | -------
+    	       | ../file1.tiff
+	       | ../file2.tiff
+start: lat/lon | ...
+ended: lat/lon | -------
+ ------------------------------
+ [12 MON] [24 HRS] [ROW X COL]
+       CYCLE LENGTH: ##
+
+
+
+     MAP OF DATA IN REGION
+           AS A GRID
+
+
+  [---------|----------------]
+ ------------------------------
+  Singular Values
+  Ii;.........................
+  #% #% #% #% .. [SV energy %]
+ ------------------------------
+               |             
+               |             
+	       |             
+       SV1     |     SV2     
+               |             
+	       |             
+               |             
+ ------------------------------
+ |	|      |      |      |
+ |	|      |      |      |
+ |  SV  |  SV  |  SV  |  SV  |
+ |	|      |      |      |
+ |	|      |      |      |
+  [---------|----------------]
+ ------------------------------
+     o   o     |SV2             
+           o   |             
+	o o    |             
+           o  o|     
+ SV1 ----------------------
+               |             
+	       |             
+               |
+               |
+   [promax] [oblimax] [bisect]
+ ------------------------------
+               |             
+               |             
+	       |             
+    PATTERN1   |   PATTERN2     
+               |             
+	       |             
+               |             
+
+
+
+
+
+
+
+
+
