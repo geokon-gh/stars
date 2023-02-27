@@ -1,0 +1,38 @@
+#TITLE: Long Abstract: Oxygen Isotope variability in Southern Thailand
+
+= Introduction
+When studying oxygen isotopes locked away in speleothem carbonate one of the foundational problems is determining the physical processes driving the variability in isotope ratios. In the Asian context the primary driver has been hypothesized to be the annual monsoon system. Past observations have shown this system's isotopic signal, or fingerprint, to be highly irregular. The intrinsic noise of the climate system creates a limit to our ability to introspect past climate variability. The annual amount-weighted average of 18O in precipitation does not provide a useful proxy for annual monsoon intensity. However when noisy annual data is integrated on the decadal scale, then these isotopic fingerprints become apparent. On the centennial and millenial scale we expect climate trends to be apparent. Layered on top of this are additional sources of noise and distortion such are the non-linear integrating effects of the karst aquifer. When working in the field we also need to be cognisent of both noise added by our equipment as well as noise induced by our selection of measurement location. Once we have a good characterization of all sourced of noise can we make an assessment of what is measureable both through field measurements of water 18O as well as through 18O measurements of speleothem carbonate.
+
+= The carbonate 18O record
+
+One of the more complete records of carbonate is the composite record from the Xian laboratory of HiaCheng
+
+FIGURE
+
+The record spans from the present back to 500kyr - which is near the limit of what is available to us through Uranium Thorium dating
+
+The record shows a bistable system where the 18O ratio changes regimes synchronous with changes in insolation. The most popular hypothesis is that this is due to a change in intensity of the summer monsoon system. As the record gets closer in time to the present and the time resolution increases, we start to see a lot of variability in the signal. However it is not immediately clear if this variability is due to rapid changes in the intensity of the monsoon (ie. signal) or if this due to some source of noise
+
+= The Asian Monsoon system
+
+The Asian monsoon system brings massive amounts of moisture from the Indian ocean and other equatorial regions to the Asian continent. Because of favorable winds and the large quantities of moisture transported over open ocean, even with frequent rainout moisture can be transported over unusually large distances. The reason the Asian monsson is hypotehsised to have a distinct isotopic signature is that frequent rainout event lead to fractionation of the moisture being transported. Heavier water molecules that incorporate 18O (and deuterium) will rain out earlier over the ocean, and the moisture that managed to reach the continent will be isotopically light during the monsoon season (relative to a "background" or local tropical reprecipitation/convection). Tieing measured isotope ratios to climate systems is still an outstanding problem - and hence saying the summer monsoon has X +/-Y d18O and the background precipitation has A +/-B d18O is not yet possible
+
+= Daily Variation in Precipitation
+
+A first look at the variability can be seen by looking at daily d18O values over the course of a year.
+
+FIGURE
+
+The data does not suggest any clear seasonal pattern and suggests that we will likely not be able to observe d18O on the annual scale.
+
+= Decadal Average 
+
+Monthly averages over the course of ten years however strongly suggests a "summer pattern" with isotopicall lighter rains. This is congrous with our hypothesis of monsoon fractionation
+
+FIGURE
+
+= Equipment variability
+
+= Location variability
+
+= Karst variability
