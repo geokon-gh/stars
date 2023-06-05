@@ -1,0 +1,119 @@
+:revealjs_customtheme: ../web/reveal-white.css
+:revealjs_slideNumber: true
+:revealjs_transition: none
+:revealjs_center: true
+:revealjs_disablelayout: true
+:!webfonts:
+
+:imagesdir: fig/
+:svg-type: inline
+
+= PhD Research Summary
+
+by George Kontsevich
+
+PhD Student - Advisor: Professor Ludvig Löwemark
+
+Department of Geosciences , National Taiwan University
+
+[.left-align]
+== Directions in Speleothem research
+
+
+_The Asian monsoon over the past 640,000 years and ice age terminations_ *Hai Cheng et al.* Nature (2016)
+image:plot/haicheng-all.svg[]
+
+.Speleothem reconstruction of the monsoon had been effective "completed" in 2016
+* Synthetic record from multiple speleothems
+* Very high temporal resolution
+* Accurate in both time and amount (^18^O)
+* Spans the full time span available with U-Th dating (~600kyr)
+
+.Outstanding questions..
+1. How does this look in different locations around Asia (BORING/DIFFICULT)?
+2. When speleothem *^18^O* changes, how exactly is the monsoon changing?
+3. Are there other drivers of *^18^O* we can look at?
+4. Are there other proxies other than *^18^O* we could be looking at? (For later..)
+[.left-align]
+
+=== Data zoom
+_The Asian monsoon over the past 640,000 years and ice age terminations_ *Hai Cheng et al.* Nature (2016)
+image:plot/haicheng-zoom.svg[]
+
+
+
+== The Other Monsoon
+
+image:diagram/two-seas-monsoon.svg[]
+
+[.columns]
+=== Wind Patterns
+[.column]
+--
+image::extern/summer-wind3h10sm.gif[]
+Summer pattern
+--
+
+[.column]
+--
+image::extern/winter-wind3h10sm.gif[]
+Winter pattern
+--
+
+=== Precipitation Patterns
+
+image:diagram/krabi-two-monsoons.png[]
+One year of monthly precipitation (IMERG satellite data)
+
+[.columns]
+=== Seasonal precipitation differences between coasts
+
+[.column]
+--
+image::map/krabi/annual/summer.svg[]
+Summer pattern (dominant in Krabi)
+--
+
+[.column]
+--
+image::map/krabi/annual/winter.svg[]
+Winter pattern (dominant in Khanom)
+--
+
+[.left-align]
+== Two Monsoons on a local scale
+
+image:diagram/rain-shadow.svg[]
+
+We could also try to focus in on a very local region
+
+PRO: Close proximity reduces the influence of secondary drivers of precipitation
+
+CON: The &Delta;^18^O between closely spaced caves maybe be too small to detect
+
+[.columns]
+
+== Characterizing the speleothem growth
+
+[.column.has-text-left]
+--
+image:diagram/karst-conduit-heavy.svg[]
+
+.Simple model...
+an increase/decrease in the monsoon is either:
+--
+
+[.column.has-text-left]
+--
+image:diagram/karst-conduit-light.svg[]
+
+1. rain season length decreased/increased
+2. daily rainfall totals decreased/increased
+--
+
+=== Two Speleothems
+
+image:diagram/karst-2-speleo.svg[]
+
+.Objective:
+Locate a cave with two speleothems have different "responses" to rainfall.
