@@ -8,7 +8,7 @@
 :imagesdir: fig/
 :svg-type: inline
 
-= PhD Research Summary
+= Tham Murd monitoring project
 
 by George Kontsevich
 
@@ -17,23 +17,23 @@ PhD Student - Advisor: Professor Ludvig Löwemark
 Department of Geosciences , National Taiwan University
 
 [.left-align]
-== Directions in Speleothem research
+== The complete speleothem ^18^O record
 
 
 _The Asian monsoon over the past 640,000 years and ice age terminations_ *Hai Cheng et al.* Nature (2016)
 image:plot/haicheng-all.svg[]
 
-.Speleothem reconstruction of the monsoon had been effective "completed" in 2016
+.*Hypothesis*: In South East China variations in ^18^O are driven by changed in the intensity of the summer monsoon system
 * Synthetic record from multiple speleothems
-* Very high temporal resolution
-* Accurate in both time and amount (^18^O)
+* Very high temporal resolution - accurate in both time and amount (^18^O)
 * Spans the full time span available with U-Th dating (~600kyr)
+* ^18^O closely follows insolation (pick your latitude..)
 
 .Outstanding questions..
-1. How does this look in different locations around Asia (BORING/DIFFICULT)?
+0. Are you sure it's a monsoon signal..?
+1. High frequency variations.. noise? signal? what's going on?
+1. How does this look in different locations around Asia?
 2. When speleothem *^18^O* changes, how exactly is the monsoon changing?
-3. Are there other drivers of *^18^O* we can look at?
-4. Are there other proxies other than *^18^O* we could be looking at? (For later..)
 [.left-align]
 
 === Data zoom
@@ -42,9 +42,11 @@ image:plot/haicheng-zoom.svg[]
 
 
 
-== The Other Monsoon
+== Study Site: Krabi, Thailand
 
 image:diagram/two-seas-monsoon.svg[]
+
+We get an added twist: A short (~2 month) Winter Monsoon system
 
 [.columns]
 === Wind Patterns
@@ -92,28 +94,47 @@ PRO: Close proximity reduces the influence of secondary drivers of precipitation
 CON: The &Delta;^18^O between closely spaced caves maybe be too small to detect
 
 [.columns]
-
-== Characterizing the speleothem growth
+== Monsoon on the cave scale
 
 [.column.has-text-left]
 --
-image:diagram/karst-conduit-heavy.svg[]
-
-.Simple model...
-an increase/decrease in the monsoon is either:
+image:diagram/karst-tower.svg[]
 --
 
 [.column.has-text-left]
 --
-image:diagram/karst-conduit-light.svg[]
+image:photo/thammurd/p0a.jpg[]
 
-1. rain season length decreased/increased
-2. daily rainfall totals decreased/increased
+The karst system acts as a (low pass?) filter on the ^18^O signal we see in precipitation
 --
 
-=== Two Speleothems
+[.columns]
+=== Equipment
+
+[.column.has-text-left]
+--
+image:outside-sampler.jpg[]
+--
+
+[.column.has-text-left]
+--
+image:inside-gauge.jpg[]
+--
+
+
+[.columns]
+=== Preliminary results
+
+[.column.has-text-left]
+--
+image:temp-results.svg[]
+--
+
+[.column.has-text-left]
+--
+image:inside-sampler.jpg[]
+--
+
+== Future Plans: Two Speleothems
 
 image:diagram/karst-2-speleo.svg[]
-
-.Objective:
-Locate a cave with two speleothems have different "responses" to rainfall.
