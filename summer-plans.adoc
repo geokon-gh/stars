@@ -1,0 +1,54 @@
+:revealjs_customtheme: ../web/reveal-white.css
+:revealjs_slideNumber: true
+:revealjs_transition: none
+:revealjs_center: true
+:revealjs_disablelayout: true
+:!webfonts:
+
+:imagesdir: fig/
+:svg-type: inline
+
+= ~~ Summer Plans ~~
+George Kontsevich
+
+PhD Student - Advisor: Professor Ludvig Löwemark
+
+Department of Geosciences , National Taiwan University
+
+[.columns]
+== Things to do..
+
+[.left-align.column]
+====
+- Work on my tan
+- Go to Chengdu
+
+
+.*AGU*
+- Register for AGU.. DEADLINE: August 2nd
+
+.*Sample Collectors*
+- Decide if we're still going to do daily samples
+- If we still want to, try to design a new .. more waterproof sampler
+====
+
+[.column]
+====
+image::boards.jpg[]
+.*Rain Gauges*
+- Coordinate with Zhenya v2.0 loggers
+- New custom boards have been designed and printed
+- A final board iteration is being worked on at the moment - will be done shortly
+- Then it will go under intense testing (in a steamy shower~~)
+
+====
+
+[.column]
+====
+image::map/krabi/annual/summer.svg[]
+
+.*IMERgination*
+- Write a GUI for my climate index generator
+- Write a first simple draft of "manuscript"
+- Demo to IMERG team ?
+====
