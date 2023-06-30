@@ -1,0 +1,27 @@
+{:deps  {;; mine
+         kxygk/steroids          {:local/root "../steroids"}
+         kxygk/csv               {:local/root "../csv"}
+         kxygk/geoprim           {:local/root "../geoprim"}
+         kxygk/geogrid           {:local/root "../geogrid"}
+         kxygk/geogrid2svg       {:local/root "../geogrid2svg"}
+         kxygk/geogrid4image     {:local/root "../geogrid4image"}
+         kxygk/geogrid4seq       {:local/root "../geogrid4seq"}
+         kxygk/quickthing        {:local/root "../quickthing"}
+         kxygk/geojson2svg       {:local/root "../geojson2svg"}
+         kxygk/rainusage         {:local/root "../rainusage"}
+         kxygk/svgmaps           {:local/root "../svgmaps"}
+         kxygk/ible              {:local/root "../ible"}
+         kxygk/tock              {:local/root "../tock"}
+         ;; extern
+         org.clojure/clojure     {:mvn/version "1.11.1"}
+         missionary/missionary   {:mvn/version "b.28"}
+         tick/tick               {:mvn/version "0.4.27-alpha"}
+         net.clojars.john/injest {:mvn/version "0.1.0-beta.8"}
+         cljfx/cljfx             {:mvn/version "1.7.22"
+                                  :exclusions  [org.openjfx/javafx-web
+                                                org.openjfx/javafx-media]}
+         org.clojure/data.csv    {:mvn/version "0.1.4"}
+         techascent/tech.ml.dataset {:mvn/version "7.000-beta-51"}
+         pez/taplet              {:git/url "https://github.com/PEZ/taplet"
+                                  :git/sha "65fb13f2be6ef42b802265d2a7e6cf19a72e33fe"}}
+         :paths ["."]}
