@@ -132,16 +132,16 @@ image::map/krabi/elevation.png[]
 == Pattern extraction through SVD/PCA
 
 [.column]
-image::map/krabi/annual/sv/first.svg[]
+image::map/krabi/annual/sv/first-sv.svg[]
 
 [.column]
-image::map/krabi/annual/sv/second.svg[]
+image::map/krabi/annual/sv/second-sv.svg[]
 
 === Third SV
-image::map/krabi/annual/sv/third.svg[]
+image::map/krabi/annual/sv/third-sv.svg[]
 
 === Fourth SV
-image::map/krabi/annual/sv/fourth.svg[]
+image::map/krabi/annual/sv/fourth-sv.svg[]
 
 == Data in 2D
 
