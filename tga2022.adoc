@@ -81,6 +81,27 @@ _Bin Wang & LinHo 2001_
 * Heuristic uses a magic number (_5_)
 --
 
+[.columns]
+=== Other indeces: ENSO indeces
+
+[.column.has-text-left]
+--
+.*Oceanic Niño Index (ONI)*
+"[..] based on a threshold of +/- 0.5^o^C for the Oceanic Niño Index (ONI) [3 month running mean of ERSST.v5 SST anomalies in the Niño 3.4 region (5^o^N-5^o^S, 120^o^-170^o^W)], based on centered 30-year base periods updated every 5 years."
+
+https://origin.cpc.ncep.noaa.gov/products/analysis_monitoring/ensostuff/ONI_v5.php
+--
+
+[.column.has-text-left]
+--
+.*Multivariate ENSO Index Version 2*
+
+image:extern/ENSO-anomalies.png[]
+https://www.psl.noaa.gov/enso/mei/
+
+"[..] The schematic is based on the composite anomalies for November-December (ND) drawn from 11 warm events and 11 cold events during 1980-2016."
+--
+
 == How does the rain actually look like?
 
 .*Dataset*
