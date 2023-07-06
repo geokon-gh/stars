@@ -149,15 +149,15 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      showgrid="false"
-     inkscape:zoom="22.283737"
-     inkscape:cx="16.963043"
-     inkscape:cy="14.427562"
+     inkscape:zoom="155.80273"
+     inkscape:cx="14.569706"
+     inkscape:cy="17.47402"
      inkscape:window-width="2478"
      inkscape:window-height="1651"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg794" />
+     inkscape:current-layer="g792" />
   <g
      id="g792"
      style="fill:#e8e8e8;fill-opacity:1">
@@ -2918,10 +2918,10 @@
     </g>
     <circle
        cx="13.98"
-       cy="14.90"
+       cy="14.9"
        fill="red"
        r="0.28"
        id="circle790"
-       style="fill:#e8e8e8;fill-opacity:1" />
+       style="fill:#10e105;fill-opacity:0.63999999" />
   </g>
 </svg>

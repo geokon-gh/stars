@@ -151,7 +151,7 @@
      showgrid="false"
      inkscape:zoom="256"
      inkscape:cx="14.707031"
-     inkscape:cy="14.982422"
+     inkscape:cy="14.978516"
      inkscape:window-width="2478"
      inkscape:window-height="1651"
      inkscape:window-x="0"
@@ -2918,11 +2918,11 @@
     </g>
     <circle
        cx="13.98"
-       cy="14.90"
+       cy="14.9"
        fill="red"
        r="0.28"
        id="circle790"
-       style="fill:#0fde05;fill-opacity:0.63578165" />
+       style="fill:#0fde05;fill-opacity:0.635782" />
   </g>
   <g
      id="path1648"
