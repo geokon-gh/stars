@@ -199,3 +199,24 @@ image::plot/krabi/annual/winter-monsoon-index.svg[]
 * 3,4 component systems (hard to visualize and validate)
 * Stability vs time step size and region
 --
+
+[.columns]
+== EXTRA: Late IMERG SVs
+
+[.column]
+image::map/krabi/annual/sv/first-sv.svg[]
+
+
+[.column]
+image::map/krabi/annual/sv/second-sv.svg[]
+
+
+[.columns]
+=== EXTRA: Final IMERG SVs
+
+[.column]
+image::map/krabi/annual/sv/first-old.svg[]
+
+
+[.column]
+image::map/krabi/annual/sv/second-old.svg[]
