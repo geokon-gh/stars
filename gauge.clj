@@ -701,7 +701,7 @@
      :location 3}))
 
 (def in-cave-duration
-  ($$ (tick/days (tick/between @($$& in-cave
+  ($$$ (tick/days (tick/between @($$& in-cave
                                      :start)
                                @($$& in-cave
                                      :end)))))
@@ -927,7 +927,7 @@
                                       :plot-width)
                                 @($$& params
                                       :plot-height)])
-          quickthing/svg2xml))))))))
+          quickthing/svg2xml))
 
 ;; IN CAVE
 
