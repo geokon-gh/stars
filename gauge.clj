@@ -650,7 +650,7 @@
                          (#(conj %
                                  [total-days
                                   0])))]
-          (let [axis (quickthing/new-axis averages
+          (let [axis (quickthing/zero-axis averages
                                           (merge options
                                                  {:x-name "DAYS"
                                                   :y-name "DRIP RATE"
@@ -763,7 +763,7 @@
                                   :end)))))
 
 (def main-drip-rate-axis
-  ($$> (quickthing/new-axis @in-cave-daily-averages
+  ($$> (quickthing/zero-axis @in-cave-daily-averages
                             (merge @($$& in-cave
                                          :options)
                                    {:x-name "DAYS"
