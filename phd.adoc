@@ -5,7 +5,7 @@
 :reproducible:
 :nofooter:
 
-= PhD Trajectory: Finding monsoons underground AGAIN
+= PhD Trajectory: Finding monsoons underground
 
 
 
@@ -91,7 +91,29 @@ The main drawbacks are that the stalagmite doesn't easily yield any other signal
 
 Going forward we need to try to develop other climate records from the caves so that we can say more about the changes we are seeing
 
+=== A mesoscale climate index
+
+The first step to understanding the paleclimate record is to understand the current climate configuration. In particular we want to have a clear understanding of the drivers of _^18^O_ in our study region. If we assume the monsoon hypothesis is correct, then we would like to know:
+- what is the isotopic signature of the summer and winter monsoons?
+- what is the isotopic signature of the "background" tropical rain in the region?
+- what is the variability in these signatures?
+
+The begin to tackle these issues we need to start with two things. A modern _^18^O_ record. A modern monsoon record. For the _^18^O_ record we have a daily record from the Krabi airport. The airport is near the study site and should generally exhibit similar _^18^O_ variability.
+
+The part that is missing is a mesoscale monsoon record. We estimate one based on a decade long super high resolution precipitation record that was collected by NASA satellites. We use a simple pattern extraction algorithm (a simplified variant of a EOF/PCA rotation) to identify the winter and summer monsoon precipitation patterns. Based on the patterns we can then estimate the presence of each monsoon for a given time period - as well as the amount of background precipitation
+
+Once we have clear metric of the  _^18^O_ and monsoons we can then start quantitatively tackle the core questions:
+- Under a stable unchanging climate, given the error and variability in the precipitation _^18^O_, how many years would you need to average to get an acceptable error? ie. under ideal conditions, what is the minimal speleothem layer we could drill and get a useful result?
+- Given ideal error-free _^18^O_ value, can we decompose it into summer/winter/background fractions?
+
+
 === Using differences in stalagmite flow paths
+
+The second question seems to pose a numeric challenge. The summer/winter/background configuration is one that doesn't have an immediate clear answer. You no longer have a classic "two endmember" setup where one climate pulls  _^18^O_ up/down while the other pulls it down/up. The third element resides in the middle and is not destinguishable from a mixture of the other two.
+
+In our case we'd guess that the summer monsoon is "very light", the local background precipitation is "very heavy" and the winter monsoon is somewhere in between. And value of _^18^O_ can be represented by different fractions of those three climate phenomena. This is effectively an issue of too many degrees of freedom!
+
+To constrain the problem and find a fixed solution, I need additional constraints. The constraint I theorize is that different speleothems in the same cave should exhibit different responses to precipitation
 
 The path of the rain water to the cave is actually a more complicated process than previously described. The water is flowing down many different small channels in the limestone, and the flow through these channels will often change depending on how much rain water is coming from above. The added pressure from large amounts can also produce a "piston effect" which pushes exponentially more water into the cave.
 
@@ -99,13 +121,32 @@ Previous research has shown that as water builds up during a long rain it will o
 
 image:diagram/karst-conduit-heavy.svg[]
 
-The net result is that each stalagmite in a cave has a fingerprint of sorts with its own set of flow paths - each stalagmite will respond slightly differently to changes in the rain. If we were to look at several stalagmites in one cave (each with their own rain response) we could start to infer more about the rains and monsoons above. For instance when we see in the record that the summer monsoon increased - what does "increased" actually means? Did the monsoon season last longer each year? Or have the rains gotten heavier? Comparing stalagmites that are sensitive to big rains to those that are not would answer these types of questions.
+The net result is that each stalagmite in a cave has a fingerprint of sorts with its own set of flow paths - each stalagmite will respond slightly differently to changes in the rain. If we were to look at several stalagmites in one cave (each with their own rain response) we could start to infer more about the rains and monsoons above
 
-Comparing different stalagmites would allow us to move from a one dimensional view of _­^18^O_ to something more nuanced.
+If we look at the simple scenario of a two-state summer/background system - any given value of _^18^O_ may represent different volumes of precipitation. The only constraint is that the fraction of summer monsoon rain to background rain remains the same.
+
+However if we have stalagmite that are more and less sensitive to high (summer monsoon) precipitation, then a change in absolute precipitation volume would result in different fractions of summer/background  _^18^O_ being deposited in the stalagmite. The two records would not match and one could say something about actual summer/background rain volumes
+
+In our three state system we would need three or four speleothems to constrain the problem and achieve the same result. Comparing different stalagmites would allow us to move from a one dimensional view of _­^18^O_ to something more nuanced.
+
+
+== Conclusion and timeline
+
+The general research is split along 3 semi-independent threads
+- climate index::
+The climate index generator is coming together and seems to present very promising results (2023-08-30). It's a bit unknown how it will be received in the meteorological community. I hope to present it at AGU to get concrete feedback. I think at the end of the day it should yield at least something new and interesting - though the scope is a bit unclear at the moment
+- flowthrough characterization::
+Equipment was unsuccessfully tested in Krabi. The second set of loggers will be installed shortly. Hopefully things will go more smoothly this time
+- paleoclimate resonstruction::
+This would involve actually taking speleothems from the cave and doing the labwork to get oxygen isotope values. This work would hopefully start in the spring. Since it looks like I need to sample 3-4 speleothems, I may just want to focus on the near-present time period (where there are hopefully other records to compare to)
+
+== Side Projects
+
+Here I list some potential side projects that are at the back of my mind
 
 === Using rain shadows to infer spatial information
 
-If we don't limit ourselves to just one cave and we look at a slightly larger scale, we can start to compare caves in a particular area. As long as the caves are near each other they will all be under the influence of the same monsoons and local weather systems.
+If we don't limit ourselves to just one cave and we look at a slightly larger scale, we can start to compare caves in a particular area. As long as the caves are near each other they will all be under the influence of the same monsoons and local weather systems. Likely caves spaced further apart would exhibit more climate variations (say different sides of a peninsula), but would also presumably have start to exhibit different mesoscale climate configuration with more potential biases due to external factors
 
 If we were to carefully select nearby caves that were separated by some small mountains then while the local climate would be the same everywhere, the different caves could end up recieving different amount of rain due to the mountains' rain shadow. Hence the record of _­^18^O_ will differ a bit from cave to cave. The rain shadow ensures that, all else being equal, rains coming towards a cave from the direction of a mountain will produce less rain than ones coming from any other direction.
 
@@ -123,21 +164,6 @@ Hu, C., Henderson, G. M., Huang, J. H., Xie, S. C., Johnson, K. R. (2008). Quant
 However it doesn't seem that anyone has yet tried to deduce a direction.
 ____
 
-== Conclusion
-
-I think the two-part project is ambitious but at the same time not unreasonable. Both ideas of course present some risks;
-
-* The stalagmite rain response fingerprinting requires having a good mathematical model for the rain flow that is corroborated by the measurements that we get from the cave. If the dripping in the cave doesn't respond to the rain in a way we can explain then it's hard to make any useful conclusions
-* The multicave spatial measurements require having equipment in multiple locations which present some technical challenges
-* In both sub-projects one has to worry about actually finding suitable locations/stalagmites and one has to hope the stalagmite records overlap in time.
-
-And of course there will be many other unknown unknowns along the way. However even though the two pieces complement each other to build a more complete picture of the past monsoons they still present independent results. Each part can be done in parallel and is not contingent on the other producing a valid result.
-
-Of course the largest risk of all is the perpetual problem of COVID..
-
-== Side Projects
-
-Here I list some potential side projects that are at the back of my mind
 
 === Insolation driver
 
