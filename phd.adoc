@@ -15,13 +15,13 @@ This is a top level document describing the motivations, background and goals of
 
 The focus of my research will be rock formations found in caves, such as stalagmites and stalagtites (collectively known as *speleothems*), and their connection to the asian monsoons. The goal of this document is two part. To first explain, based on the latest research, how the monsoon weather system is connected to the chemical record we find in caves. And then second, to explore how we can expand this cave-monsoon connection to learn more about our past climate.
 
-To keep this short many things are not discussed. So how these records fits within a broader picture of the Earth's past climate and and how it can help uncover some of geologies unanswered questions is left outside the scope of this document. Details of the study location, references, indepth technical background information on geochemistry and hydrology and the fun jargon that comes with it all - all these things live on separate pages (to be maybe uploaded over time)
+Details of the study location, references, indepth technical background information on geochemistry and hydrology will live on separate pages (to be maybe uploaded over time)
 
 == Introduction
 
 === What are speleothems?
 
-This is a general term for rocks that grow in caves. My primary focus will be on cave *stalagmites* (the rocks that growing vertically from the cave floor) because they have more a predictable growth and are easier to study when compared to other cave features. I will use the two terms interchangeably.
+This is a general term for rocks that grow in caves. My primary focus will be on cave *stalagmites* (the rocks that growing vertically from the cave floor) because they have more a predictable growth and are easier to study when compared to other cave features (TODO: Find some authoritative source on why we only look at stalagmites)
 
 === Why speleothems?
 
@@ -29,20 +29,20 @@ Relatively Young Field::
   While people have been studying caves for a while, substantive progress has been made in the past decade. My impression so far has been that there are still many unanswered questions, many poorly understood phenomena and plenty of accessible avenues of research.
 
 Matching Skillset::
-  The climate record we can see in caves is unusually "clean" with very small errors - especially when compared to other geological records. This makes it possible to use mathematical tricks to try to infer more than is available at first glance. The hope is that this will allow me to use my past experience in physics/programming to find new ways forward.
+  The climate record we can see in caves is unusually "clean" with very small errors - especially when compared to other geological records. To me this indicates that it has the potential to be a bit more quantitative than other climate proxies. The hope is that this will allow me to use my past experience in physics/programming to find new ways forward. That said, as we will see, the link between our proxies and climate is a bit limited.
 
 Team Synergy::
-  Professor's Lowemark's paleoclimate team brings in expertise from a wide variety of different areas - from lake records to arctic deep sea cores. Hopefully my work will be complementary and we can work together, learn from each other and combine our different experiences to find new unexplored areas of research at the boundaries.
+  Professor's Lowemark's paleoclimate team brings in expertise from a wide variety of different areas - from lake records to arctic deep sea cores. Hopefully my work will be complementary and we can work together, learn from each other and combine our different experiences to find new unexplored areas of research at the boundaries. Since the cave record is limited in what it can reconstruct - corroborating results/theories with other lower resolution paleoclimate records would help validate results and build a cohesive climate picture. 
 
 === What do speleothems tell us?
 
 Speleothems primarily form in caves made of limestone. They form due to water flowing through the limestone in a complicated system called _karst_ - where the water is both carving the rock, creating the caves, and creates new rock, the speleothems.
 
-The main record we find in limestone caves is the _­^18^O_ atoms we find trapped in the cave's stalagmites. _­^18^O_ is a relatively rare form of oxygen which is about _12%_ heavier than the more common oxygen _­^16^O_. It represents about _0.2%_ of all the oxygen available on Earth. If we look at the water molecules in the oceans we will occassionally see an _H~2~O_ with a _­^18^O_ oxygen. Since these water molecule will a bit heavier than the others, they will have more trouble evaporating. Hence compared to the oceans, you will find less _­^18^O_ in the rain, rivers and polar ice. The heavier water molecules that do manage to evaporate will also be the ones that tend to fall out with the first rains.
+The main record we find in limestone caves is the _­^18^O_ atoms trapped in the cave's stalagmites. _­^18^O_ is a relatively rare form of oxygen which is about _12%_ heavier than the more common oxygen _­^16^O_. It represents about _0.2%_ of all the oxygen available on Earth. If we look at the water molecules in the oceans we will occassionally see an _H~2~O_ with a _­^18^O_ oxygen. Since these water molecule will a bit heavier than the others, they will have more trouble evaporating. Hence compared to the oceans, you will find less _­^18^O_ in the rain, rivers and polar ice. The heavier water molecules that do manage to evaporate will also be the ones that tend to fall out with the first rains.
 
 image:diagram/karst-light-rain.svg[]
 
-When it rains above a limestone cave system all the _H~2~O_, both heavy and light, will initially soak into the soil above. Soil is mostly made of decomposing vegitation and the biological activity within is constantly producing _CO~2~_ gas. The deeper you go down in the soil the more difficult it is for this _CO~2~_ to flow out to the atmosphere above. So as the rain water flows down it comes in contact with _CO~2~_ at higher and higher concentrations - and this _CO~2~_ will start to dissolve into the water in larger amounts. Once dissolved, part of the _CO~2~_ will produces a weak acid _H~2~CO~3~_ (carbonic acid). The now mildly acidic rain water continues to flow down till it reaches the underlying limestone rock below the soil.
+When it rains above a limestone cave system all the _H~2~O_, both heavy and light, will initially soak into the soil above. Within the soil decomposition and plant respiration through the root system is constantly producing _CO~2~_ gas. The deeper you go down in the soil the more difficult it is for this _CO~2~_ to flow out to the atmosphere above. So as the rain water flows down it comes in contact with _CO~2~_ at higher and higher concentrations - and this _CO~2~_ will start to dissolve into the water in larger amounts. Once dissolved, part of the _CO~2~_ will produces a weak acid _H~2~CO~3~_ (carbonic acid). The now mildly acidic rain water continues to flow down till it reaches the underlying limestone rock below.
 
 When the acidic rain water makes contact with this rock layer it dissolves a small amount of the limestone (mostly calcium-carbonate _CaCO~3~_) into calcium bicarbonate _Ca(HCO~3~)_. This mixture of water, calcium bicarbonate and some remaining dissolved _CO~2~_ gas will then continue to slowly flow downward through the limestone (from where it will typically continue down to a river and eventually back to the sea).
 
@@ -102,20 +102,20 @@ The begin to tackle these issues we need to start with two things. A modern _^18
 
 The part that is missing is a mesoscale monsoon record. We estimate one based on a decade long super high resolution precipitation record that was collected by NASA satellites. We use a simple pattern extraction algorithm (a simplified variant of a EOF/PCA rotation) to identify the winter and summer monsoon precipitation patterns. Based on the patterns we can then estimate the presence of each monsoon for a given time period - as well as the amount of background precipitation
 
-Once we have clear metric of the  _^18^O_ and monsoons we can then start quantitatively tackle the core questions:
+Once we have a clear metric of the  _^18^O_ and monsoons we can then start quantitatively tackle the core questions:
 - Under a stable unchanging climate, given the error and variability in the precipitation _^18^O_, how many years would you need to average to get an acceptable error? ie. under ideal conditions, what is the minimal speleothem layer we could drill and get a useful result?
-- Given ideal error-free _^18^O_ value, can we decompose it into summer/winter/background fractions?
+- Given an ideal error-free _^18^O_ value, can we decompose it into its summer/winter/background fractions?
 
 
 === Using differences in stalagmite flow paths
 
 The second question seems to pose a numeric challenge. The summer/winter/background configuration is one that doesn't have an immediate clear answer. You no longer have a classic "two endmember" setup where one climate pulls  _^18^O_ up/down while the other pulls it down/up. The third element resides in the middle and is not destinguishable from a mixture of the other two.
 
-In our case we'd guess that the summer monsoon is "very light", the local background precipitation is "very heavy" and the winter monsoon is somewhere in between. And value of _^18^O_ can be represented by different fractions of those three climate phenomena. This is effectively an issue of too many degrees of freedom!
+The winter monsoon's moisture source in the Bay of Thailand or South China Sea is closer to the study site and hence it should undergo less rainout before reaching the cave compared to the summer monsoon which comes from the Indian Ocean. When looking at their isotopic signatures we'd expect that the summer monsoon is isotopically "very light", the local background precipitation is "very heavy" and the winter monsoon is somewhere in between. As a result a fundamental issue is that any measured value of _^18^O_ could correspond to different fractions of those three climate phenomena and we have no immediate way to distinguish which fraction is correct. This is effectively an issue of too many degrees of freedom!
 
-To constrain the problem and find a fixed solution, I need additional constraints. The constraint I theorize is that different speleothems in the same cave should exhibit different responses to precipitation
+To constrain the problem and to find a fixed solution I need additional constraints. I hope to construct an additional contraint on the total precipitation volume by comparing different speleothems in the same cave. Each stalagmite should exhibit different responses to precipitation volume. Hence the amount of summer/winter monsoon rain that reaches each stalagmite will be different and as a result the valid climate fractions for the measured oxygen isotopes in each speleothem will also be distinct.
 
-The path of the rain water to the cave is actually a more complicated process than previously described. The water is flowing down many different small channels in the limestone, and the flow through these channels will often change depending on how much rain water is coming from above. The added pressure from large amounts can also produce a "piston effect" which pushes exponentially more water into the cave.
+The reason for the difference is that the path of the rain water to the cave is actually a more complicated process than previously described. The water is flowing down many different small channels in the limestone, and the flow through these channels will often change depending on how much rain water is coming down from above. The added pressure from large amounts can also produce a "piston effect" which pushes exponentially more water into the cave.
 
 Previous research has shown that as water builds up during a long rain it will often find new channels to flow down into the cave. Just like when you fill your hands with water, as the water level rises it finds new gaps between your fingers to go through. This can lead to a stalagmite which has little flow and growth when rains are small, but once the rains pass some threshold level, a new channel is reached and there is a drastic increase in the flow/growth. Or you can have the opposite situation, where past a certain point the water finds some other way down - past the stalagmite - and the flow rate stops increasing.
 
