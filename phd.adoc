@@ -150,12 +150,13 @@ A potential pitfall is that if the rain volume response in the cave is particula
 == Conclusions and timeline
 
 The general research is split along 3 semi-independent threads
-- climate index::
-The climate index generator is coming together and seems to present very promising results (2023-08-30). It's a bit unknown how it will be received in the meteorological community. I hope to present it at AGU to get concrete feedback. I think at the end of the day it should yield at least something new and interesting - though the scope is a bit unclear at the moment
-- flowthrough characterization::
-Equipment was unsuccessfully tested in Krabi. The second set of loggers will be installed by the end of 2023-09 hopefully. And hopefully things will go more smoothly this time around. Meanwhile water samples are still being collected both outside and in the cave.
-- paleoclimate resonstruction::
-This would involve actually taking speleothems from the cave and doing the labwork to get oxygen isotope values. This work would hopefully start in the spring. Since it looks like I need to sample 3-4 speleothems, I may just want to focus on the near-present time period (where there are hopefully other records to compare to)
+
+climate index::
+  The climate index generator is coming together and seems to present very promising results (2023-08-30). It's a bit unknown how it will be received in the meteorological community. I hope to present it at AGU to get concrete feedback. I think at the end of the day it should yield at least something new and interesting - though the scope is a bit unclear at the moment
+flowthrough characterization::
+  Equipment was unsuccessfully tested in Krabi. The second set of loggers will be installed by the end of 2023-09 hopefully. And hopefully things will go more smoothly this time around. Meanwhile water samples are still being collected both outside and in the cave.
+paleoclimate resonstruction::
+  This would involve actually taking speleothems from the cave and doing the labwork to get oxygen isotope values. This work would hopefully start in the spring. Since it looks like I need to sample 3-4 speleothems, I may just want to focus on the near-present time period (where there are hopefully other records to compare to)
 
 == Side Projects
 
