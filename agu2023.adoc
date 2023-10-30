@@ -1,0 +1,465 @@
+:revealjs_customtheme: ../web/reveal-white.css
+:revealjs_slideNumber: true
+:revealjs_transition: none
+:revealjs_center: true
+:revealjs_disablelayout: true
+:!webfonts:
+
+:imagesdir: fig/
+:svg-type: inline
+
+= Using IMERG precipitation patterns to index climate at the mesoscale: A basis rotation method based on climate bistability
+by George Kontsevich
+
+PhD Student - Advisor: Professor Ludvig Löwemark
+
+Department of Geosciences , National Taiwan University
+
+[.columns]
+== Preamble
+
+[.column]
+image:photo/thammurd/p0c.jpg[]
+
+[.column]
+image:diagram/karst-light-rain.svg[]
+
+[.column]
+image:photo/thammurd/s2c.jpg[]
+
+
+[.text-left]
+=== !
+
+image:diagram/haicheng-all.svg[]
+
+.Observations:
+* ^18^O varies with insolation at ~60 degrees North
+* Exhibits a "stepped" behavior for unknown reasons
+* The main driver is hypothesized to be changes in the Monsoon
+
+.Monsoon mechanism (in theory..)
+* Monsoon moisture from the Indian ocean rains out heavier molecules over the ocean
+* "light" ^18^O poor moisture reaches the continent
+
+
+[.text-left]
+=== !
+
+image:diagram/haicheng-2-state.svg[]
+
+.Unknowns:
+* when ^18^O goes up, what is the actual change in the monsoon strength?
+* cave water = monsoon + non-monsoon rains
+* what is the isotope signature of each type of rain?
+* ...
+* what is "monsoon strength"? (length of season? peak rainfall intensity? cumulative rianfall amount?)
+
+
+=== !
+
+image:diagram/haicheng-3-state.svg[]
+
+*  It can get even more complicated..
+
+== Introduction
+
+[.text-left]
+====
+Objective:: To generate a location specific climate metric
+Motivation:: We often want to correlate phenomena to the presence of a climate system in a locale
+
+._Using IMERG precipitation patterns to index climate at the mesoscale: A basis rotation method based on climate bistability_
+*patterns* :: extraction by PCA/EOF/SVD
+*mesoscale* :: 10 yrs of IMERG data presents new synergies with PCA
+*climate bistability* :: simplifying constraint in many climate systems
+*basis rotation* :: a new way to "fix" the PCA
+====
+
+== Motivating example
+
+Two monsoon systems in South East Asia
+
+image:diagram/two-seas-monsoon.svg[]
+
+We suspect each system's precipitation has an associated ^18^O concentration
+
+[.columns]
+=== !
+
+[.column]
+====
+.Annual daily measurements ()
+* RED: mm of rain
+* BLUE: d^18^O
+* Each row = one year - Jan 1st -> Dec 31st
+image:plot/airport-isotopes.svg[]
+
+====
+[.column.has-text-left]
+====
+
+.Visual inspection
+* A "Dry Season" at the beginning of the year (controlled by ENSO)
+* No particlarly clear correlation between rain amounts and isotope
+* No clear "summer" or "winter" seasons
+
+.Questions:
+* What is the ^18^O signature of the winter/summer monsoon?
+* Does the ^18^O covary with the winter/summer monsoons?
+* When is the summer/winter monsoon exactly?
+
+.What we would like is to calculate correlation coefficients
+* ^18^O vs. "Summer Monsoonness"
+* ^18^O vs. "Winter Monsoonness"
+
+*We need a _local_ climate metric to quantify the presence of a climate phenomena*
+====
+
+[.columns]
+== Rain as climate proxy
+
+[.column]
+====
+high density precipitation data thanks to NASA satellites (IMERG)
+image:diagram/krabi-annual-rain/2011.png[]
+====
+
+[.column]
+====
+image:map/krabi/elevation.png[]
+
+* climate configuration/parameters + topography -> rain's spatial pattern.
+* rain patterns = unique fingerprint
+* the pattern signals the presence of the climate phenomena
+* a detailed understanding of the climate configuration isn't need
+====
+
+=== !
+image:diagram/krabi-annual-rain/2011.png[]
+
+=== !
+image:diagram/krabi-annual-rain/2012.png[]
+
+=== !
+image:diagram/krabi-annual-rain/2013.png[]
+
+=== !
+image:diagram/krabi-annual-rain/2014.png[]
+
+=== !
+image:diagram/krabi-annual-rain/2015.png[]
+
+[.columns]
+=== First Pass: Visual Inspection
+
+[.column]
+image:map/krabi/elevation.png[]
+
+[.column]
+image:diagram/krabi-two-monsoons.png[]
+
+[.column.has-text-left]
+.Observations:
+* 2 patterns: summer + winter
+* Onset/Withdrawl change year to year
+* Sporadic dry period
+.* Weather = Climate + Noise
+
+[.columns]
+== Second Pass: EOF
+
+[.column]
+====
+image:imergination/first-sv.svg[]
+PC1
+====
+
+[.column]
+====
+image:imergination/second-sv.svg[]
+PC2
+====
+
+[.column]
+====
+image:imergination/sv-weights.svg[]
+Singular Values
+====
+
+[.column.text-left]
+====
+.Good:
+. Noise is gone! (in PC3,4,5,..)
+. IMERG/mesoscale eliminates smearing + gives a ~40000 dimension basis
+
+.Bad:
+. PC1/2 must be orthogonal - while climate does not
+. PC1/2 are mixtures of the two patterns - always!
+====
+
+[.columns]
+=== Second Pass: EOF
+
+[.column]
+====
+image:imergination/sv-0.svg[]
+PC1
+image:imergination/sv-3.svg[]
+PC4
+====
+
+[.column]
+====
+image:imergination/sv-1.svg[]
+PC2
+image:imergination/sv-4.svg[]
+PC5
+====
+
+[.column]
+====
+image:imergination/sv-2.svg[]
+PC3
+image:imergination/sv-5.svg[]
+PC6
+====
+
+[.column.text-left]
+====
+.Good:
+. *Noise is gone! (in PC3,4,5,..)*
+. IMERG/mesoscale eliminates smearing + gives a ~40000 dimension basis
+
+.Bad:
+. PC1/2 must be orthogonal - while climate does not
+. PC1/2 are mixtures of the two patterns - always!
+====
+
+[.columns]
+=== Second Pass: EOF
+
+[.column]
+====
+El Nino
+
+image:extern/ENSO-anomalies.png[https://psl.noaa.gov/enso/mei/]
+image:extern/Sst_9798_animated.gif[https://upload.wikimedia.org/wikipedia/commons/f/fb/Sst_9798_animated.gif]
+
+Multivariate ENSO Index Version 2 (MEI.v2)
+====
+
+[.column]
+====
+North Atlantic Oscillation
+
+image:extern/nao_pc_mon.new_.gif[https://climatedataguide.ucar.edu/climate-data/hurrell-north-atlantic-oscillation-nao-index-pc-based]
+Hurrell North Atlantic Oscillation Index
+
+Arctic Oscillation
+image:extern/new.ao.loading.gif[https://www.cpc.ncep.noaa.gov/products/precip/CWlink/daily_ao_index/loading.html]
+"the first empirical orthogonal function (EOF) of monthly mean 1000 hPa geopotential height during the 1979-2000 period"
+====
+
+[.column]
+====
+Antartic Oscillation(AO) Southern Annular Mode (SAM)
+
+image:extern/AO-front.jpeg[https://en.wikipedia.org/wiki/Antarctic_oscillation#/media/File:FMIB_36792_Coup_de_Vent_d'Ouest,_au_Sud_de_l'Australie_(4_September_1895).jpeg]
+
+image:extern/new.aao.loading.gif[https://www.cpc.ncep.noaa.gov/products/precip/CWlink/daily_ao_index/aao/aao.loading.shtml]
+====
+
+[.column]
+====
+.Good:
+. Noise is gone! (in PC3,4,5,..)
+. *IMERG/mesoscale eliminates smearing* + gives a ~2500 dimension basis
+
+.Bad:
+. PC1/2 must be orthogonal - while climate does not
+. PC1/2 are mixtures of the two patterns - always!
+====
+
+[.columns]
+== Fixing the EOF: What's going wrong?
+
+[.column.is-one-quarter]
+====
+image:diagram/krabi-annual-rain/2011.png[]
+image:diagram/krabi-annual-rain/2012.png[]
+image:diagram/krabi-annual-rain/2013.png[]
+====
+
+[.column.is-one-quarter]
+====
+image:imergination/first-sv.svg[]
+image:imergination/second-sv.svg[]
+====
+
+[.column.is-vcentered]
+image:diagram/sv-projections.svg[]
+
+[.columns]
+== Fixing the EOF: Bistability
+
+[.column]
+image:diagram/sv-projections.svg[]
+
+[.column.has-text-left]
+====
+.Observations:
+. Climate is either "summer monsoon" or "winter monsoon"
+. Climate can't be both! (except maybe in a transition month)
+. Many climate phenomena excihibit bistability: ENSO, NAO, AO, SAM
+
+.Fix:
+. Divide the PC1/PC2 plane in two to halves
+. Such that you minimize the variance of both halves
+. The centroid of each half yield the "true" pattern
+====
+
+
+[.columns]
+=== Fixing the EOF: Bistability
+
+[.column]
+image:imergination/sv-projs.svg[]
+
+[.column.has-text-left]
+====
+.Observations:
+. Climate is either "summer monsoon" or "winter monsoon"
+. Climate can't be both! (except maybe in a transition month)
+. Many climate phenomena excihibit bistability: ENSO, NAO, AO, SAM
+
+.Fix:
+. Divide the PC1/PC2 plane in two to halves
+. Such that you minimize the variance of both halves
+. The centroid of each half yield the "true" pattern
+====
+
+[.columns]
+=== Fixing the EOF: Bistability
+
+[.column]
+image:imergination/first-pattern.svg[]
+
+[.column]
+image:imergination/second-pattern.svg[]
+
+
+[.columns]
+=== Fixing the EOF: Bistability
+
+[.column.is-one-third]
+====
+image:diagram/krabi-annual-rain/2011.png[]
+image:diagram/krabi-annual-rain/2012.png[]
+====
+
+
+[.column.is-one-quarter]
+====
+image:imergination/first-pattern.svg[]
+
+image:imergination/second-pattern.svg[]
+====
+
+[.column]
+image:imergination/indeces.svg[]
+
+
+[.columns]
+== Fixing the EOF: Noise normalization TODO
+
+[.column]
+====
+image:diagram/krabi-annual-rain/2011.png[]
+image:diagram/krabi-annual-rain/2012.png[]
+image:diagram/krabi-annual-rain/2013.png[]
+====
+
+
+[.column.has-text-left]
+====
+.Observations:
+* Notice how each month's rain looks like:
+
+`MonthlyRain = ClimatePattern + Noise`
+
+* However, since you can't have negative rain, the *"Noise"* is all positive values.
+
+.Fix:
+. Find the average power of the *"Noise"*
+. Subtract it from all the data
+. Rerun the PCA bisection
+====
+
+
+[.columns]
+=== Fixing the EOF: Noise normalization TODO
+
+[.column]
+====
+image:imergination/sv-0.svg[]
+PC1
+image:imergination/sv-3.svg[]
+PC4
+====
+
+[.column]
+====
+image:imergination/sv-1.svg[]
+PC2
+image:imergination/sv-4.svg[]
+PC5
+====
+
+[.column]
+====
+image:imergination/sv-2.svg[]
+PC3
+image:imergination/sv-5.svg[]
+PC6
+
+====
+
+[.column]
+====
+* The sum of PC3,4,5,6,.. will give us an estimate of the power of the noise
+* We can then subtract it so the "Noise" is around zero
+====
+
+[.columns]
+=== Fixing the EOF: Noise normalization TODO
+
+[.column.is-one-third]
+====
+image:diagram/sv-projections.svg[]
+====
+
+[.column.has-text-left.is-one-third]
+====
+.Observations:
+* The Noise is uniform and a uniform signal actually forms a vector on the PC1/2 plane
+* Normalizing the noise will shift all the points rightward
+* New bisections basis should provide a tighter fit
+* New climate index should
+====
+
+[.column.is-one-third]
+====
+image:diagram/sv-projections-shift.svg[]
+====
+
+
+== Fixing the EOF: Dry Season elimination
+image:diagram/sv-projections-dry.svg[]
+The Dry Season functions as a “3rd Pattern" but it's of a known shape (ie. no rain)
+
+
+== Fixing the EOF: Mixing months
+image:diagram/sv-projections-interseason.svg[]
+
+One month during each year, when we go from a Summer Monsoon to a Winter Monsoon, the two patterns intermix. After our first pass, we can isolate which month this is and reconstruct a more robust basis in a second pass
