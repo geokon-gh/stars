@@ -1,0 +1,53 @@
+= POSTER
+
+== Case Studies
+
+WORLD MAP - with highlighted regions
+
+- Thailand
+- India
+- Africa
+
+== Spatial Climate Patterns
+
+Precipitation Distribution = Atmosphere State + Orography
+
+Recurrent rain patterns function as a unique fingerprint for the precense of climate phenomena
+
+Most recurrant patterns come in a positive and negative phase - ex: ENSO, NAO, SAM, AO
+
+
+ANNUAL MAPS OR RAIN
+
+== PCA
+
+We can extract the repeating elements through a PCA of the local IMERG precipitation record
+
+High resolution mesocale data minimizes data smearing.
+
+At the meso scale climate patterns manifest all at once across the region with no apparant North/South or West/East onset delay.
+
+
+PCA BASIS VECTORS
+
+== PC subspace
+
+The first two EOFs form a subspace which captures both positive and negative phases of the climate phenomena. We can reproject our data into this subspace
+
+Both EOF1 and EOF2 basis vectors always represent a mixture of both climate phases
+
+Since both climate phases cannot cooccur, the subspace can be bifurcated into a positive and negative phase
+
+PC SUBSPACE REPROJECTIONS
+
+== Climate Phase Basis
+
+We can find each climate phase's pattern by finding the centroid of each half plane
+
+This creates a pair of nonorthogonal rotated basis vector
+
+== Climate Index
+
+Doing an orthogonal projection on to these climate centroids we can calculate the presence of each climate phenomena and construct something akin to a local climate index.
+
+To eliminate double counting each data point is projected onto the centroid of the half plane it's located on
