@@ -8,35 +8,38 @@ WORLD MAP - with highlighted regions
 - India
 - Africa
 
-== Spatial Climate Patterns
+== IMERG
 
-Precipitation Distribution = Atmosphere State + Orography
+IMERG shows the mesoscale spatial distribution of precipitation
 
-Recurrent rain patterns function as a unique fingerprint for the precense of climate phenomena
+Precipitation Distribution = Climate + Orography + Noise
 
-Most recurrant patterns come in a positive and negative phase - ex: ENSO, NAO, SAM, AO
+Recurrent climate driven rain patterns function as a unique fingerprint for the precense of climate phenomena
 
 
 ANNUAL MAPS OR RAIN
 
 == PCA
 
-We can extract the repeating elements through a PCA of the local IMERG precipitation record
+Pattern extraction starts with a PCA of the 10 years of monthly IMERG records
 
-High resolution mesocale data minimizes data smearing.
-
-At the meso scale climate patterns manifest all at once across the region with no apparant North/South or West/East onset delay.
+High resolution mesocale data minimizes smearing, as patterns manifest all at once across the region with no apparant North/South or West/East onset delay.
 
 
 PCA BASIS VECTORS
 
 == PC subspace
 
-The first two EOFs form a subspace which captures both positive and negative phases of the climate phenomena. We can reproject our data into this subspace
+Looking at IMERG records in the PC1/2 subspace show that climate is typically in on of two mutually exclusive positive or negative phases. This characteristic of most systems. Ex: ENSO, NAO, SAM, AO
+
 
 Both EOF1 and EOF2 basis vectors always represent a mixture of both climate phases
 
 Since both climate phases cannot cooccur, the subspace can be bifurcated into a positive and negative phase
+
+
+Most recurrant patterns come in a positive and negative phase - ex: ENSO, NAO, SAM, AO
+
 
 PC SUBSPACE REPROJECTIONS
 

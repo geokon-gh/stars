@@ -398,7 +398,7 @@ image:diagram/krabi-annual-rain/2013.png[]
 
 
 [.columns]
-=== Fixing the EOF: Noise normalization TODO
+=== Fixing the EOF: Noise normalization !!TODO!!
 
 [.column]
 ====
@@ -432,7 +432,7 @@ PC6
 ====
 
 [.columns]
-=== Fixing the EOF: Noise normalization TODO
+=== Fixing the EOF: Noise normalization !!TODO!!
 
 [.column.is-one-third]
 ====
@@ -454,12 +454,12 @@ image:diagram/sv-projections-shift.svg[]
 ====
 
 
-== Fixing the EOF: Dry Season elimination
+== Fixing the EOF: Dry Season elimination !!TODO!!
 image:diagram/sv-projections-dry.svg[]
 The Dry Season functions as a “3rd Pattern" but it's of a known shape (ie. no rain)
 
 
-== Fixing the EOF: Mixing months
+== Fixing the EOF: Mixing months !!TODO!!
 image:diagram/sv-projections-interseason.svg[]
 
 One month during each year, when we go from a Summer Monsoon to a Winter Monsoon, the two patterns intermix. After our first pass, we can isolate which month this is and reconstruct a more robust basis in a second pass

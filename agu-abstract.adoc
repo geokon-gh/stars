@@ -1,7 +1,13 @@
-# AGU
+:imagesdir: thailand/
+:!webfonts:
+:stylesheet: ../web/adoc.css
+:table-caption!:
+:reproducible:
+:nofooter:
+
+# Using IMERG precipitation patterns to index climate at the mesoscale: A basis rotation method based on climate bistability
 
 Session: H23U-1847
-Title: Using IMERG precipitation patterns to index climate at the mesoscale: A basis rotation method based on climate bistability
 
 Date:  Wednesday, 13 December 2023
 Time: 06:10 - 10:30
@@ -21,25 +27,35 @@ For this analysis we are using the IMERG dataset. This dataset provides a 0.1x0.
 
 For this proof-of-concept test of the method I use monthly aggrigate precipitation values. I used ten years of data from 2010 to 2020, resulting in 120 montly snapshots
 
-YEARLY CYCLE PICTURE
-
+[.columns]
+====
+image:year0.svg[]
+====
 ## Methods
 
 The procedure is in 4 simple steps. First I do a singular value decomposition of the data which yields 120 basis vectors. This is because the dimension of each image, ie. the number of pixels, exceeds the total number of images.
 
 Here we show the first 4 vectors
 
-SV IMAGES
+[.columns]
+====
+image:sv-0.svg[]
+image:sv-1.svg[]
+image:sv-2.svg[]
+image:sv-3.svg[]
+image:sv-4.svg[]
+image:sv-5.svg[]
+====
 
 The singular values confirm what we see on visual inspection, that there are two dominant patterns captures in the first and second singular vectors. The remaining vectors characterize the noise.
 
-SW IMAGE
+image:sv-weights.svg[]
 
 We can see this in the vector images, where the first two images present smooth patterns, while the remaining two show something that looks like a high frequency noise.
 
 We can then look again at our initial data (the 120 monthly images) as they appear in projected on to the first and second singular vectors.
 
-PROJ
+image:sv-projs.svg[]
 
 When looking at the data in this 2D subspace two important observations can be made:
 
@@ -49,8 +65,12 @@ When looking at the data in this 2D subspace two important observations can be m
 
 These two observations illustrate that the weather is almost always in one of two states. To isolate these two groups, the subspace can split into two halves and the average centroid of each half can be calculated. All splitting dichotomies are evaluated and the one selected minimizes the total variance of both halves (red line in plot). Each resulting centroid, indicated by dashed lines, represents a mixture of the two orthogonal singular basis vectors and can be visually inspected
 
-PATTERN 1 and 2
+[.columns]
+====
+image:first-pattern.svg[]
+image:first-pattern.svg[]
+====
 
 The two resulting patterns correspond to the recurring patterns observed in the original data. These form a new (non-orthogonal) basis. Projecting the original non-orthogonally on to these two vectors gives each data point a value quantifying it's correspondence to each climate pattern. Based on these projections each month get two climatic index values. We use the bisecting line to constrain each data point to one half so that only one climate index is generated for each point in a composite plot 
 
-CLIMATE INDEX
+image:indeces.svg[]
