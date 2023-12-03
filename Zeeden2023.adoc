@@ -1,0 +1,80 @@
+:revealjs_customtheme: ../web/reveal-white.css
+:revealjs_slideNumber: true
+:revealjs_transition: none
+:revealjs_center: true
+:revealjs_disablelayout: true
+:!webfonts:
+
+:imagesdir: fig/
+
+= Earth's rotation and Earth-Moon distance in the Devonia derived from multiple geological records
+
+Summarized by George Kontsevich
+
+== Problem: Moon is floating away too fast
+image:PIC[]
+. The tides exert a braking force on the earth
+. The force causes the moon the moon to move away from the Earth at 3.83 cm/year
+- Working back, the Earth would "hit" the moon at ~1.5 Ga
+. The moon is ~4.4 Ga
+Therefore the tidal braking force must have changed over time
+
+== Possible Cause: Continental Drift
+
+As the distribution of the continents has changed over time, the global tide system has changes in conjunction - and hence the braking power of the tides
+
+image:FarhatImageOfContinents
+
+As the continents move there are changes in:
+
+. Average depth
+. Dissipation factor
+
+In _Farhat et al. 2022_ they manage to make a simulation of the past changes in continent drift that explains the changes in the Moon recession rate
+
+[.columns]
+== Orbital Parameters
+
+[.column]
+====
+.Precession
+*25 kyr*
+image:PIC[]
+====
+
+[.column]
+====
+.Obliquity
+*41kyrs*
+image:PIC[]
+====
+
+[.column]
+====
+.Eccentricity
+*405kyrs* & *100krs*
+image:PIC[]
+A parameter of the Earth/Moon vs. Sun system therefore:
+
+. Not affected by changes in distance to the Moon
+. Not affected by changes on Earth
+. Relatively constant/predictable function of the other celestial bodies
+====
+
+== Strategy
+
+1. Find samples with constant sedementation rate and measure some parameter (eg. magnetic suseptability)
+2. Estimate a sedementation rate .. vaguely
+3. Find an eccentricity signal near what would make sense for 400kyr/100kyr
+4. Adjust the sedimentation rate to make it match the eccentricity
+5. Find other peaks that correspond to _obliquity_ and _precession_
+
+Repeat this over many samples and average your results to get an estimate of the precession rate
+
+== Results
+
+image:Fig3[]
+
+== Model vs Data
+
+image:Fig5[]
