@@ -6,7 +6,6 @@
 :!webfonts:
 
 :imagesdir: fig/
-:svg-type: inline
 
 = Using IMERG precipitation patterns to index climate at the mesoscale: A basis rotation method based on climate bistability
 by George Kontsevich
@@ -33,6 +32,8 @@ image:photo/thammurd/s2c.jpg[]
 
 image:diagram/haicheng-all.svg[]
 
+_The Asian monsoon over the past 640,000 years and ice age terminations_ *Hai Cheng et al.* Nature (2016)
+
 .Observations:
 * ^18^O varies with insolation at ~60 degrees North
 * Exhibits a "stepped" behavior for unknown reasons
@@ -48,6 +49,8 @@ image:diagram/haicheng-all.svg[]
 
 image:diagram/haicheng-2-state.svg[]
 
+_The Asian monsoon over the past 640,000 years and ice age terminations_ *Hai Cheng et al.* Nature (2016)
+
 .Unknowns:
 * when ^18^O goes up, what is the actual change in the monsoon strength?
 * cave water = monsoon + non-monsoon rains
@@ -59,6 +62,8 @@ image:diagram/haicheng-2-state.svg[]
 === !
 
 image:diagram/haicheng-3-state.svg[]
+
+_The Asian monsoon over the past 640,000 years and ice age terminations_ *Hai Cheng et al.* Nature (2016)
 
 *  It can get even more complicated..
 
@@ -121,63 +126,63 @@ image:plot/airport-isotopes.svg[]
 
 [.column]
 ====
+image:map/krabi/annual/year0.svg[]
 high density precipitation data thanks to NASA satellites (IMERG)
-image:diagram/krabi-annual-rain/2011.png[]
 ====
 
 [.column]
 ====
-image:map/krabi/elevation.png[]
+image:map/krabi/topo.svg[]
+====
 
+[.column]
+====
 * climate configuration/parameters + topography -> rain's spatial pattern.
 * rain patterns = unique fingerprint
 * the pattern signals the presence of the climate phenomena
 * a detailed understanding of the climate configuration isn't need
 ====
 
-=== !
-image:diagram/krabi-annual-rain/2011.png[]
+=== 2011
+image:map/krabi/annual/year0.svg[]
 
-=== !
-image:diagram/krabi-annual-rain/2012.png[]
+=== 2012
+image:map/krabi/annual/year1.svg[]
 
-=== !
-image:diagram/krabi-annual-rain/2013.png[]
+=== 2013
+image:map/krabi/annual/year2.svg[]
 
-=== !
-image:diagram/krabi-annual-rain/2014.png[]
-
-=== !
-image:diagram/krabi-annual-rain/2015.png[]
+=== 2014
+image:map/krabi/annual/year3.svg[]
 
 [.columns]
 === First Pass: Visual Inspection
 
 [.column]
-image:map/krabi/elevation.png[]
+image:map/krabi/topo.svg[]
 
 [.column]
-image:diagram/krabi-two-monsoons.png[]
+image:map/krabi/annual/year1.svg[]
 
 [.column.has-text-left]
 .Observations:
 * 2 patterns: summer + winter
 * Onset/Withdrawl change year to year
 * Sporadic dry period
-.* Weather = Climate + Noise
+* Weather = Climate + Noise
 
 [.columns]
 == Second Pass: EOF
 
 [.column]
 ====
-image:imergination/first-sv.svg[]
+image:imergination/sv-0.svg[]
 PC1
 ====
 
 [.column]
 ====
-image:imergination/second-sv.svg[]
+image:imergination/sv-1.svg[]
 PC2
 ====
 
@@ -203,26 +208,20 @@ Singular Values
 
 [.column]
 ====
-image:imergination/sv-0.svg[]
-PC1
+image:imergination/sv-2.svg[]
+PC3
+====
+
+[.column]
+====
 image:imergination/sv-3.svg[]
 PC4
 ====
 
 [.column]
 ====
-image:imergination/sv-1.svg[]
-PC2
 image:imergination/sv-4.svg[]
 PC5
-====
-
-[.column]
-====
-image:imergination/sv-2.svg[]
-PC3
-image:imergination/sv-5.svg[]
-PC6
 ====
 
 [.column.text-left]
@@ -284,34 +283,36 @@ image:extern/new.aao.loading.gif[https://www.cpc.ncep.noaa.gov/products/precip/C
 [.columns]
 == Fixing the EOF: What's going wrong?
 
-[.column.is-one-quarter]
+[.column.is-one-fifth]
 ====
-image:diagram/krabi-annual-rain/2011.png[]
-image:diagram/krabi-annual-rain/2012.png[]
-image:diagram/krabi-annual-rain/2013.png[]
+image::imergination/year-stack.png[]
 ====
 
-[.column.is-one-quarter]
+[.column.is-one-fifth]
 ====
-image:imergination/first-sv.svg[]
-image:imergination/second-sv.svg[]
+image:imergination/sv-0.svg[]
+====
+
+[.column.is-one-fifth]
+====
+image:imergination/sv-1.svg[]
 ====
 
 [.column.is-vcentered]
-image:diagram/sv-projections.svg[]
+image:imergination/summary/sv-projections-plain.png[]
 
 [.columns]
 == Fixing the EOF: Bistability
 
 [.column]
-image:diagram/sv-projections.svg[]
+image:imergination/summary/sv-projections-plain.png[]
 
 [.column.has-text-left]
 ====
 .Observations:
 . Climate is either "summer monsoon" or "winter monsoon"
 . Climate can't be both! (except maybe in a transition month)
-. Many climate phenomena excihibit bistability: ENSO, NAO, AO, SAM
+. Many climate phenomena will exhibit bistability: ENSO, NAO, AO, SAM
 
 .Fix:
 . Divide the PC1/PC2 plane in two to halves
@@ -324,14 +325,14 @@ image:diagram/sv-projections.svg[]
 === Fixing the EOF: Bistability
 
 [.column]
-image:imergination/sv-projs.svg[]
+image:imergination/summary/sv-projections.png[]
 
 [.column.has-text-left]
 ====
 .Observations:
 . Climate is either "summer monsoon" or "winter monsoon"
 . Climate can't be both! (except maybe in a transition month)
-. Many climate phenomena excihibit bistability: ENSO, NAO, AO, SAM
+. Many climate phenomena will exhibit bistability: ENSO, NAO, AO, SAM
 
 .Fix:
 . Divide the PC1/PC2 plane in two to halves
@@ -341,33 +342,49 @@ image:imergination/sv-projs.svg[]
 
 [.columns]
 === Fixing the EOF: Bistability
-
-[.column]
-image:imergination/first-pattern.svg[]
 
 [.column]
 image:imergination/second-pattern.svg[]
 
 
+[.column]
+image:imergination/first-pattern.svg[]
+
+
 [.columns]
 === Fixing the EOF: Bistability
 
-[.column.is-one-third]
-====
-image:diagram/krabi-annual-rain/2011.png[]
-image:diagram/krabi-annual-rain/2012.png[]
-====
-
-
 [.column.is-one-quarter]
 ====
-image:imergination/first-pattern.svg[]
+image::imergination/year-stack.png[]
+====
 
+
+[.column.is-one-fifth]
+====
+image:imergination/first-pattern.svg[]
+====
+
+[.column.is-one-fifth]
+====
 image:imergination/second-pattern.svg[]
 ====
 
 [.column]
 image:imergination/indeces.svg[]
+
+[.columns]
+=== Fixing the EOF: Bistability
+
+[.column]
+image:imergination/indeces.svg[]
+
+[.column.is-one-third]
+image:extern/20210827_Global_surface_temperature_bar_chart_-_bars_color-coded_by_El_Niño_and_La_Niña_intensity.svg[]
+
+== !
+
+image:../agu2023-poster-tall.png[]
 
 
 [.columns]
@@ -375,9 +392,9 @@ image:imergination/indeces.svg[]
 
 [.column]
 ====
-image:diagram/krabi-annual-rain/2011.png[]
-image:diagram/krabi-annual-rain/2012.png[]
-image:diagram/krabi-annual-rain/2013.png[]
+image:diagram/krabi-annual-rain/2011.svg[]
+image:diagram/krabi-annual-rain/2012.svg[]
+image:diagram/krabi-annual-rain/2013.svg[]
 ====
 
 
