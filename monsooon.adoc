@@ -1,0 +1,8 @@
+:imagesdir: fig/
+:!webfonts:
+:stylesheet: ../web/adoc.css
+:table-caption!:
+:reproducible:
+:nofooter:
+
+= Monsoons: Notes from "The Asian Monsoon" - Peter Clift / Alan Plumb
