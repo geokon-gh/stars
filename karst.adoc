@@ -1,0 +1,38 @@
+:imagesdir: fig/photo/eastern-caves/
+:!webfonts:
+:stylesheet: ../web/adoc.css
+:table-caption!:
+:reproducible:
+:nofooter:
+
+
+= Karst
+
+Notes from *Karst Hydrology and Geomorphology* by _Derek Ford and Paul Williams_
+
+== Carbonate Rocks
+Vary along several dimensions
+
+- limestone vs. dolomite
+- carbonate vs silt/mud impurities
+- calcite vs aragonite
+
+=== Calcite/Aragonite
+- Calcite is less dense
+- Calcites 5 possible crystal structures which can combine in to a plethora of different configurations
+- Aragonite just has one crystal structure
+- Calcite can accomodate substitutions for *Ca^2+* in the its crystal structure. These are generally smaller  divalent cations (*Na^+*, *Mn^2+*, *Fe^2+*, *Zn^2+*, *Mg^2+*). Larger atoms (ex: *Sr^2+*)  don't integrate as easily
+- Aragonite doesn't allow small cation substitution, but larger ones may be present (ex: *Sr* and *U*)
+- Aragonite can invert to calcite. Since it's more dense this leads to a decrease in porosity
+- If Aragonite dissolves and reprecipitates as calcite, it expells most *Sr* and *U* ions.
+
+=== Dolomite
+
+- Both a rock name (aka dolostone) and a mineral name
+- Kinda like calcite but has one layer of *Ca^2+* cations alternating with a layer of *Mg^2+* cations. But for this you need a perfect 1:1 ratio of *Ca* to *Mg*. In reality you typically have a *Ca* rich ratio and *Ca* atoms in the *Mg* layer
+- Zn Fe Mn Na Sr atoms can contaminate either layer
+- Fe slots in particularly well in either layer - so you typically have more iron than in a calcite
+- When it weathers the *Fe^2+* oxidizes to *Fe^3+*
+- "As disorder increases so does solubility" (related to PCP??)
+- "Staining with alizarin red is the standard means of distinguishing it from calcite (Adams et al. 1984)"
+- Ca/Mg ratios can vary from rock to rock - and you're usually somewhere on a limestone/calcite vs dolomite spectrum. Don't expect it to be consistent!! (again, maybe different sources in the aquifer lead to a PCP signal) 
