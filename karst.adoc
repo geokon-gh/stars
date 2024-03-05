@@ -36,3 +36,47 @@ Vary along several dimensions
 - "As disorder increases so does solubility" (related to PCP??)
 - "Staining with alizarin red is the standard means of distinguishing it from calcite (Adams et al. 1984)"
 - Ca/Mg ratios can vary from rock to rock - and you're usually somewhere on a limestone/calcite vs dolomite spectrum. Don't expect it to be consistent!! (again, maybe different sources in the aquifer lead to a PCP signal) 
+
+== Limestone deposition
+
+- Coral reefs are not a major contributor by volume
+- Mostly is precipitation of marine animal shells (ex: algae aragonite needles)
+- Marine shells are then cemented and recrystallized
+- Diagenesis can then lead to the formation of calcite spars (solid crystals of calcite.. like iceland spar
+- River runoff can mix with the shell deposition creating calcareous shale/sandstone. So Limestone is often not very oure, Will have clay/mud/silicates/sand
+- If there is little compaction and diagenesis you can get chalks
+- Sometimes diagenese happens so slowly that you are left with the shapes of previous crystal structures or a ghost image of the original depositional environment (ex: biosparites)
+- *Allochem* recognizable "grains" in carbonate rock
+- Lithification preserved a tiny amount of organic material. About ~1% in modern limestone (page 15)
+-  If the depositional environment is periodically exposed supratidaly then you can end up with layers of thing clay called *paleosol*.
+
+- Terrestrial limestone forms at hotsprings - *tufa* (a framestone on root, plants, rocks around the spring) and *travertine* (crystalline, underground, inorganic)
+- Calcium carbonate can also accu ulate a bit in lakes - *marls* - can form some sands
+
+== Limestone Diagensis
+
+- Limestone starts off as nuddy material at 40-80% porosity
+- After diagensis it's about 5% porosity
+- If its not buried deep and compacted then it remains porous and forms *chalk*.
+- As the carbonate rock reaches above sea level, sea water is pushed out by meteoric water
+- Rainwater leads to dissolution and the removal of aragonite [which is from the original shells I think!]
+- Aragonite is then replaced with calcite spar
+- If done slowly, retains aragonite crystal shape (ghosts)
+
+
+- Dolimite probably occurs due to diagensis in lagoonal environmrnts bc it requires hypersaline environments
+- It's likely formed by replacing earlier calcite/aragonite
+- Another possibility is that fresh water intrusion creates conditions where calcite dissolved but dolomite does not (maybe in Florida right now)
+- Geothermal activity may also play a role (page 21-22)
+- *Breccia* broken fragments in a cement
+- *Stylolites* = Pressure solution seam (very squiggly "bed"/layer). Forms below 500m (high pressure). It's dissolutional but concentrates impurities so is not very permiable (page 23). Can be along bedding planes but not always
+- Silica may accumulate (for instance from sponges/radiolaria/diatoms) creating lenses of *chert* 
+- At high pressure and heat youget annealing and formation of spars. At higher heat the crystals realign destroying fossiles and starting to form *marbles*
+
+== Evaporation
+- A little -> Dolomite (organic) - slightly above seawater salinity
+- More -> Gypsum (inorganic) - 3x seawater strength
+- A Lot -> Salt (inorganic) - 11x seawater strength
+- Restricted evaporation lagoons - *sabkha*
+- Gypsum when under pressure will turn to *anhydrite* and reduce by volume by 40%
+== 
