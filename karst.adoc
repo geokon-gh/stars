@@ -78,5 +78,32 @@ Vary along several dimensions
 - More -> Gypsum (inorganic) - 3x seawater strength
 - A Lot -> Salt (inorganic) - 11x seawater strength
 - Restricted evaporation lagoons - *sabkha*
+- *Gypsum* sulfate mineral .. CaSO_{4} 2H_{2}O
 - Gypsum when under pressure will turn to *anhydrite* and reduce by volume by 40%
-== 
+- Anhydrite will have annealed bedding planes/joints and have no porosity. Surrounding/Overlaying dolomite will crumble ("brecciated") bc of the volume change
+
+== Dissolution
+- Hard to characterize
+- If clay/silica impurities are too high then you won't form karst
+- Dissolution rate is not a just a bulk property (ex:ratio of impurities) but also about things like texture/grain size
+
+== Bedding planes
+-  "[..] produced by some change in sedimentation or by its temporary interruption"
+- ex: "by the introduction of clay by a storm or flood, etc. that leave a paper-thin or thicker parting between the successive regular carbonate layers"
+- These can be 1000s of km long! and confine water to deep layers. (ex Canadian Praries with 30kyr residence times - page 36)
+
+== Joints
+- "Joints are simple pull-apart breaks in previously consolidated rocks"
+- "joints are oriented normal to bedding planes"
+- parallel joint consitute a *joint set*
+- Multiple joint sets at regular angles to each other form a *joint system*
+- "its important to understand that some new joints are created as a karst terrain is eroding, because of pressure release as rock is removed"
+- "Many caves are rectangular mazes guided rigidly by joint patterns"
+
+= Faults
+
+- "Faults are fractures with some displacement of rock up, down and/or laterally"
+- "Where this is less than about 1cm ther may be considered to grade into shear fractures or *joints*."
+- "For hydrological purposes it is better to think of the wter passing from more widely open areas with highly irregular shapes to others down the hydraulic gradient visa constrictions (*throats*)
+- "Effective throat apertures appear to be log-normally distributed (e.g. Chernyshev 1983)"
+- "By measuring the particate organic matter reaching stalactites and stalagmites visa the finest cracks in the cave roofs worlwide, van Beynen et al, (2011) show that throat apertures in their tiny feedwater channels can never be less that ~0.1um"
