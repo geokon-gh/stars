@@ -107,3 +107,30 @@ Vary along several dimensions
 - "For hydrological purposes it is better to think of the wter passing from more widely open areas with highly irregular shapes to others down the hydraulic gradient visa constrictions (*throats*)
 - "Effective throat apertures appear to be log-normally distributed (e.g. Chernyshev 1983)"
 - "By measuring the particate organic matter reaching stalactites and stalagmites visa the finest cracks in the cave roofs worlwide, van Beynen et al, (2011) show that throat apertures in their tiny feedwater channels can never be less that ~0.1um"
+
+== Folding
+- Karst limestone will only fold (ie. plastic deformation) at great depths/pressure
+- Folding can create things like artesian wells (when mixed with siliciclastic strata)
+- It also creates some of the longest groundwater flows in the world. "Recharge from the Rocky Mountains and their eastern foothills is believed to flow for more than 1000km through carbonates beneath confining salts, sands, clays and shales in the Canadian Prairies, with underground residence times perhaps more than 30 000 yr"
+
+= Chemistry
+
+- Quartz aso dissolves, which suggests a dissolution threshold for "karstification"
+- Actually with no CO_{2} calcite and quartz have similar dissolution rates. So CO_{2} is pretty much necessary for the dissolution of calcite
+- CO_{2} forms a weak acid which promotes dissolution
+- CO_{2} in the air is about 0.04% - but in trapped soil air this can gradually displace all the oxygen (~21). So the P_{CO_{2}} is typically much higher than in aerially exposed karst/rain
+- CO_{2} + H_{2}O <=> H_{2}CO_{3} (carbonic acid)
+- acids sorta give protons..  H_{2}CO_{3} <=> H^{+}+HCO_{3}^{-}
+- the bicarconate ion can give another proton leaving us with carbonate
+- HCO_{3}^{-} <=> H^{+} + CO_{3}^{2-}
+- When calcite dissolves it also gives a carbonate! The carbonates can exchange
+- CaCO_{3} + H^{+} <=> Ca^{2+} + HCO_{3}^{-}
+
+=== Soil
+
+- Soil is usually more than 40% void
+- 17-31% of the volume is available for air storage, while the remaining fraction is taken up by bound water
+- Torturous intergranular pathways retard both drainage and rapid diffusion of gases
+- 40% of plant CO_{2} uptake is then respired in the root systems. So its taking CO_{2} frrom the air and in effect pumping it out its roots.
+- Root respiration increases with both water availability and temperature
+- Temprature relationship follows : log P_{CO_{2}} = -2 + 0.04* T (Drake and Wigley 1975) [p.50]
