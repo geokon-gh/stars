@@ -100,7 +100,7 @@ Vary along several dimensions
 - "its important to understand that some new joints are created as a karst terrain is eroding, because of pressure release as rock is removed"
 - "Many caves are rectangular mazes guided rigidly by joint patterns"
 
-= Faults
+== Faults
 
 - "Faults are fractures with some displacement of rock up, down and/or laterally"
 - "Where this is less than about 1cm ther may be considered to grade into shear fractures or *joints*."
@@ -113,7 +113,7 @@ Vary along several dimensions
 - Folding can create things like artesian wells (when mixed with siliciclastic strata)
 - It also creates some of the longest groundwater flows in the world. "Recharge from the Rocky Mountains and their eastern foothills is believed to flow for more than 1000km through carbonates beneath confining salts, sands, clays and shales in the Canadian Prairies, with underground residence times perhaps more than 30 000 yr"
 
-= Chemistry
+== Calcite Dissolution Chemistry Basics
 
 - Quartz aso dissolves, which suggests a dissolution threshold for "karstification"
 - Actually with no CO_{2} calcite and quartz have similar dissolution rates. So CO_{2} is pretty much necessary for the dissolution of calcite
@@ -126,7 +126,7 @@ Vary along several dimensions
 - When calcite dissolves it also gives a carbonate! The carbonates can exchange
 - CaCO_{3} + H^{+} <=> Ca^{2+} + HCO_{3}^{-}
 
-=== Soil
+== Soil
 
 - Soil is usually more than 40% void
 - 17-31% of the volume is available for air storage, while the remaining fraction is taken up by bound water
