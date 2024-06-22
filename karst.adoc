@@ -13,125 +13,125 @@ Notes from *Karst Hydrology and Geomorphology* by _Derek Ford and Paul Williams_
 == Carbonate Rocks
 Vary along several dimensions
 
-- limestone vs. dolomite
-- carbonate vs silt/mud impurities
-- calcite vs aragonite
+* limestone vs. dolomite
+* carbonate vs silt/mud impurities
+* calcite vs aragonite
 
 === Calcite/Aragonite
-- Calcite is less dense
-- Calcites 5 possible crystal structures which can combine in to a plethora of different configurations
-- Aragonite just has one crystal structure
-- Calcite can accomodate substitutions for *Ca^2+* in the its crystal structure. These are generally smaller  divalent cations (*Na^+*, *Mn^2+*, *Fe^2+*, *Zn^2+*, *Mg^2+*). Larger atoms (ex: *Sr^2+*)  don't integrate as easily
-- Aragonite doesn't allow small cation substitution, but larger ones may be present (ex: *Sr* and *U*)
-- Aragonite can invert to calcite. Since it's more dense this leads to a decrease in porosity
-- If Aragonite dissolves and reprecipitates as calcite, it expells most *Sr* and *U* ions.
+* Calcite is less dense
+* Calcites 5 possible crystal structures which can combine in to a plethora of different configurations
+* Aragonite just has one crystal structure
+* Calcite can accomodate substitutions for *Ca^2+* in the its crystal structure. These are generally smaller  divalent cations (*Na^+*, *Mn^2+*, *Fe^2+*, *Zn^2+*, *Mg^2+*). Larger atoms (ex: *Sr^2+*)  don't integrate as easily
+* Aragonite doesn't allow small cation substitution, but larger ones may be present (ex: *Sr* and *U*)
+* Aragonite can invert to calcite. Since it's more dense this leads to a decrease in porosity
+* If Aragonite dissolves and reprecipitates as calcite, it expells most *Sr* and *U* ions.
 
 === Dolomite
 
-- Both a rock name (aka dolostone) and a mineral name
-- Kinda like calcite but has one layer of *Ca^2+* cations alternating with a layer of *Mg^2+* cations. But for this you need a perfect 1:1 ratio of *Ca* to *Mg*. In reality you typically have a *Ca* rich ratio and *Ca* atoms in the *Mg* layer
-- Zn Fe Mn Na Sr atoms can contaminate either layer
-- Fe slots in particularly well in either layer - so you typically have more iron than in a calcite
-- When it weathers the *Fe^2+* oxidizes to *Fe^3+*
-- "As disorder increases so does solubility" (related to PCP??)
-- "Staining with alizarin red is the standard means of distinguishing it from calcite (Adams et al. 1984)"
-- Ca/Mg ratios can vary from rock to rock - and you're usually somewhere on a limestone/calcite vs dolomite spectrum. Don't expect it to be consistent!! (again, maybe different sources in the aquifer lead to a PCP signal) 
+* Both a rock name (aka dolostone) and a mineral name
+* Kinda like calcite but has one layer of *Ca^2+* cations alternating with a layer of *Mg^2+* cations. But for this you need a perfect 1:1 ratio of *Ca* to *Mg*. In reality you typically have a *Ca* rich ratio and *Ca* atoms in the *Mg* layer
+* Zn Fe Mn Na Sr atoms can contaminate either layer
+* Fe slots in particularly well in either layer - so you typically have more iron than in a calcite
+* When it weathers the *Fe^2+* oxidizes to *Fe^3+*
+* "As disorder increases so does solubility" (related to PCP??)
+* "Staining with alizarin red is the standard means of distinguishing it from calcite (Adams et al. 1984)"
+* Ca/Mg ratios can vary from rock to rock - and you're usually somewhere on a limestone/calcite vs dolomite spectrum. Don't expect it to be consistent!! (again, maybe different sources in the aquifer lead to a PCP signal)
 
 == Limestone deposition
 
-- Coral reefs are not a major contributor by volume
-- Mostly is precipitation of marine animal shells (ex: algae aragonite needles)
-- Marine shells are then cemented and recrystallized
-- Diagenesis can then lead to the formation of calcite spars (solid crystals of calcite.. like iceland spar
-- River runoff can mix with the shell deposition creating calcareous shale/sandstone. So Limestone is often not very oure, Will have clay/mud/silicates/sand
-- If there is little compaction and diagenesis you can get chalks
-- Sometimes diagenese happens so slowly that you are left with the shapes of previous crystal structures or a ghost image of the original depositional environment (ex: biosparites)
-- *Allochem* recognizable "grains" in carbonate rock
-- Lithification preserved a tiny amount of organic material. About ~1% in modern limestone (page 15)
--  If the depositional environment is periodically exposed supratidaly then you can end up with layers of thing clay called *paleosol*.
+* Coral reefs are not a major contributor by volume
+* Mostly is precipitation of marine animal shells (ex: algae aragonite needles)
+* Marine shells are then cemented and recrystallized
+* Diagenesis can then lead to the formation of calcite spars (solid crystals of calcite.. like iceland spar
+* River runoff can mix with the shell deposition creating calcareous shale/sandstone. So Limestone is often not very oure, Will have clay/mud/silicates/sand
+* If there is little compaction and diagenesis you can get chalks
+* Sometimes diagenese happens so slowly that you are left with the shapes of previous crystal structures or a ghost image of the original depositional environment (ex: biosparites)
+* *Allochem* recognizable "grains" in carbonate rock
+* Lithification preserved a tiny amount of organic material. About ~1% in modern limestone (page 15)
+*  If the depositional environment is periodically exposed supratidaly then you can end up with layers of thing clay called *paleosol*.
 
-- Terrestrial limestone forms at hotsprings - *tufa* (a framestone on root, plants, rocks around the spring) and *travertine* (crystalline, underground, inorganic)
-- Calcium carbonate can also accu ulate a bit in lakes - *marls* - can form some sands
+* Terrestrial limestone forms at hotsprings - *tufa* (a framestone on root, plants, rocks around the spring) and *travertine* (crystalline, underground, inorganic)
+* Calcium carbonate can also accu ulate a bit in lakes - *marls* - can form some sands
 
 == Limestone Diagensis
 
-- Limestone starts off as nuddy material at 40-80% porosity
-- After diagensis it's about 5% porosity
-- If its not buried deep and compacted then it remains porous and forms *chalk*.
-- As the carbonate rock reaches above sea level, sea water is pushed out by meteoric water
-- Rainwater leads to dissolution and the removal of aragonite [which is from the original shells I think!]
-- Aragonite is then replaced with calcite spar
-- If done slowly, retains aragonite crystal shape (ghosts)
+* Limestone starts off as nuddy material at 40-80% porosity
+* After diagensis it's about 5% porosity
+* If its not buried deep and compacted then it remains porous and forms *chalk*.
+* As the carbonate rock reaches above sea level, sea water is pushed out by meteoric water
+* Rainwater leads to dissolution and the removal of aragonite [which is from the original shells I think!]
+* Aragonite is then replaced with calcite spar
+* If done slowly, retains aragonite crystal shape (ghosts)
 
 
-- Dolimite probably occurs due to diagensis in lagoonal environmrnts bc it requires hypersaline environments
-- It's likely formed by replacing earlier calcite/aragonite
-- Another possibility is that fresh water intrusion creates conditions where calcite dissolved but dolomite does not (maybe in Florida right now)
-- Geothermal activity may also play a role (page 21-22)
-- *Breccia* broken fragments in a cement
-- *Stylolites* = Pressure solution seam (very squiggly "bed"/layer). Forms below 500m (high pressure). It's dissolutional but concentrates impurities so is not very permiable (page 23). Can be along bedding planes but not always
-- Silica may accumulate (for instance from sponges/radiolaria/diatoms) creating lenses of *chert* 
-- At high pressure and heat youget annealing and formation of spars. At higher heat the crystals realign destroying fossiles and starting to form *marbles*
+* Dolimite probably occurs due to diagensis in lagoonal environmrnts bc it requires hypersaline environments
+* It's likely formed by replacing earlier calcite/aragonite
+* Another possibility is that fresh water intrusion creates conditions where calcite dissolved but dolomite does not (maybe in Florida right now)
+* Geothermal activity may also play a role (page 21-22)
+* *Breccia* broken fragments in a cement
+* *Stylolites* = Pressure solution seam (very squiggly "bed"/layer). Forms below 500m (high pressure). It's dissolutional but concentrates impurities so is not very permiable (page 23). Can be along bedding planes but not always
+* Silica may accumulate (for instance from sponges/radiolaria/diatoms) creating lenses of *chert*
+* At high pressure and heat youget annealing and formation of spars. At higher heat the crystals realign destroying fossiles and starting to form *marbles*
 
 == Evaporation
-- A little -> Dolomite (organic) - slightly above seawater salinity
-- More -> Gypsum (inorganic) - 3x seawater strength
-- A Lot -> Salt (inorganic) - 11x seawater strength
-- Restricted evaporation lagoons - *sabkha*
-- *Gypsum* sulfate mineral .. CaSO_{4} 2H_{2}O
-- Gypsum when under pressure will turn to *anhydrite* and reduce by volume by 40%
-- Anhydrite will have annealed bedding planes/joints and have no porosity. Surrounding/Overlaying dolomite will crumble ("brecciated") bc of the volume change
+* A little -> Dolomite (organic) - slightly above seawater salinity
+* More -> Gypsum (inorganic) - 3x seawater strength
+* A Lot -> Salt (inorganic) - 11x seawater strength
+* Restricted evaporation lagoons - *sabkha*
+* *Gypsum* sulfate mineral .. CaSO_{4} 2H_{2}O
+* Gypsum when under pressure will turn to *anhydrite* and reduce by volume by 40%
+* Anhydrite will have annealed bedding planes/joints and have no porosity. Surrounding/Overlaying dolomite will crumble ("brecciated") bc of the volume change
 
 == Dissolution
-- Hard to characterize
-- If clay/silica impurities are too high then you won't form karst
-- Dissolution rate is not a just a bulk property (ex:ratio of impurities) but also about things like texture/grain size
+* Hard to characterize
+* If clay/silica impurities are too high then you won't form karst
+* Dissolution rate is not a just a bulk property (ex:ratio of impurities) but also about things like texture/grain size
 
 == Bedding planes
--  "[..] produced by some change in sedimentation or by its temporary interruption"
-- ex: "by the introduction of clay by a storm or flood, etc. that leave a paper-thin or thicker parting between the successive regular carbonate layers"
-- These can be 1000s of km long! and confine water to deep layers. (ex Canadian Praries with 30kyr residence times - page 36)
+*  "[..] produced by some change in sedimentation or by its temporary interruption"
+* ex: "by the introduction of clay by a storm or flood, etc. that leave a paper-thin or thicker parting between the successive regular carbonate layers"
+* These can be 1000s of km long! and confine water to deep layers. (ex Canadian Praries with 30kyr residence times - page 36)
 
 == Joints
-- "Joints are simple pull-apart breaks in previously consolidated rocks"
-- "joints are oriented normal to bedding planes"
-- parallel joint consitute a *joint set*
-- Multiple joint sets at regular angles to each other form a *joint system*
-- "its important to understand that some new joints are created as a karst terrain is eroding, because of pressure release as rock is removed"
-- "Many caves are rectangular mazes guided rigidly by joint patterns"
+* "Joints are simple pull-apart breaks in previously consolidated rocks"
+* "joints are oriented normal to bedding planes"
+* parallel joint consitute a *joint set*
+* Multiple joint sets at regular angles to each other form a *joint system*
+* "its important to understand that some new joints are created as a karst terrain is eroding, because of pressure release as rock is removed"
+* "Many caves are rectangular mazes guided rigidly by joint patterns"
 
 == Faults
 
-- "Faults are fractures with some displacement of rock up, down and/or laterally"
-- "Where this is less than about 1cm ther may be considered to grade into shear fractures or *joints*."
-- "For hydrological purposes it is better to think of the wter passing from more widely open areas with highly irregular shapes to others down the hydraulic gradient visa constrictions (*throats*)
-- "Effective throat apertures appear to be log-normally distributed (e.g. Chernyshev 1983)"
-- "By measuring the particate organic matter reaching stalactites and stalagmites visa the finest cracks in the cave roofs worlwide, van Beynen et al, (2011) show that throat apertures in their tiny feedwater channels can never be less that ~0.1um"
+* "Faults are fractures with some displacement of rock up, down and/or laterally"
+* "Where this is less than about 1cm ther may be considered to grade into shear fractures or *joints*."
+* "For hydrological purposes it is better to think of the wter passing from more widely open areas with highly irregular shapes to others down the hydraulic gradient visa constrictions (*throats*)
+* "Effective throat apertures appear to be log-normally distributed (e.g. Chernyshev 1983)"
+* "By measuring the particate organic matter reaching stalactites and stalagmites visa the finest cracks in the cave roofs worlwide, van Beynen et al, (2011) show that throat apertures in their tiny feedwater channels can never be less that ~0.1um"
 
 == Folding
 .p35
-- Karst limestone will only fold (ie. plastic deformation) at great depths/pressure
-- Folding can create things like artesian wells (when mixed with siliciclastic strata)
-- It also creates some of the longest groundwater flows in the world. "Recharge from the Rocky Mountains and their eastern foothills is believed to flow for more than 1000km through carbonates beneath confining salts, sands, clays and shales in the Canadian Prairies, with underground residence times perhaps more than 30 000 yr"
+* Karst limestone will only fold (ie. plastic deformation) at great depths/pressure
+* Folding can create things like artesian wells (when mixed with siliciclastic strata)
+* It also creates some of the longest groundwater flows in the world. "Recharge from the Rocky Mountains and their eastern foothills is believed to flow for more than 1000km through carbonates beneath confining salts, sands, clays and shales in the Canadian Prairies, with underground residence times perhaps more than 30 000 yr"
 
 == Calcite Dissolution Chemistry Basics
 .p47
-- Quartz aso dissolves, which suggests a dissolution threshold for "karstification"
-- Actually with no CO_{2} calcite and quartz have similar dissolution rates. So CO_{2} is pretty much necessary for the dissolution of calcite
-- CO_{2} forms a weak acid which promotes dissolution
-- CO_{2} in the air is about 0.04% - but in trapped soil air this can gradually displace all the oxygen (~21). So the P_{CO_{2}} is typically much higher than in aerially exposed karst/rain
-- CO_{2} + H_{2}O <=> H_{2}CO_{3} (carbonic acid)
-- acids sorta give protons..  H_{2}CO_{3} <=> H^{+}+HCO_{3}^{-}
-- the bicarconate ion can give another proton leaving us with carbonate
-- HCO_{3}^{-} <=> H^{+} + CO_{3}^{2-}
-- When calcite dissolves it also gives a carbonate! The carbonates can exchange
-- CaCO_{3} + H^{+} <=> Ca^{2+} + HCO_{3}^{-}
+* Quartz aso dissolves, which suggests a dissolution threshold for "karstification"
+* Actually with no CO_{2} calcite and quartz have similar dissolution rates. So CO_{2} is pretty much necessary for the dissolution of calcite
+* CO_{2} forms a weak acid which promotes dissolution
+* CO_{2} in the air is about 0.04% - but in trapped soil air this can gradually displace all the oxygen (~21). So the P_{CO_{2}} is typically much higher than in aerially exposed karst/rain
+* CO_{2} + H_{2}O <=> H_{2}CO_{3} (carbonic acid)
+* acids sorta give protons..  H_{2}CO_{3} <=> H^{+}+HCO_{3}^{-}
+* the bicarconate ion can give another proton leaving us with carbonate
+* HCO_{3}^{-} <=> H^{+} + CO_{3}^{2-}
+* When calcite dissolves it also gives a carbonate! The carbonates can exchange
+* CaCO_{3} + H^{+} <=> Ca^{2+} + HCO_{3}^{-}
 
 == Soil
 .p50
-- Soil is usually more than 40% void
-- 17-31% of the volume is available for air storage, while the remaining fraction is taken up by bound water
-- Torturous intergranular pathways retard both drainage and rapid diffusion of gases
-- 40% of plant CO_{2} uptake is then respired in the root systems. So its taking CO_{2} frrom the air and in effect pumping it out its roots.
-- Root respiration increases with both water availability and temperature
-- Temprature relationship follows : log P_{CO_{2}} = -2 + 0.04* T (Drake and Wigley 1975) [p.50]
+* Soil is usually more than 40% void
+* 17-31% of the volume is available for air storage, while the remaining fraction is taken up by bound water
+* Torturous intergranular pathways retard both drainage and rapid diffusion of gases
+* 40% of plant CO_{2} uptake is then respired in the root systems. So its taking CO_{2} frrom the air and in effect pumping it out its roots.
+* Root respiration increases with both water availability and temperature
+* Temprature relationship follows : log P_{CO_{2}} = -2 + 0.04* T (Drake and Wigley 1975) [p.50]
