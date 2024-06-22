@@ -135,3 +135,41 @@ Vary along several dimensions
 * 40% of plant CO_{2} uptake is then respired in the root systems. So its taking CO_{2} frrom the air and in effect pumping it out its roots.
 * Root respiration increases with both water availability and temperature
 * Temprature relationship follows : log P_{CO_{2}} = -2 + 0.04* T (Drake and Wigley 1975) [p.50]
+
+== Open/Closed systems
+.p51 .p81 p82
+*  The relationship between dissolution and if a system is closed or open is complicated
+* A closed system, such as deep in soil, can potentially have much higher P_{CO_{2}}
+* An open system will have CO_{2} replenshiment from the air
+* Given a P_{CO_{2}} of 0.036% at 25 C
+** A closed system will dissolve 25mg per liter
+** An open system will dissolve 55mg per liter (40% more)
+* You can have situations like glacial tills, where there is soil has carbonate chips in it. So as the water travels down it'd dissolving the rock and getting new CO_{2} from the soil
+* Purely atmospheric systems with no soil will lead to poor dissolution.. (I think?)
+
+== "S-O-H" systems (ie. sulfur induced dissolution)
+.p53
+* shale interbeds in the limestone/dolomite will often contain iron-rich minierals like *pyrite* (FeS_{2})
+* pyrite will create a weak acid which locally enhances calcite dissolution
+* the reaction depends on the precense of dissolved oxygen, so the effect will be limited in anaerobic/phreatic environments
+* By contrast the effect will be seen in "vadose (ie. air-filled) caves"
+* The flow of *hydrogen sulfide H_{2}S* and organics through deep karst is the basis of oil and gas formation (see .p54 .p55)
+* So hydrogen sulfide can be "freed" from organic rich layers at deeper anaerobic areas of high pressure and temperature
+* H_{2}S flowing upward and then reaching oxygenated waters from above - usually at the watertable - can cause the formation of *sulfuric acid*
+
+== Carbonate dissolution - temp/pressure
+.57
+* Calcite dissolves more in cold water (at same CO_{2} level)
+** At standard atmosphere (25C and 0.03% CO_{2}) - 55 mg of calcite per liter
+** At 0C this increases to 75 mg of calcite per liter
+* As water goes down is generally cools - increasing the amount of calcite it can dissolve
+* CO_{2} rich water coming up is complex (ex from a volcanic tectonic setting) and the net effect is situation dependent
+** -> pressure drops -> CO_{2} degasses -> calcite precipitates
+** -> water cools -> calcite is more soluable -> dissolves more rock
+** Heat can also breakdown calcite generating CO_{2} (ex: oil window) which can then travel upward
+
+== Salts
+.p59 .p60
+* Large amounts of salt will affect solubility.. maybe? It's a bit unclear
+* See Fig 12b : NaCl seems to have no real effect at all?
+* Fig 3.14 : Seems confusing..
