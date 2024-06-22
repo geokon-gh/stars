@@ -109,12 +109,13 @@ Vary along several dimensions
 - "By measuring the particate organic matter reaching stalactites and stalagmites visa the finest cracks in the cave roofs worlwide, van Beynen et al, (2011) show that throat apertures in their tiny feedwater channels can never be less that ~0.1um"
 
 == Folding
+.p35
 - Karst limestone will only fold (ie. plastic deformation) at great depths/pressure
 - Folding can create things like artesian wells (when mixed with siliciclastic strata)
 - It also creates some of the longest groundwater flows in the world. "Recharge from the Rocky Mountains and their eastern foothills is believed to flow for more than 1000km through carbonates beneath confining salts, sands, clays and shales in the Canadian Prairies, with underground residence times perhaps more than 30 000 yr"
 
 == Calcite Dissolution Chemistry Basics
-
+.p47
 - Quartz aso dissolves, which suggests a dissolution threshold for "karstification"
 - Actually with no CO_{2} calcite and quartz have similar dissolution rates. So CO_{2} is pretty much necessary for the dissolution of calcite
 - CO_{2} forms a weak acid which promotes dissolution
@@ -127,7 +128,7 @@ Vary along several dimensions
 - CaCO_{3} + H^{+} <=> Ca^{2+} + HCO_{3}^{-}
 
 == Soil
-
+.p50
 - Soil is usually more than 40% void
 - 17-31% of the volume is available for air storage, while the remaining fraction is taken up by bound water
 - Torturous intergranular pathways retard both drainage and rapid diffusion of gases
