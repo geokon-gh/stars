@@ -173,3 +173,9 @@ Vary along several dimensions
 * Large amounts of salt will affect solubility.. maybe? It's a bit unclear
 * See Fig 12b : NaCl seems to have no real effect at all?
 * Fig 3.14 : Seems confusing..
+
+== Bacteria
+.p62
+* Anaerobic :: below the watertable (up to 100C and >1kbar) Will typically be reducing sulphates - creating acids and dissolving carbonates
+* Around the Watertable :: will be in an environment with dissolved oxygen O_{2} and oxidizing/reducing things. Ex: ".. oxidation of Mn^{2+} too produce birnessite and other brown or black manganese coatings on peggles or on passage walls".
+* Relic Cave :: Acidic bacterial biofilms cause etching/weathering. Ammonia will get turned into saltpetre
