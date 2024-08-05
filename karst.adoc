@@ -179,3 +179,24 @@ Vary along several dimensions
 * Anaerobic :: below the watertable (up to 100C and >1kbar) Will typically be reducing sulphates - creating acids and dissolving carbonates
 * Around the Watertable :: will be in an environment with dissolved oxygen O_{2} and oxidizing/reducing things. Ex: ".. oxidation of Mn^{2+} too produce birnessite and other brown or black manganese coatings on peggles or on passage walls".
 * Relic Cave :: Acidic bacterial biofilms cause etching/weathering. Ammonia will get turned into saltpetre
+
+== Things to measure..
+.p63
+* SpC :: specific conductivity - gives a good approximation of the dissolved load b/c proportionate to ionic concentration... _SpC = 1.86 * TH + 31.5_ [R^{2} = 0.93] .. where _TH_ = Total hardness (mg/l of CaCO_{3})
+* pH :: can be done in the cave.. but it's a bit tricky
+* Direct measurement of TH is also possible in the field
+* Chloride can be measured with *ion-selective electrodes*
+* If you want to take the samples to a lab, then you need to acidify them first (p65) to make sure everything is dissolved
+
+== Dissolution Kinetics
+.p65
+* Friction makes the liquid-solid interface effectively static (just molecular diffusion near the boundary). Further away from the surface you get eddy diffusion based on the flow turbulence. This friction induced layer is called the *Diffusion Boundary Layer (DBL)*
+* In the DBL it'll be saturated
+* "Roques (1969) found that a drop of water forming at the tip of a soda straw stalactite lost 10% of its CO_{2} in the first second 30% in 90s and 70% in 15 min"
+* Dissolution rates of karst can't be generalized b/c it will depend on tge surface roughness .. ex: Carrara marble will dissolve faster than icelandic spar (zippering off of molecules at the surface) (p68)
+* H+ dependent regimes are less sensitive to roughness
+* Dolomitic calcite (Mg rich) may dissolve *faster* b/c of discontinuities _or_ *slower* due to MgCO_{2} not dissolving as easily
+* "Early penetration will occur under closed-system conditions with laminar flow that prohibits eddy diffusion"
+* mixing corrosion :: differ water bodies as saturation of different CO_{2} concentrations - when mixed will be undersaturated
+* they will dissolve material and re-reach saturation in 1-2 meters. So doesn't explain karstification..
+* kinetic breakthrough :: "the dissolutional fronts of one or moreconduits break through the full length of yje high-resistance, unmodifiedfissure to reach an unimpeded point point of discharge such as a spring or early cave: those conduits enlarge rapidly and attract the flow un other conduits towards them". At a certain size this creates a sudden change to turbulent flow and breakthrough the DBL`
