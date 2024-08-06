@@ -200,3 +200,14 @@ Vary along several dimensions
 * mixing corrosion :: differ water bodies as saturation of different CO_{2} concentrations - when mixed will be undersaturated
 * they will dissolve material and re-reach saturation in 1-2 meters. So doesn't explain karstification..
 * kinetic breakthrough :: "the dissolutional fronts of one or moreconduits break through the full length of yje high-resistance, unmodifiedfissure to reach an unimpeded point point of discharge such as a spring or early cave: those conduits enlarge rapidly and attract the flow un other conduits towards them". At a certain size this creates a sudden change to turbulent flow and breakthrough the DBL`
+* Precipitation on to a sufrace is much easier than in solution. There is a "nucleation potential" that needs to be overcome. So the saturation index needs to reach SI_{c} > 1.5 so in-solution or SI_{c} > 0.3 for on-surface.
+* cyanobacteria on tufa act a nucleation point for microfabrics
+* by contrast diatoms produce CO_{2} and retard accumulation (ex: Huanglong) p74
+* Mg will act as a poison - attaching to the calcite steps and inhibiting growth. But it can't adsorb onto aragonite, so aragnoite can grow in Mg rich seawater
+* In cold regions kast is dissolved much facter b/c of the inverse relationship with CO_{2} dissolution
+* However precipitation rate is the stronger factor (and it typically rains more where it's hotter)
+* Other factors like does the rain form surface flow, or go underground. Or is there thick soil cover.. all are huge factors
+* Denudation rate can be modeled with this relationship: D_{max} = 100/ ( \rho{} )4^{1/3} * (K_{c} K_{1} K_{CO_{2}} / K_{2})^{1/2} P_{CO_{@}}^{1/3} (P - E)   .....  p80
+* As a result .. a factor of 100 P_{CO_{2}} -> 5x denudation rate
+* And 25C to 5C leads to an autogenic denudation increase of ~30%
+* Karst discharge can be monitored and plotted as a "rating curve". See; p84 and Fig 4.6
