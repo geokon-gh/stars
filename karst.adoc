@@ -211,3 +211,20 @@ Vary along several dimensions
 * As a result .. a factor of 100 P_{CO_{2}} -> 5x denudation rate
 * And 25C to 5C leads to an autogenic denudation increase of ~30%
 * Karst discharge can be monitored and plotted as a "rating curve". See; p84 and Fig 4.6
+
+== Karst Denudation
+.p85
+
+... not relevant or interesting. Seems ultimately kind of futile to estimate.
+
+.p90
+Erosion rates can be estimated by measuring cosmogenic cholorine-36. Cosmic rays turns 40Ca to 36Cl. Most are produced at the surface, with exponentially fewer as you go into the rock. 2 orders of magnitude at 15meters. Time to saturation is about 10^5-10^6 years. But erosion removes the saturated top layer - so you can work back and estimate the erosion rate. *Stone et al. 1994*
+
+.92
+Silicate areas have so much clay material (kaolinite) that it clogs up joints and caves don't form. Hence no quartz karst. (doesn't silicate make clay?)
+
+~50% of dissolution happens at the karst surface - and the rest is in the top 5-10 meters. Bacteria can continue to give CO_2 lower down
+
+Topography can drive denudation (due to channeling of runoff + soil distribution)
+
+Vegitation can both drive dissolution, but it can also take up Ca and Mg (into the tree body) so the relationship is not clear. See p95 (left) and Fig 4.14
