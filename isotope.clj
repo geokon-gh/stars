@@ -128,8 +128,8 @@
                          ds/rowvecs)
           axis-basis B-pairs 
           axis       (quickthing/new-axis axis-basis
-                                          {:x-name ""
-                                           :y-name ""
+                                          {:x-name "Days"
+                                           :y-name "d18O"
                                            :title  selected-col
                                            :color  "#0004"})]
       (->> (-> (svg/group {}

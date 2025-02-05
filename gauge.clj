@@ -3,7 +3,7 @@
   "Managing and plotting rain gauge data"
   (:use ;;steroids
         geoprim
-        geogrid
+        ;;geogrid
         geogrid2svg
         geogrid4image
         geogrid4seq
@@ -599,9 +599,7 @@
                   #(conj %
                          {:values  data-vec
                           :attribs {:stroke "#b00"}
-                          :layout  viz/svg-line-plot}
-                         #_
-                         (quickthing/adjustable-circles normalized-log)))
+                          :layout  viz/svg-line-plot}))
           (viz/svg-plot2d-cartesian)))
 ;; Note: My current plotting framework
 ;; doesn't play nice with "filled" plots
@@ -1096,9 +1094,7 @@ end-time         (start-of-day
               %
               {:values  normalized-log
                :attribs {:stroke "#b00"}
-               :layout  viz/svg-line-plot}
-              #_(quickthing/adjustable-circles
-                  normalized-log)))
+               :layout  viz/svg-line-plot}))
          (viz/svg-plot2d-cartesian))
       (->
          normalized-log
@@ -1117,9 +1113,7 @@ end-time         (start-of-day
               %
               {:values  normalized-log
                :attribs {:stroke "#b00"}
-               :layout  viz/svg-line-plot}
-              #_(quickthing/adjustable-circles
-                  normalized-log)))
+               :layout  viz/svg-line-plot}))
          (viz/svg-plot2d-cartesian)))))
 ;; Note: My current plotting framework
 ;; doesn't play nice with "filled" plots
