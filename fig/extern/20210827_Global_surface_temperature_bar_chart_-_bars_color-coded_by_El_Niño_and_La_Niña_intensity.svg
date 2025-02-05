@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="750" font-family="Liberation Sans,sans-serif" text-anchor="middle" fill="black" font-size="40px">
+
+<path d="M0,0 h1000 v750 h-1000 z" stroke="none" fill="#f8f8f8f8"/>
+
+<path d="M150,60 h800 v590 h-800 z" stroke="#888888" stroke-width="1" fill="gray"/>
+
+<path stroke="lightgray" stroke-width="0.50" d="  M140,60 h810 M140,158.333 h810 M140,256.667 h810 M140,355 h810 M140,453.333 h810 M140,551.667 h810 M140,650 h810  M150,60 v605 M250,60 v605 M350,60 v605 M450,60 v605 M550,60 v605 M650,60 v605 M750,60 v605 M850,60 v605 M950,60 v605 "/>
+
+<g font-size="35px" transform="translate(75,0)">
+<text y="72.25">+1.5</text>
+<text y="268.92">+1 °C</text>
+<text y="465.58">+0.5</text>
+<text y="662.25">0</text>
+</g>
+
+<g font-size="35" transform="translate(-4,700)">
+<text x="155">1950</text>
+<text x="255">1960</text>
+<text x="355">1970</text>
+<text x="455">1980</text>
+<text x="555">1990</text>
+<text x="655">2000</text>
+<text x="755">2010</text>
+<text x="855">2020</text>
+</g>
+
+
+
+  <switch>
+
+<g id="trsvg19-ko" systemLanguage="ko">
+<text x="550" y="40" id="trsvg1-ko">세계 평균 온도 변화</text>
+<text x="550" y="740" font-size="10px" id="trsvg2-ko">HadCRUT의 온도 자료: 표시된 해는 전 해의 7월부터 그 해의 6월까지의 온도</text>
+</g>
+
+<g id="trsvg19-ja" systemLanguage="ja">
+<text x="550" y="40" id="trsvg1-ja">地球の平均気温の変化</text>
+<text x="550" y="740" font-size="10px" id="trsvg2-ja">HadCRUTによる気温データ: 指定された年の前年7月から6月まで</text>
+</g>
+
+<g id="trsvg19">
+<text x="550" y="40" id="trsvg1">Global average temperature change</text>
+<text x="550" y="740" font-size="10px" id="trsvg2">Temperature data from HadCRUT: previous July through June of indicated year</text>
+</g>
+
+   </switch>
+
+
+   <g stroke="black" stroke-width="1">
+
+<path fill="#fcbba1" d="M170,650 v-156.78 h10.1 v156.78 z"/>
+<path fill="#fee0d2" d="M180,650 v-163.62 h10.1 v163.62 z"/>
+<path fill="#fee0d2" d="M190,650 v-120.04 h10.1 v120.04 z"/>
+<path fill="#c6dbef" d="M200,650 v-87.85 h10.1 v87.85 z"/>
+ <circle cx="205" cy="569.15" r="3" fill="white"/>
+<path fill="#6baed6" d="M210,650 v-42.38 h10.1 v42.38 z"/>
+ <circle cx="215" cy="614.62" r="3" fill="white"/>
+<path fill="#ffffff" d="M220,650 v-76.92 h10.1 v76.92 z"/>
+<path fill="#fb6a4a" d="M230,650 v-148.33 h10.1 v148.33 z"/>
+<path fill="#fee0d2" d="M240,650 v-128.9 h10.1 v128.9 z"/>
+
+<path fill="#ffffff" d="M250,650 v-84.77 h10.1 v84.77 z"/>
+<path fill="#ffffff" d="M260,650 v-137.44 h10.1 v137.44 z"/>
+<path fill="#ffffff" d="M270,650 v-116.56 h10.1 v116.56 z"/>
+<path fill="#ffffff" d="M280,650 v-97.86 h10.1 v97.86 z"/>
+<path fill="#fcbba1" d="M290,650 v-94.09 h10.1 v94.09 z"/>
+<path fill="#c6dbef" d="M300,650 v-33.07 h10.1 v33.07 z"/>
+ <circle cx="305" cy="623.93" r="3" fill="white"/>
+<path fill="#fb6a4a" d="M310,650 v-68.65 h10.1 v68.65 z"/>
+<path fill="#ffffff" d="M320,650 v-91.24 h10.1 v91.24 z"/>
+<path fill="#ffffff" d="M330,650 v-83.26 h10.1 v83.26 z"/>
+<path fill="#fcbba1" d="M340,650 v-99.58 h10.1 v99.58 z"/>
+
+<path fill="#fee0d2" d="M350,650 v-128.08 h10.1 v128.08 z"/>
+<path fill="#6baed6" d="M360,650 v-71.68 h10.1 v71.68 z"/>
+ <circle cx="365" cy="585.32" r="3" fill="white"/>
+<path fill="#c6dbef" d="M370,650 v-72.29 h10.1 v72.29 z"/>
+ <circle cx="375" cy="584.21" r="3" fill="white"/>
+<path fill="#fb6a4a" d="M380,650 v-163.37 h10.1 v163.37 z"/>
+<path fill="#08306b" d="M390,650 v-87.86 h10.1 v87.86 z"/>
+ <circle cx="395" cy="569.14" r="3" fill="white"/>
+<path fill="#c6dbef" d="M400,650 v-112.44 h10.1 v112.44 z"/>
+ <circle cx="405" cy="544.56" r="3" fill="white"/>
+<path fill="#08306b" d="M410,650 v-52.97 h10.1 v52.97 z"/>
+ <circle cx="415" cy="604.03" r="3" fill="white"/>
+<path fill="#fee0d2" d="M420,650 v-134.85 h10.1 v134.85 z"/>
+<path fill="#fee0d2" d="M430,650 v-157.15 h10.1 v157.15 z"/>
+<path fill="#ffffff" d="M440,650 v-137.89 h10.1 v137.89 z"/>
+
+<path fill="#fee0d2" d="M450,650 v-221.82 h10.1 v221.82 z"/>
+<path fill="#ffffff" d="M460,650 v-225.95 h10.1 v225.95 z"/>
+<path fill="#ffffff" d="M470,650 v-183.36 h10.1 v183.36 z"/>
+<path fill="#cb181d" d="M480,650 v-202.58 h10.1 v202.58 z"/>
+<path fill="#c6dbef" d="M490,650 v-195.57 h10.1 v195.57 z"/>
+ <circle cx="495" cy="461.43" r="3" fill="white"/>
+<path fill="#c6dbef" d="M500,650 v-150.59 h10.1 v150.59 z"/>
+ <circle cx="505" cy="506.41" r="3" fill="white"/>
+<path fill="#ffffff" d="M510,650 v-180.29 h10.1 v180.29 z"/>
+<path fill="#fcbba1" d="M520,650 v-190.84 h10.1 v190.84 z"/>
+<path fill="#fb6a4a" d="M530,650 v-265.05 h10.1 v265.05 z"/>
+<path fill="#08306b" d="M540,650 v-202.86 h10.1 v202.86 z"/>
+ <circle cx="545" cy="454.14" r="3" fill="white"/>
+
+<path fill="#ffffff" d="M550,650 v-267.6 h10.1 v267.6 z"/>
+<path fill="#ffffff" d="M560,650 v-273.24 h10.1 v273.24 z"/>
+<path fill="#fb6a4a" d="M570,650 v-252.78 h10.1 v252.78 z"/>
+<path fill="#ffffff" d="M580,650 v-183.77 h10.1 v183.77 z"/>
+<path fill="#ffffff" d="M590,650 v-201.9 h10.1 v201.9 z"/>
+<path fill="#fcbba1" d="M600,650 v-273.21 h10.1 v273.21 z"/>
+<path fill="#6baed6" d="M610,650 v-261.99 h10.1 v261.99 z"/>
+ <circle cx="615" cy="395.01" r="3" fill="white"/>
+<path fill="#ffffff" d="M620,650 v-264.36 h10.1 v264.36 z"/>
+<path fill="#cb181d" d="M630,650 v-364.42 h10.1 v364.42 z"/>
+<path fill="#08306b" d="M640,650 v-308 h10.1 v308 z"/>
+ <circle cx="645" cy="349" r="3" fill="white"/>
+
+<path fill="#08306b" d="M650,650 v-275.21 h10.1 v275.21 z"/>
+ <circle cx="655" cy="381.79" r="3" fill="white"/>
+<path fill="#c6dbef" d="M660,650 v-281.79 h10.1 v281.79 z"/>
+ <circle cx="665" cy="375.21" r="3" fill="white"/>
+<path fill="#ffffff" d="M670,650 v-363.71 h10.1 v363.71 z"/>
+<path fill="#fcbba1" d="M680,650 v-335.47 h10.1 v335.47 z"/>
+<path fill="#ffffff" d="M690,650 v-348.2 h10.1 v348.2 z"/>
+<path fill="#fee0d2" d="M700,650 v-347.93 h10.1 v347.93 z"/>
+<path fill="#c6dbef" d="M710,650 v-367.03 h10.1 v367.03 z"/>
+ <circle cx="715" cy="289.97" r="3" fill="white"/>
+<path fill="#fee0d2" d="M720,650 v-388.84 h10.1 v388.84 z"/>
+<path fill="#08306b" d="M730,650 v-321.42 h10.1 v321.42 z"/>
+ <circle cx="735" cy="335.58" r="3" fill="white"/>
+<path fill="#c6dbef" d="M740,650 v-351.38 h10.1 v351.38 z"/>
+ <circle cx="745" cy="305.62" r="3" fill="white"/>
+
+<path fill="#fcbba1" d="M750,650 v-419.07 h10.1 v419.07 z"/>
+<path fill="#08306b" d="M760,650 v-358.12 h10.1 v358.12 z"/>
+ <circle cx="765" cy="298.88" r="3" fill="white"/>
+<path fill="#6baed6" d="M770,650 v-355.64 h10.1 v355.64 z"/>
+ <circle cx="775" cy="301.36" r="3" fill="white"/>
+<path fill="#ffffff" d="M780,650 v-379.08 h10.1 v379.08 z"/>
+<path fill="#ffffff" d="M790,650 v-399.89 h10.1 v399.89 z"/>
+<path fill="#fee0d2" d="M800,650 v-423.38 h10.1 v423.38 z"/>
+<path fill="#cb181d" d="M810,650 v-519.63 h10.1 v519.63 z"/>
+<path fill="#c6dbef" d="M820,650 v-480.56 h10.1 v480.56 z"/>
+ <circle cx="825" cy="176.44" r="3" fill="white"/>
+<path fill="#c6dbef" d="M830,650 v-446.57 h10.1 v446.57 z"/>
+ <circle cx="835" cy="210.43" r="3" fill="white"/>
+<path fill="#fee0d2" d="M840,650 v-462.4 h10.1 v462.4 z"/>
+
+<path fill="#ffffff" d="M850,650 v-517.9 h10.1 v517.9 z"/>
+<path fill="#6baed6" d="M860,650 v-440.91 h10.1 v440.91 z"/>
+ <circle cx="865" cy="216.09" r="3" fill="white"/>
+<path fill="#6baed6" d="M870,650 v-461.26 h10.1 v461.26 z"/>
+ <circle cx="875" cy="195.74" r="3" fill="white"/>
+<path fill="#c6dbef" d="M880,650 v-481.76 h10.1 v481.76 z"/>
+ <circle cx="885" cy="175.24" r="3" fill="white"/>
+
+   </g>
+
+
+     <g id="LEGEND" transform="translate(-5,0)" stroke="black" stroke-width="1">
+
+<path fill="#cb181d" d="M170,70 h40 v40 h-40 z"/>
+<path fill="#fb6a4a" d="M170,110 h40 v40 h-40 z"/>
+<path fill="#fcbba1" d="M170,150 h40 v40 h-40 z"/>
+<path fill="#fee0d2" d="M170,190 h40 v40 h-40 z"/>
+
+<path fill="white" d="M170,230 h40 v40 h-40 z"/>
+
+<path fill="#c6dbef" d="M170,270 h40 v40 h-40 z"/>
+ <circle cx="190" cy="290" r="10" fill="white"/>
+<path fill="#6baed6" d="M170,310 h40 v40 h-40 z"/>
+ <circle cx="190" cy="330" r="10" fill="white"/>
+<path fill="#08306b" d="M170,350 h40 v40 h-40 z"/>
+ <circle cx="190" cy="370" r="10" fill="white"/>
+
+
+   <switch>
+
+<g fill="white" stroke="none" id="trsvg21-ko" systemLanguage="ko">
+<text text-anchor="start" x="220" y="105" id="trsvg16-ko">강한 엘니뇨</text>
+<text text-anchor="start" x="220" y="265" id="trsvg17-ko">► 중립</text>
+<text text-anchor="start" x="220" y="385" id="trsvg18-ko">강한 라니냐</text>
+</g>
+
+<g fill="white" stroke="none" id="trsvg21-ja" systemLanguage="ja">
+<text text-anchor="start" x="220" y="105" id="trsvg16-ja">エルニーニョが非常に強力な年</text>
+<text text-anchor="start" x="220" y="265" id="trsvg17-ja">► 中間</text>
+<text text-anchor="start" x="220" y="385" id="trsvg18-ja">ラニーニャが強力</text>
+</g>
+
+<g fill="white" stroke="none" id="trsvg21">
+<text text-anchor="start" x="220" y="105" id="trsvg16">Very strong El Niño years</text>
+<text text-anchor="start" x="220" y="265" id="trsvg17">► Neutral</text>
+<text text-anchor="start" x="220" y="385" id="trsvg18">Strong La Niña</text>
+</g>
+
+   </switch>
+
+      </g>
+
+</svg>
